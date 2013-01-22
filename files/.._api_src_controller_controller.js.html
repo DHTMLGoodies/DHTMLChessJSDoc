@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>..&#x2F;api&#x2F;src&#x2F;controller&#x2F;controller.js - DHTML Chess</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.5.1&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.5.1&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;www.dhtml-chess.com&#x2F;images&#x2F;logo.png" title="DHTML Chess"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 0.0.2</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/chess.controller.AnalysisController.html">chess.controller.AnalysisController</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.controller.Controller.html">chess.controller.Controller</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.controller.TacticController.html">chess.controller.TacticController</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.dataSource.FolderTree.html">chess.dataSource.FolderTree</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.dataSource.GameList.html">chess.dataSource.GameList</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.model.Game.html">chess.model.Game</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.model.Move.html">chess.model.Move</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.parser.FenParser0x88.html">chess.parser.FenParser0x88</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.parser.Move0x88.html">chess.parser.Move0x88</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.parser.PositionValidator.html">chess.parser.PositionValidator</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.remote.GameReader.html">chess.remote.GameReader</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.board.Board.html">chess.view.board.Board</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.board.GUI.html">chess.view.board.GUI</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.board.Piece.html">chess.view.board.Piece</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.Comment.html">chess.view.dialog.Comment</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.GameImport.html">chess.view.dialog.GameImport</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.NewGame.html">chess.view.dialog.NewGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.OverwriteMove.html">chess.view.dialog.OverwriteMove</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.Promote.html">chess.view.dialog.Promote</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.eco.VariationTree.html">chess.view.eco.VariationTree</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.folder.Tree.html">chess.view.folder.Tree</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.gamelist.Grid.html">chess.view.gamelist.Grid</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.highlight.Arrow.html">chess.view.highlight.Arrow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.highlight.Square.html">chess.view.highlight.Square</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.installer.Installer.html">chess.view.installer.Installer</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.menuItems.GameImport.html">chess.view.menuItems.GameImport</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.menuItems.NewGame.html">chess.view.menuItems.NewGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.message.TacticMessage.html">chess.view.message.TacticMessage</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.metadata.FenField.html">chess.view.metadata.FenField</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.metadata.Game.html">chess.view.metadata.Game</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.metadata.Move.html">chess.view.metadata.Move</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.notation.Panel.html">chess.view.notation.Panel</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Board.html">chess.view.position.Board</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Castling.html">chess.view.position.Castling</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Dialog.html">chess.view.position.Dialog</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Pieces.html">chess.view.position.Pieces</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.SideToMove.html">chess.view.position.SideToMove</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.SaveGame.NewGame.html">chess.view.SaveGame.NewGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.Controller.html">chess.view.user.Controller</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.Country.html">chess.view.user.Country</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.LoginButton.html">chess.view.user.LoginButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.LoginWindow.html">chess.view.user.LoginWindow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.LogoutButton.html">chess.view.user.LogoutButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.Panel.html">chess.view.user.Panel</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.ProfileWindow.html">chess.view.user.ProfileWindow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.RegisterButton.html">chess.view.user.RegisterButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.RegisterWindow.html">chess.view.user.RegisterWindow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.SettingsButton.html">chess.view.user.SettingsButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/Board.html">Board</a></li>
+            
+                <li><a href="..&#x2F;modules/Controller.html">Controller</a></li>
+            
+                <li><a href="..&#x2F;modules/DataSource.html">DataSource</a></li>
+            
+                <li><a href="..&#x2F;modules/Dialog.html">Dialog</a></li>
+            
+                <li><a href="..&#x2F;modules/Grid.html">Grid</a></li>
+            
+                <li><a href="..&#x2F;modules/Installer.html">Installer</a></li>
+            
+                <li><a href="..&#x2F;modules/Menu.html">Menu</a></li>
+            
+                <li><a href="..&#x2F;modules/Model.html">Model</a></li>
+            
+                <li><a href="..&#x2F;modules/Parser.html">Parser</a></li>
+            
+                <li><a href="..&#x2F;modules/Tree.html">Tree</a></li>
+            
+                <li><a href="..&#x2F;modules/User.html">User</a></li>
+            
+                <li><a href="..&#x2F;modules/View.html">View</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: ..&#x2F;api&#x2F;src&#x2F;controller&#x2F;controller.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+  Game controller base class. This class acts as the glue between
+  game models and views. When something happens in current game, it sends a message&#x2F;event to the
+  controller. The controller delegates this message to the views and all views interested
+  @module Controller
+  @namespace chess.controller
+  @class Controller
+  @constructor
+  @param {Object} config
+ *&#x2F;
+chess.controller.Controller = new Class({
+    Extends:ludo.controller.Controller,
+    models:[],
+    applyTo:[&#x27;chess&#x27;, &#x27;user.menuItemNewGame&#x27;, &#x27;user.saveGame&#x27;, &#x27;user.menuItemSaveGame&#x27;],
+    currentModel:null,
+    modelCacheSize:15,
+
+    databaseId:undefined,
+    views:{},
+    disabledEvents:{},
+
+    ludoConfig:function (config) {
+        this.parent(config);
+        this.databaseId = config.databaseId || this.databaseId;
+
+        this.createDefaultViews();
+        this.createDefaultModel();
+    },
+
+    createDefaultViews:function () {
+        new chess.view.dialog.OverwriteMove();
+        new chess.view.dialog.Promote();
+        new chess.view.dialog.Comment();
+        new chess.view.dialog.NewGame();
+    },
+
+    createDefaultModel:function () {
+        var model = this.getNewModel();
+        this.models[0] = model;
+        this.currentModel = model;
+        model.newGame();
+    },
+
+    addView:function (view) {
+        if (this.views[view.submodule] !== undefined) {
+            this.log(&#x27;submodule &#x27; + view.submodule + &#x27; already registered in controller&#x27;);
+            return;
+        }
+        this.views[view.submodule] = view;
+		if(!view.submodule)console.log(view);
+        switch (view.submodule) {
+            case window.chess.Views.buttonbar.game:
+                view.addEvent(&#x27;play&#x27;, this.playMoves.bind(this));
+                view.addEvent(&#x27;tostart&#x27;, this.toStart.bind(this));
+                view.addEvent(&#x27;toend&#x27;, this.toEnd.bind(this));
+                view.addEvent(&#x27;previous&#x27;, this.previousMove.bind(this));
+                view.addEvent(&#x27;next&#x27;, this.nextMove.bind(this));
+                view.addEvent(&#x27;pause&#x27;, this.pauseGame.bind(this));
+                view.addEvent(&#x27;flip&#x27;, this.flipBoard.bind(this));
+                break;
+
+            case &#x27;gameList&#x27;:
+                view.addEvent(&#x27;selectGame&#x27;, this.selectGame.bind(this));
+                break;
+            case &#x27;menuItemSaveGame&#x27;:
+            case &#x27;saveGame&#x27;:
+                view.addEvent(&#x27;saveGame&#x27;, function () {
+                    this.currentModel.save();
+                }.bind(this));
+                break;
+            case &#x27;dialogNewGame&#x27;:
+                view.addEvent(&#x27;newGame&#x27;, function (metadata) {
+                    this.currentModel = this.getNewModel({
+                        metadata:metadata
+                    });
+                    this.currentModel.activate();
+                }.bind(this));
+                break;
+            case &#x27;menuItemNewGame&#x27;:
+                view.addEvent(&#x27;newGame&#x27;, function () {
+					&#x2F;**
+					 * New game dialog event
+					 * @event newGameDialog
+					 *&#x2F;
+                    this.fireEvent(&#x27;newGameDialog&#x27;);
+                }.bind(this));
+                break;
+            case &#x27;commandLine&#x27;:
+				view.addEvent(&#x27;move&#x27;, this.addMove.bind(this));
+				view.addEvent(&#x27;setPosition&#x27;, this.setPosition.bind(this));
+				view.addEvent(&#x27;load&#x27;, this.selectGame.bind(this));
+				view.addEvent(&#x27;flip&#x27;, this.flipBoard.bind(this));
+				view.addEvent(&#x27;grade&#x27;, this.gradeCurrentMove.bind(this));
+
+				break;
+            case &#x27;board&#x27;:
+                view.addEvent(&#x27;move&#x27;, this.addMove.bind(this));
+                view.addEvent(&#x27;animationComplete&#x27;, this.nextAutoPlayMove.bind(this));
+                break;
+            case &#x27;notation&#x27;:
+                view.addEvent(&#x27;setCurrentMove&#x27;, this.setCurrentMove.bind(this));
+                view.addEvent(&#x27;gradeMove&#x27;, this.gradeMove.bind(this));
+                view.addEvent(&#x27;commentBefore&#x27;, this.dialogCommentBefore.bind(this));
+                view.addEvent(&#x27;commentAfter&#x27;, this.dialogCommentAfter.bind(this));
+                break;
+            case &#x27;dialogOverwriteMove&#x27;:
+                view.addEvent(&#x27;overwriteMove&#x27;, this.overwriteMove.bind(this));
+                view.addEvent(&#x27;newVariation&#x27;, this.newVariation.bind(this));
+                view.addEvent(&#x27;cancelOverwrite&#x27;, this.cancelOverwrite.bind(this));
+                break;
+            case &#x27;dialogPromote&#x27;:
+                view.addEvent(&#x27;promote&#x27;, this.addMove.bind(this));
+                break;
+            case &#x27;buttonTacticHint&#x27;:
+                view.addEvent(&#x27;showHint&#x27;, this.showHint.bind(this));
+                break;
+            case &#x27;buttonTacticSolution&#x27;:
+                view.addEvent(&#x27;showSolution&#x27;, this.showSolution.bind(this));
+                break;
+            case &#x27;buttonNextGame&#x27;:
+                view.addEvent(&#x27;nextGame&#x27;, this.loadNextGame.bind(this));
+                break;
+            case &#x27;buttonPreviousGame&#x27;:
+                view.addEvent(&#x27;previousGame&#x27;, this.loadPreviousGame.bind(this));
+                break;
+            case &#x27;folder.tree&#x27;:
+                view.addEvent(&#x27;selectDatabase&#x27;, this.selectDatabase.bind(this));
+                break;
+            case &#x27;eco.VariationTree&#x27;:
+                view.addEvent(&#x27;selectMove&#x27;, this.addMove.bind(this));
+                break;
+            case &#x27;positionSetup&#x27;:
+                view.addEvent(&#x27;setPosition&#x27;, this.setPosition.bind(this));
+                break;
+            case &#x27;dialogComment&#x27;:
+                view.addEvent(&#x27;commentBefore&#x27;, this.addCommentBefore.bind(this));
+                view.addEvent(&#x27;commentAfter&#x27;, this.addCommentAfter.bind(this));
+                break;
+        }
+    },
+
+	&#x2F;**
+	 * Select a database
+	 * @method selectDatabase
+	 * @param {Number} database
+	 *&#x2F;
+    selectDatabase:function (database) {
+        this.databaseId = database.id;
+		&#x2F;**
+		 * Select database event
+		 * @event selectDatabase
+		 * @param {Number} database
+		 *&#x2F;
+        this.fireEvent(&#x27;selectDatabase&#x27;, database);
+    },
+	&#x2F;**
+	 * Load next game in selected database. This method will only work if you have
+	 * a grid with list of games. The only thing this method does is to fire the &quot;nextGame&quot;
+	 * event which the list of games grid listens to. The grid will go to next game and fire it&#x27;s
+	 * selectGame event
+	 * @method loadNextGame
+	 * @return undefined
+	 *&#x2F;
+    loadNextGame:function () {
+		&#x2F;**
+		 * next game event
+		 * @event nextGame
+		 *&#x2F;
+        this.fireEvent(&#x27;nextGame&#x27;);
+    },
+
+	&#x2F;**
+	 * Load previous game from selected database. For info, see loadNextGame
+	 * @method loadPreviousGame
+	 * @return undefined
+	 *&#x2F;
+    loadPreviousGame:function () {
+        this.fireEvent(&#x27;previousGame&#x27;);
+    },
+
+    showHint:function () {
+        var nextMove = this.currentModel.getNextMove();
+        if (nextMove) {
+            this.views.board.showHint(nextMove);
+        }
+    },
+
+    showSolution:function () {
+        var nextMove = this.currentModel.getNextMove();
+        if (nextMove) {
+            this.views.board.showSolution(nextMove);
+        }
+    },
+
+    setPosition:function (fen) {
+        this.currentModel.setPosition(fen);
+    },
+
+    overwriteMove:function (oldMove, newMove) {
+        this.currentModel.overwriteMove(oldMove, newMove);
+    },
+
+    newVariation:function (oldMove, newMove) {
+        this.currentModel.setCurrentMove(oldMove);
+        this.currentModel.newVariation(newMove);
+    },
+
+    cancelOverwrite:function () {
+        this.currentModel.resetPosition();
+    },
+
+    setCurrentMove:function (move) {
+        this.currentModel.goToMove(move);
+    },
+	&#x2F;**
+	 * Flip board. The only thing this method does is to fire the flipBoard event.
+	 * @method flipBoard
+	 * @return undefined
+	 *&#x2F;
+    flipBoard:function () {
+		&#x2F;**
+		 * flip event. A board is example of a view listening to this event. When it&#x27;s fired, the board
+		 * will be flipped
+		 * @event flip
+		 *&#x2F;
+        this.fireEvent(&#x27;flip&#x27;);
+    },
+
+	&#x2F;**
+	 * Add a move to current model
+	 * @method addMove
+	 * @param {Object} move
+	 * @return undefined
+	 *&#x2F;
+    addMove:function (move) {
+        this.currentModel.appendMove(move);
+    },
+    gradeMove:function (move, grade) {
+        this.currentModel.gradeMove(move, grade);
+    },
+
+	gradeCurrentMove:function(grade){
+		var move = this.currentModel.getCurrentMove();
+		if(move){
+			this.currentModel.gradeMove(move, grade);
+		}
+	},
+
+    dialogCommentBefore:function (move) {
+		&#x2F;**
+		 * Event fired when the Comment before a move dialog should be shown.
+		 * @event commentBefore
+		 * @param {chess.model.Game} currentModel
+		 * @param {Object} move
+ 		 *&#x2F;
+        this.fireEvent(&#x27;commentBefore&#x27;, [this.currentModel, move]);
+    },
+
+    dialogCommentAfter:function (move) {
+		&#x2F;**
+		 * Event fired when the Comment after a move dialog should be shown.
+		 * @event commentAfter
+		 * @param {chess.model.Game} currentModel
+		 * @param {Object} move
+ 		 *&#x2F;
+        this.fireEvent(&#x27;commentAfter&#x27;, [this.currentModel, move]);
+    },
+    addCommentBefore:function (comment, move) {
+        this.currentModel.setCommentBefore(comment, move);
+    },
+    addCommentAfter:function (comment, move) {
+        this.currentModel.setCommentAfter(comment, move);
+    },
+	&#x2F;**
+	 * Go to start of current game
+	 * @method toStart
+	 * @return undefined
+	 *&#x2F;
+    toStart:function () {
+        this.currentModel.toStart();
+    },
+	&#x2F;**
+	 * Go to end of current game
+	 * @method toEnd
+	 * @return undefined
+	 *&#x2F;
+    toEnd:function () {
+        this.currentModel.toEnd();
+    },
+	&#x2F;**
+	 * Go to previous move
+	 * @method previousMove
+	 * @return undefined
+	 *&#x2F;
+    previousMove:function () {
+        this.currentModel.previousMove();
+    },
+	&#x2F;**
+	 * Go to next move
+	 * @method nextMove
+	 * @return undefined
+	 *&#x2F;
+    nextMove:function () {
+        this.currentModel.nextMove();
+    },
+	&#x2F;**
+	 * Start auto play of moves in current game from current position
+	 * @method playMoves
+	 * @return undefined
+	 *&#x2F;
+    playMoves:function () {
+        this.currentModel.startAutoPlay();
+    },
+	&#x2F;**
+	 * Pause auto play of moves
+	 * @method pauseGame
+	 * @return undefined
+	 *&#x2F;
+    pauseGame:function () {
+        this.currentModel.stopAutoPlay();
+    },
+
+    nextAutoPlayMove:function () {
+        this.currentModel.nextAutoPlayMove();
+    },
+
+    selectGame:function (game) {
+        var model;
+        if (model = this.getModelFromCache(game)) {
+            this.currentModel = model;
+            this.currentModel.activate();
+        } else {
+            this.currentModel = this.getNewModel(game);
+        }
+    },
+
+    getModelFromCache:function (game) {
+        for (var i = 0; i &lt; this.models.length; i++) {
+            if (this.models[i].getId() === game.id) {
+                return this.models[i];
+            }
+        }
+        return null;
+    },
+
+    getNewModel:function (game) {
+        game = game || {};
+        var model = new chess.model.Game(game);
+        this.addEventsToModel(model);
+        this.models.push(model);
+
+        if (this.models.length &gt; this.modelCacheSize) {
+
+            this.models[0].removeEvents();
+            delete this.models[0];
+
+            for (var i = 0; i &lt; this.models.length - 1; i++) {
+                this.models[i] = this.models[i + 1];
+            }
+            this.models.length = this.models.length - 1;
+        }
+        return model;
+    },
+
+    addEventsToModel:function (model) {
+        for (var eventName in window.chess.events.game) {
+            if(window.chess.events.game.hasOwnProperty(eventName)){
+                if (this.disabledEvents[eventName] === undefined) {
+                    model.addEvent(window.chess.events.game[eventName], this.fireModelEvent.bind(this));
+                }
+            }
+        }
+    },
+
+    fireModelEvent:function (event, model, param) {
+        if (model.getId() == this.currentModel.getId()) {
+            ludo.util.log(event);
+            this.fireEvent(event, [model, param]);
+            this.modelEventFired(event, model, param);
+        }
+    },
+
+    modelEventFired:function(){
+
+    },
+
+    &#x2F;**
+     * Return active game
+     * @method getCurrentModel
+     * @return object chess.model.Game
+     *&#x2F;
+    getCurrentModel:function () {
+        return this.currentModel;
+    }
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

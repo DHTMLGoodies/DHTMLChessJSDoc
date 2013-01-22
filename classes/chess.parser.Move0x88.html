@@ -1,0 +1,2809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>chess.parser.Move0x88 - DHTML Chess</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.5.1&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.5.1&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;www.dhtml-chess.com&#x2F;images&#x2F;logo.png" title="DHTML Chess"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 0.0.2</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/chess.controller.AnalysisController.html">chess.controller.AnalysisController</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.controller.Controller.html">chess.controller.Controller</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.controller.TacticController.html">chess.controller.TacticController</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.dataSource.FolderTree.html">chess.dataSource.FolderTree</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.dataSource.GameList.html">chess.dataSource.GameList</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.model.Game.html">chess.model.Game</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.model.Move.html">chess.model.Move</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.parser.FenParser0x88.html">chess.parser.FenParser0x88</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.parser.Move0x88.html">chess.parser.Move0x88</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.parser.PositionValidator.html">chess.parser.PositionValidator</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.remote.GameReader.html">chess.remote.GameReader</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.board.Board.html">chess.view.board.Board</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.board.GUI.html">chess.view.board.GUI</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.board.Piece.html">chess.view.board.Piece</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.Comment.html">chess.view.dialog.Comment</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.GameImport.html">chess.view.dialog.GameImport</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.NewGame.html">chess.view.dialog.NewGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.OverwriteMove.html">chess.view.dialog.OverwriteMove</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.Promote.html">chess.view.dialog.Promote</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.eco.VariationTree.html">chess.view.eco.VariationTree</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.folder.Tree.html">chess.view.folder.Tree</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.gamelist.Grid.html">chess.view.gamelist.Grid</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.highlight.Arrow.html">chess.view.highlight.Arrow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.highlight.Square.html">chess.view.highlight.Square</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.installer.Installer.html">chess.view.installer.Installer</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.menuItems.GameImport.html">chess.view.menuItems.GameImport</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.menuItems.NewGame.html">chess.view.menuItems.NewGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.message.TacticMessage.html">chess.view.message.TacticMessage</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.metadata.FenField.html">chess.view.metadata.FenField</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.metadata.Game.html">chess.view.metadata.Game</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.metadata.Move.html">chess.view.metadata.Move</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.notation.Panel.html">chess.view.notation.Panel</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Board.html">chess.view.position.Board</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Castling.html">chess.view.position.Castling</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Dialog.html">chess.view.position.Dialog</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Pieces.html">chess.view.position.Pieces</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.SideToMove.html">chess.view.position.SideToMove</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.SaveGame.NewGame.html">chess.view.SaveGame.NewGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.Controller.html">chess.view.user.Controller</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.Country.html">chess.view.user.Country</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.LoginButton.html">chess.view.user.LoginButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.LoginWindow.html">chess.view.user.LoginWindow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.LogoutButton.html">chess.view.user.LogoutButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.Panel.html">chess.view.user.Panel</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.ProfileWindow.html">chess.view.user.ProfileWindow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.RegisterButton.html">chess.view.user.RegisterButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.RegisterWindow.html">chess.view.user.RegisterWindow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.SettingsButton.html">chess.view.user.SettingsButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/Board.html">Board</a></li>
+            
+                <li><a href="..&#x2F;modules/Controller.html">Controller</a></li>
+            
+                <li><a href="..&#x2F;modules/DataSource.html">DataSource</a></li>
+            
+                <li><a href="..&#x2F;modules/Dialog.html">Dialog</a></li>
+            
+                <li><a href="..&#x2F;modules/Grid.html">Grid</a></li>
+            
+                <li><a href="..&#x2F;modules/Installer.html">Installer</a></li>
+            
+                <li><a href="..&#x2F;modules/Menu.html">Menu</a></li>
+            
+                <li><a href="..&#x2F;modules/Model.html">Model</a></li>
+            
+                <li><a href="..&#x2F;modules/Parser.html">Parser</a></li>
+            
+                <li><a href="..&#x2F;modules/Tree.html">Tree</a></li>
+            
+                <li><a href="..&#x2F;modules/User.html">User</a></li>
+            
+                <li><a href="..&#x2F;modules/View.html">View</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>chess.parser.Move0x88 Class</h1>
+<div class="box meta">
+    
+        <div class="uses">
+            Uses
+            <ul class="inline commas">
+                
+                    <li><a href="chess.parser.FenParser0x88.html">chess.parser.FenParser0x88</a></li>
+                
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_move-0x88.js.html#l1"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;move-0x88.js:1</code></a>
+        </div>
+    
+
+    
+        
+            Module: <a href="../modules/Parser.html">Parser</a>
+        
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>Class for move validation. This class is used by chess.model.Game</p>
+</div>
+
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_chess.parser.Move0x88" class="method item">
+    <h3 class="name"><code>chess.parser.Move0x88</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_move-0x88.js.html#l1"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;move-0x88.js:1</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code"><code class="prettyprint">var validator = new chess.parser.Move0x88();
+var valid = validator.isValid(
+    { from : 'h7', to : 'h6' },
+    'r1bq1rk1/ppppbppp/2n2n2/4p3/2B1P3/2N2N1P/PPPP1PP1/R1BQ1RK1 b - 2 6'
+);
+if(valid){ alert('Move is valid') } else { alert('Move is invalid') };
+</code></pre>
+            </div>
+        </div>
+    
+</div>
+
+    </div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+        
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_getDistance">getDistance</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_getEnPassantSquare">getEnPassantSquare</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_getFen">getFen</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_getFromFileByNotation">getFromFileByNotation</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_getFromRankByNotation">getFromRankByNotation</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_getLongNotationForAMove">getLongNotationForAMove</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_getNotationForAMove">getNotationForAMove</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_getPiecesOfAColor">getPiecesOfAColor</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_getPined">getPined</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_getToSquareByNotation">getToSquareByNotation</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_getValidMovesAndResult">getValidMovesAndResult</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_hasThreeFoldRepetition">hasThreeFoldRepetition</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_isCastleMove">isCastleMove</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_isEnPassantMove">isEnPassantMove</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_isOnSameFile">isOnSameFile</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_isOnSameRank">isOnSameRank</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_isPromotionMove">isPromotionMove</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_isValid">isValid</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_makeMove">makeMove</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_makeMoveByNotation">makeMoveByNotation</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_setFen">setFen</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+
+            
+        </div>
+
+        
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method_getDistance" class="method item inherited">
+    <h3 class="name"><code>getDistance</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>sq1</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>sq2</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_getDistance">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l727"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:727</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Returns distance between two sqaures</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">sq1</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">sq2</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>:
+                    
+                    distance
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getEnPassantSquare" class="method item inherited">
+    <h3 class="name"><code>getEnPassantSquare</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a> | Null</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_getEnPassantSquare">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l144"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:144</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a> | Null</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code"><code class="prettyprint">var fen = '5k2/8/8/3pP3/8/8/8/7K w - d6 0 1';
+var parser = new chess.parser.FenParser0x88(fen);
+alert(parser.getEnPassantSquare()); // alerts 'd6'
+</code></pre>
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_getFen" class="method item inherited">
+    <h3 class="name"><code>getFen</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_getFen">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l1270"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:1270</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Return current fen position</p>
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>:
+                    
+                    fen
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getFromFileByNotation" class="method item inherited">
+    <h3 class="name"><code>getFromFileByNotation</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>notation</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_getFromFileByNotation">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l1035"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:1035</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Get from rank by notation. 0 is first file(a), 1 is second file(b), 2 is third file etc.</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">notation</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getFromRankByNotation" class="method item inherited">
+    <h3 class="name"><code>getFromRankByNotation</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>notation</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_getFromRankByNotation">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l1021"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:1021</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Get from rank by notation, 0 is first rank, 16 is second rank, 32 is third rank etc.</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">notation</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getLongNotationForAMove" class="method item inherited">
+    <h3 class="name"><code>getLongNotationForAMove</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>move</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>shortNotation</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_getLongNotationForAMove">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l1282"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:1282</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Return long notation for a move</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">move</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">shortNotation</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>:
+                    
+                    long notation
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getNotationForAMove" class="method item inherited">
+    <h3 class="name"><code>getNotationForAMove</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>move</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_getNotationForAMove">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l1309"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:1309</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Return short notation for a move</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">move</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <p>alert(parser.getNotationForAMove({from:'g1',to:'f3'});</p>
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_getPiecesOfAColor" class="method item inherited">
+    <h3 class="name"><code>getPiecesOfAColor</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>color</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_getPiecesOfAColor">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l103"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:103</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Returns pieces of a color</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">color</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code"><code class="prettyprint">var parser = new chess.parser.FenParser0x88('5k2/8/8/3pP3/8/8/8/7K w - d6 0 1');
+var pieces = parser.getPiecesOfAColor('white');
+console.log(pieces);
+</code></pre>
+
+<p>each piece is represented by an object like this:</p><pre class="code"><code class="prettyprint">{
+    s : 112,
+    t : 14
+}
+</code></pre>
+
+<p>where s is square and type is type. s is numeric according to the 0x88 chess board where
+a1 is 0, a2 is 16, b2 is 17, a3 is 32, i.e. a 128x64 square board.</p>
+
+<p>t is a numeric representation(4 bits).</p>
+
+<p>P : 0001
+N : 0010
+K : 0011
+B : 0101
+R : 0110
+Q : 0111
+p : 1001
+n : 1010
+k : 1011
+b : 1101
+r : 1100
+q : 1100</p>
+
+<p>As you can see, black pieces all have the first bit set to 1, and all the sliding pieces
+(bishop, rook and queen) has the second bit set to 1. This makes it easy to to determine color
+and sliding pieces using the bitwise &amp; operator.</p>
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_getPined" class="method item inherited">
+    <h3 class="name"><code>getPined</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>color</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_getPined">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l558"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:558</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Return array of the squares where pieces are pinned, i.e. cannot move.
+Squares are in the 0x88 format. You can use Board0x88Config.numberToSquareMapping
+to translate to readable format, example: Board0x88Config.numberToSquareMapping[16] will give you 'a2'</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">color</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getToSquareByNotation" class="method item inherited">
+    <h3 class="name"><code>getToSquareByNotation</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>notation</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_getToSquareByNotation">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l1048"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:1048</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Return numeric destination square by notation.</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">notation</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>:
+                    
+                    square
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getValidMovesAndResult" class="method item inherited">
+    <h3 class="name"><code>getValidMovesAndResult</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>color</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_getValidMovesAndResult">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l241"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:241</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Returns valid moves and results for the position according to the 0x88 chess programming
+algorithm where position on the board is numeric (A1=0,H1=7,A2=16,H2=23,A3=32,A4=48).
+First rank is numbered 0-7. Second rank starts at first rank + 16, i.e. A2 = 16. Third
+rank starts at second rank + 16, i.e. A3 = 32 and so on.</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">color</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code"><code class="prettyprint"> var fen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
+ var parser = new chess.parser.FenParser0x88(fen)
+ console.log(parser.getValidMovesAndResult());
+</code></pre>
+
+<p>returns an object containing information about number of checks(0,1 or 2 for double check),
+valid moves and result(0 for undecided, .5 for stalemate, -1 for black win and 1 for white win).
+moves are returend in the following format:</p>
+
+<pre class="code"><code class="prettyprint">numeric square : [array of valid squares to move]
+</code></pre>
+
+<p>example for knight on b1:</p><pre class="code"><code class="prettyprint">1 : [32,34]
+</code></pre>
+
+<p>since it's located on b1(numeric value 1) and can move to either a3 or c3(32 and 34).</p>
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_hasThreeFoldRepetition" class="method item inherited">
+    <h3 class="name"><code>hasThreeFoldRepetition</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>fens</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_hasThreeFoldRepetition">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l853"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:853</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Returns true when last position in the game has occured 2 or more times, i.e. 3 fold
+repetition.(if 2, it will be 3 fold after the next move, a "claimed" draw).</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">fens</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_isCastleMove" class="method item inherited">
+    <h3 class="name"><code>isCastleMove</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>move</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_isCastleMove">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l809"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:809</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Returns true if a move is a castle move. This method does not validate if the king is allowed
+to move to the designated square.</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">move</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_isEnPassantMove" class="method item inherited">
+    <h3 class="name"><code>isEnPassantMove</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>move</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_isEnPassantMove">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l784"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:784</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Returns true if a move is an "en passant" move. Move is given in this format:</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">move</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <p>var move = {
+        from: Board0x88Config.mapping['e5'],
+        to: Board0x88Config.mapping['e6']
+    }
+console.log(parser.isEnPassantMove(move);</p>
+
+<p>Move is an object and requires properties "from" and "to" which is a numeric square(according to a 0x88 board).</p>
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_isOnSameFile" class="method item inherited">
+    <h3 class="name"><code>isOnSameFile</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>square1</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>square2</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_isOnSameFile">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l225"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:225</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Returns true if two squares are on the same file. Squares are in the 0x88 format, i.e.
+a1=0,a2=16. You can use Board0x88Config.mapping to get a more readable code.</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">square1</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">square2</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code"><code class="prettyprint">    var parser = new chess.parser.FenParser0x88();
+    console.log(parser.isOnSameFile(0,16)); // a1 and a2 -&gt; true
+    console.log(parser.isOnSameFile(0,1)); // a1 and b1 -&gt; false
+</code></pre>
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_isOnSameRank" class="method item inherited">
+    <h3 class="name"><code>isOnSameRank</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>square1</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>square2</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_isOnSameRank">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l209"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:209</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Returns true if two squares are on the same rank. Squares are in the 0x88 format, i.e.
+a1=0,a2=16. You can use Board0x88Config.mapping to get a more readable code.</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">square1</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">square2</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code"><code class="prettyprint">    var parser = new chess.parser.FenParser0x88();
+    console.log(parser.isOnSameSquare(0,16)); // a1 and a2 -&gt; false
+    console.log(parser.isOnSameSquare(0,1)); // a1 and b1 -&gt; true
+</code></pre>
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_isPromotionMove" class="method item">
+    <h3 class="name"><code>isPromotionMove</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>move</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>fen</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_move-0x88.js.html#l104"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;move-0x88.js:104</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Returns true if a move is promotion move</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">move</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">fen</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>:
+                    
+                    valid
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_isValid" class="method item">
+    <h3 class="name"><code>isValid</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>move</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>fen</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_move-0x88.js.html#l39"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;move-0x88.js:39</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Returns true if a move is valid</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">move</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">fen</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_makeMove" class="method item inherited">
+    <h3 class="name"><code>makeMove</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>move</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_makeMove">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l839"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:839</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Make a move by an object</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">move</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <p>var parser = new chess.parser.FenParser0x88('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1');
+parser.makeMove({from:'e2',to:'e4'});
+console.log(parser.getFen());</p>
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_makeMoveByNotation" class="method item inherited">
+    <h3 class="name"><code>makeMoveByNotation</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>notation</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_makeMoveByNotation">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l825"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:825</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Make a move by notation</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">notation</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                    undefined
+                
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <p>var parser = new chess.parser.FenParser0x88('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1');
+parser.makeMoveByNotation('e4');
+console.log(parser.getFen());</p>
+            </div>
+        </div>
+    
+</div>
+
+                
+                    <div id="method_setFen" class="method item inherited">
+    <h3 class="name"><code>setFen</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>fen</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="..&#x2F;classes&#x2F;chess.parser.FenParser0x88.html#method_setFen">chess.parser.FenParser0x88</a>:
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_parser0x88_fen-parser-0x88.js.html#l20"><code>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js:20</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Set a new position</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">fen</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

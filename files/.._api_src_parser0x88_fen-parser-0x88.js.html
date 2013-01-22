@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js - DHTML Chess</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.5.1&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.5.1&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;www.dhtml-chess.com&#x2F;images&#x2F;logo.png" title="DHTML Chess"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 0.0.2</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/chess.controller.AnalysisController.html">chess.controller.AnalysisController</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.controller.Controller.html">chess.controller.Controller</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.controller.TacticController.html">chess.controller.TacticController</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.dataSource.FolderTree.html">chess.dataSource.FolderTree</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.dataSource.GameList.html">chess.dataSource.GameList</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.model.Game.html">chess.model.Game</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.model.Move.html">chess.model.Move</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.parser.FenParser0x88.html">chess.parser.FenParser0x88</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.parser.Move0x88.html">chess.parser.Move0x88</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.parser.PositionValidator.html">chess.parser.PositionValidator</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.remote.GameReader.html">chess.remote.GameReader</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.board.Board.html">chess.view.board.Board</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.board.GUI.html">chess.view.board.GUI</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.board.Piece.html">chess.view.board.Piece</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.Comment.html">chess.view.dialog.Comment</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.GameImport.html">chess.view.dialog.GameImport</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.NewGame.html">chess.view.dialog.NewGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.OverwriteMove.html">chess.view.dialog.OverwriteMove</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.Promote.html">chess.view.dialog.Promote</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.eco.VariationTree.html">chess.view.eco.VariationTree</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.folder.Tree.html">chess.view.folder.Tree</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.gamelist.Grid.html">chess.view.gamelist.Grid</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.highlight.Arrow.html">chess.view.highlight.Arrow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.highlight.Square.html">chess.view.highlight.Square</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.installer.Installer.html">chess.view.installer.Installer</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.menuItems.GameImport.html">chess.view.menuItems.GameImport</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.menuItems.NewGame.html">chess.view.menuItems.NewGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.message.TacticMessage.html">chess.view.message.TacticMessage</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.metadata.FenField.html">chess.view.metadata.FenField</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.metadata.Game.html">chess.view.metadata.Game</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.metadata.Move.html">chess.view.metadata.Move</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.notation.Panel.html">chess.view.notation.Panel</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Board.html">chess.view.position.Board</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Castling.html">chess.view.position.Castling</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Dialog.html">chess.view.position.Dialog</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Pieces.html">chess.view.position.Pieces</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.SideToMove.html">chess.view.position.SideToMove</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.SaveGame.NewGame.html">chess.view.SaveGame.NewGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.Controller.html">chess.view.user.Controller</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.Country.html">chess.view.user.Country</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.LoginButton.html">chess.view.user.LoginButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.LoginWindow.html">chess.view.user.LoginWindow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.LogoutButton.html">chess.view.user.LogoutButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.Panel.html">chess.view.user.Panel</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.ProfileWindow.html">chess.view.user.ProfileWindow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.RegisterButton.html">chess.view.user.RegisterButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.RegisterWindow.html">chess.view.user.RegisterWindow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.SettingsButton.html">chess.view.user.SettingsButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/Board.html">Board</a></li>
+            
+                <li><a href="..&#x2F;modules/Controller.html">Controller</a></li>
+            
+                <li><a href="..&#x2F;modules/DataSource.html">DataSource</a></li>
+            
+                <li><a href="..&#x2F;modules/Dialog.html">Dialog</a></li>
+            
+                <li><a href="..&#x2F;modules/Grid.html">Grid</a></li>
+            
+                <li><a href="..&#x2F;modules/Installer.html">Installer</a></li>
+            
+                <li><a href="..&#x2F;modules/Menu.html">Menu</a></li>
+            
+                <li><a href="..&#x2F;modules/Model.html">Model</a></li>
+            
+                <li><a href="..&#x2F;modules/Parser.html">Parser</a></li>
+            
+                <li><a href="..&#x2F;modules/Tree.html">Tree</a></li>
+            
+                <li><a href="..&#x2F;modules/User.html">User</a></li>
+            
+                <li><a href="..&#x2F;modules/View.html">View</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: ..&#x2F;api&#x2F;src&#x2F;parser0x88&#x2F;fen-parser-0x88.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ Chess position parser
+ @module Parser
+ @namespace chess.parser
+ @class FenParser0x88
+ @constructor
+ @param {String} fen
+ @example
+ var parser = new chess.parser.FenParser0x88(&#x27;rnbqkbnr&#x2F;pppppppp&#x2F;8&#x2F;8&#x2F;8&#x2F;8&#x2F;PPPPPPPP&#x2F;RNBQKBNR w KQkq - 0 1&#x27;);
+ console.log(parser.getValidMovesAndResult(&#x27;white&#x27;));
+
+ *&#x2F;
+chess.parser.FenParser0x88 = new Class({
+	initialize:function (fen) {
+		if (fen) {
+			this.setFen(fen);
+		}
+	},
+
+	&#x2F;**
+	 * Set a new position
+	 * @method setFen
+	 * @param {String} fen
+	 *&#x2F;
+	setFen:function (fen) {
+		this.cache = {
+			&#x27;board&#x27;:[],
+			&#x27;white&#x27;:[],
+			&#x27;black&#x27;:[],
+			&#x27;whiteSliding&#x27;:[],
+			&#x27;blackSliding&#x27;:[],
+			&#x27;king&#x27;:{ &#x27;white&#x27;:undefined, &#x27;black&#x27;:&#x27;undefined&#x27;}
+		};
+		this.fen = fen;
+		this.updateFenArray(fen);
+		this.parseFen();
+	},
+
+	updateFenArray:function () {
+		var fenParts = this.fen.split(&#x27; &#x27;);
+
+		var castleCode = 0;
+		for (var i = 0; i &lt; fenParts[2].length; i++) {
+			castleCode += Board0x88Config.castle[fenParts[2].substr(i, 1)];
+		}
+
+		this.fenParts = {
+			&#x27;pieces&#x27;:fenParts[0],
+			&#x27;color&#x27;:fenParts[1],
+			&#x27;castle&#x27;:fenParts[2],
+			&#x27;castleCode&#x27;:castleCode,
+			&#x27;enPassant&#x27;:fenParts[3],
+			&#x27;halfMoves&#x27;:fenParts[4],
+			&#x27;fullMoves&#x27;:fenParts[5]
+		};
+	},
+
+	parseFen:function () {
+		var pos = 0;
+
+		var squares = Board0x88Config.fenSquares;
+		var index, type, piece;
+		for (var i = 0, len = this.fenParts[&#x27;pieces&#x27;].length; i &lt; len; i++) {
+			var token = this.fenParts[&#x27;pieces&#x27;].substr(i, 1);
+
+			if (Board0x88Config.fenPieces[token]) {
+				index = Board0x88Config.mapping[squares[pos]];
+				type = Board0x88Config.pieces[token];
+				piece = {
+					t:type,
+					s:index
+				};
+				&#x2F;&#x2F; Board array
+				this.cache[&#x27;board&#x27;][index] = type;
+
+				&#x2F;&#x2F; White and black array
+				this.cache[Board0x88Config.colorMapping[token]].push(piece);
+
+				&#x2F;&#x2F; King array
+				if (Board0x88Config.typeMapping[type] == &#x27;king&#x27;) {
+					this.cache[&#x27;king&#x27; + (piece.t &amp; 0x8 ? &#x27;black&#x27; : &#x27;white&#x27;)] = piece;
+				}
+				pos++;
+			} else if (i &lt; len - 1 &amp;&amp; Board0x88Config.numbers[token]) {
+				var token2 = this.fenParts[&#x27;pieces&#x27;].substr(i + 1, 1);
+				if (!isNaN(token2)) {
+					token = [token, token2].join(&#x27;&#x27;);
+				}
+				pos += parseInt(token);
+			}
+		}
+
+	},
+
+	getPieces:function () {
+		return this.cache[&#x27;white&#x27;].append(this.cache[&#x27;black&#x27;]);
+	},
+
+	getKing:function (color) {
+		return this.cache[&#x27;king&#x27; + color];
+	},
+
+	&#x2F;**
+	 Returns pieces of a color
+	 @method getPiecesOfAColor
+	 @param color
+	 @return {array}
+	 @example
+	 	var parser = new chess.parser.FenParser0x88(&#x27;5k2&#x2F;8&#x2F;8&#x2F;3pP3&#x2F;8&#x2F;8&#x2F;8&#x2F;7K w - d6 0 1&#x27;);
+	 	var pieces = parser.getPiecesOfAColor(&#x27;white&#x27;);
+	 	console.log(pieces);
+	 each piece is represented by an object like this:
+	 @example
+	 	{
+	 		s : 112,
+	 		t : 14
+	 	}
+	 where s is square and type is type. s is numeric according to the 0x88 chess board where
+	 a1 is 0, a2 is 16, b2 is 17, a3 is 32, i.e. a 128x64 square board.
+
+	 t is a numeric representation(4 bits).
+
+	 P : 0001
+	 N : 0010
+	 K : 0011
+	 B : 0101
+	 R : 0110
+	 Q : 0111
+	 p : 1001
+	 n : 1010
+	 k : 1011
+	 b : 1101
+	 r : 1100
+	 q : 1100
+
+	 As you can see, black pieces all have the first bit set to 1, and all the sliding pieces
+	 (bishop, rook and queen) has the second bit set to 1. This makes it easy to to determine color
+	 and sliding pieces using the bitwise &amp; operator.
+	 *&#x2F;
+	getPiecesOfAColor:function (color) {
+		return this.cache[color]
+	},
+
+	&#x2F;**
+	 @method getEnPassantSquare
+	 @return {String|null}
+	 @example
+	 	var fen = &#x27;5k2&#x2F;8&#x2F;8&#x2F;3pP3&#x2F;8&#x2F;8&#x2F;8&#x2F;7K w - d6 0 1&#x27;;
+	 	var parser = new chess.parser.FenParser0x88(fen);
+	 	alert(parser.getEnPassantSquare()); &#x2F;&#x2F; alerts &#x27;d6&#x27;
+	 *&#x2F;
+	getEnPassantSquare:function () {
+		var enPassant = this.fenParts[&#x27;enPassant&#x27;];
+		if (enPassant != &#x27;-&#x27;) {
+			return enPassant;
+		}
+		return null;
+	},
+	setEnPassantSquare:function (square) {
+		this.fenParts[&#x27;enPassant&#x27;] = square;
+	},
+
+	getSlidingPieces:function (color) {
+		return this.cache[color + &#x27;Sliding&#x27;];
+	},
+
+	getHalfMoves:function () {
+		return this.fenParts[&#x27;halfMoves&#x27;];
+	},
+
+	getFullMoves:function () {
+		return this.fenParts[&#x27;fullMoves&#x27;];
+	},
+
+	canCastleKingSide:function (color) {
+		var code = color === &#x27;white&#x27; ? Board0x88Config.castle[&#x27;K&#x27;] : Board0x88Config.castle[&#x27;k&#x27;];
+		return this.fenParts.castleCode &amp; code;
+	},
+
+	canCastleQueenSide:function (color) {
+		var code = color === &#x27;white&#x27; ? Board0x88Config.castle[&#x27;Q&#x27;] : Board0x88Config.castle[&#x27;q&#x27;];
+		return this.fenParts.castleCode &amp; code;
+	},
+
+	getColor:function () {
+		return Board0x88Config.colorAbbreviations[this.fenParts[&#x27;color&#x27;]];
+	},
+
+	getColorCode:function () {
+		return this.fenParts[&#x27;color&#x27;];
+	},
+
+	getPieceOnSquare:function (square) {
+		var piece = this.cache[&#x27;board&#x27;][square];
+		if (piece) {
+			return {
+				square:Board0x88Config.numberToSquareMapping[square],
+				type:Board0x88Config.typeMapping[piece],
+				color:piece &amp; 0x8 ? &#x27;black&#x27; : &#x27;white&#x27;,
+				sliding:piece &amp; 0x4
+			}
+		}
+		return null;
+	},
+
+	getPieceTypeOnSquare:function (square) {
+		return this.cache[&#x27;board&#x27;][square];
+	},
+	&#x2F;**
+	 * Returns true if two squares are on the same rank. Squares are in the 0x88 format, i.e.
+	 * a1=0,a2=16. You can use Board0x88Config.mapping to get a more readable code.
+	 @method isOnSameRank
+	 @param {Number} square1
+	 @param {Number} square2
+	 @return {Boolean}
+	 @example
+	 	var parser = new chess.parser.FenParser0x88();
+	 	console.log(parser.isOnSameSquare(0,16)); &#x2F;&#x2F; a1 and a2 -&gt; false
+	 	console.log(parser.isOnSameSquare(0,1)); &#x2F;&#x2F; a1 and b1 -&gt; true
+	 *&#x2F;
+	isOnSameRank:function (square1, square2) {
+		return (square1 &amp; 240) === (square2 &amp; 240);
+	},
+
+	&#x2F;**
+	 * Returns true if two squares are on the same file. Squares are in the 0x88 format, i.e.
+	 * a1=0,a2=16. You can use Board0x88Config.mapping to get a more readable code.
+	 @method isOnSameFile
+	 @param {Number} square1
+	 @param {Number} square2
+	 @return {Boolean}
+	 @example
+	 	var parser = new chess.parser.FenParser0x88();
+	 	console.log(parser.isOnSameFile(0,16)); &#x2F;&#x2F; a1 and a2 -&gt; true
+	 	console.log(parser.isOnSameFile(0,1)); &#x2F;&#x2F; a1 and b1 -&gt; false
+	 *&#x2F;
+	isOnSameFile:function (square1, square2) {
+		return (square1 &amp; 15) === (square2 &amp; 15);
+	},
+
+	&#x2F;**
+	 Returns valid moves and results for the position according to the 0x88 chess programming
+	 algorithm where position on the board is numeric (A1=0,H1=7,A2=16,H2=23,A3=32,A4=48).
+	 First rank is numbered 0-7. Second rank starts at first rank + 16, i.e. A2 = 16. Third
+	 rank starts at second rank + 16, i.e. A3 = 32 and so on.
+	 @method getValidMovesAndResult
+	 @param color
+	 @return {Object}
+	 @example
+	 	 var fen = &#x27;rnbqkbnr&#x2F;pppppppp&#x2F;8&#x2F;8&#x2F;8&#x2F;8&#x2F;PPPPPPPP&#x2F;RNBQKBNR w KQkq - 0 1&#x27;;
+	 	 var parser = new chess.parser.FenParser0x88(fen)
+	 	 console.log(parser.getValidMovesAndResult());
+	 returns an object containing information about number of checks(0,1 or 2 for double check),
+	 valid moves and result(0 for undecided, .5 for stalemate, -1 for black win and 1 for white win).
+	 moves are returend in the following format:
+
+	 	numeric square : [array of valid squares to move]
+	 example for knight on b1:
+	 @example
+	 	1 : [32,34]
+	 since it&#x27;s located on b1(numeric value 1) and can move to either a3 or c3(32 and 34).
+	 *&#x2F;
+	getValidMovesAndResult:function (color) {
+		color = color || this.getColor();
+		var ret = {}, directions;
+		var enPassantSquare = this.getEnPassantSquare();
+		if (enPassantSquare) {
+			enPassantSquare = Board0x88Config.mapping[enPassantSquare];
+		}
+
+		var kingSideCastle = this.canCastleKingSide(color);
+		var queenSideCastle = this.canCastleQueenSide(color);
+		var oppositeColor = color === &#x27;white&#x27; ? &#x27;black&#x27; : &#x27;white&#x27;;
+
+		var WHITE = color === &#x27;white&#x27;;
+
+		var protectiveMoves = this.getCaptureAndProtectiveMoves(oppositeColor);
+		var checks;
+		checks = this.getCountChecks(color, protectiveMoves);
+		var validSquares = null;
+		var pinned = [], pieces;
+		if (checks === 2) {
+			pieces = [this.getKing(color)];
+		} else {
+			pieces = this.cache[color];
+			pinned = this.getPinned(color);
+			if (checks === 1) {
+				validSquares = this.getValidSquaresOnCheck(color);
+			}
+		}
+		var totalCountMoves = 0, a, square;
+		for (var i = 0; i &lt; pieces.length; i++) {
+			var piece = pieces[i];
+			var paths = [];
+
+			switch (piece.t) {
+				&#x2F;&#x2F; pawns
+				case 0x01:
+					if (!pinned[piece.s] || (pinned[piece.s] &amp;&amp; this.isOnSameFile(piece.s, pinned[piece.s].by) )) {
+						if (!this.cache[&#x27;board&#x27;][piece.s + 16]) {
+							paths.push(piece.s + 16);
+							if (piece.s &lt; 32) {
+								if (!this.cache[&#x27;board&#x27;][piece.s + 32]) {
+									paths.push(piece.s + 32);
+								}
+							}
+						}
+					}
+					if (!pinned[piece.s] || (pinned[piece.s] &amp;&amp; pinned[piece.s].by === piece.s + 15)) {
+						if (enPassantSquare == piece.s + 15 || (this.cache[&#x27;board&#x27;][piece.s + 15]) &amp;&amp; this.cache[&#x27;board&#x27;][piece.s + 15] &amp; 0x8) {
+							paths.push(piece.s + 15);
+						}
+					}
+					if (!pinned[piece.s] || (pinned[piece.s] &amp;&amp; pinned[piece.s].by === piece.s + 17)) {
+						if (enPassantSquare == piece.s + 17 || (this.cache[&#x27;board&#x27;][piece.s + 17]) &amp;&amp; this.cache[&#x27;board&#x27;][piece.s + 17] &amp; 0x8) {
+							paths.push(piece.s + 17);
+						}
+					}
+					break;
+				case 0x09:
+					if (!pinned[piece.s] || (pinned[piece.s] &amp;&amp; this.isOnSameFile(piece.s, pinned[piece.s].by) )) {
+						if (!this.cache[&#x27;board&#x27;][piece.s - 16]) {
+							paths.push(piece.s - 16);
+							if (piece.s &gt; 87) {
+								if (!this.cache[&#x27;board&#x27;][piece.s - 32]) {
+									paths.push(piece.s - 32);
+								}
+							}
+						}
+					}
+					if (!pinned[piece.s] || (pinned[piece.s] &amp;&amp; pinned[piece.s].by === piece.s - 15)) {
+						if (enPassantSquare == piece.s - 15 || (this.cache[&#x27;board&#x27;][piece.s - 15]) &amp;&amp; !(this.cache[&#x27;board&#x27;][piece.s - 15] &amp; 0x8)) {
+							paths.push(piece.s - 15);
+						}
+					}
+					if (!pinned[piece.s] || (pinned[piece.s] &amp;&amp; pinned[piece.s].by === piece.s - 17)) {
+						if (enPassantSquare == piece.s - 17 || (this.cache[&#x27;board&#x27;][piece.s - 17]) &amp;&amp; !(this.cache[&#x27;board&#x27;][piece.s - 17] &amp; 0x8)) {
+							paths.push(piece.s - 17);
+						}
+					}
+
+					break;
+				&#x2F;&#x2F; Sliding pieces
+				case 0x05:
+				case 0x07:
+				case 0x06:
+				case 0x0D:
+				case 0x0E:
+				case 0x0F:
+					directions = Board0x88Config.movePatterns[piece.t];
+					if (pinned[piece.s]) {
+						if (directions.indexOf(pinned[piece.s].direction) &gt;= 0) {
+							directions = [pinned[piece.s].direction, pinned[piece.s].direction * -1];
+						} else {
+							directions = [];
+						}
+					}
+					for (a = 0; a &lt; directions.length; a++) {
+						square = piece.s + directions[a];
+						while ((square &amp; 0x88) === 0) {
+							if (this.cache[&#x27;board&#x27;][square]) {
+								if ((WHITE &amp;&amp; this.cache[&#x27;board&#x27;][square] &amp; 0x8) || (!WHITE &amp;&amp; !(this.cache[&#x27;board&#x27;][square] &amp; 0x8))) {
+									paths.push(square);
+								}
+								break;
+							}
+							paths.push(square);
+							square += directions[a];
+						}
+					}
+					break;
+				&#x2F;&#x2F; Knight
+				case 0x02:
+				case 0x0A:
+					if (pinned[piece.s]) {
+						break;
+					}
+					directions = Board0x88Config.movePatterns[piece.t];
+
+					for (a = 0; a &lt; directions.length; a++) {
+						square = piece.s + directions[a];
+						if ((square &amp; 0x88) === 0) {
+							if (this.cache[&#x27;board&#x27;][square]) {
+								if ((WHITE &amp;&amp; this.cache[&#x27;board&#x27;][square] &amp; 0x8) || ( !WHITE &amp;&amp; !(this.cache[&#x27;board&#x27;][square] &amp; 0x8))) {
+									paths.push(square);
+								}
+							} else {
+								paths.push(square);
+							}
+						}
+					}
+					break;
+				&#x2F;&#x2F; White king
+				&#x2F;&#x2F; Black king
+				case 0X03:
+				case 0X0B:
+					directions = Board0x88Config.movePatterns[piece.t];
+					for (a = 0; a &lt; directions.length; a++) {
+						square = piece.s + directions[a];
+						if ((square &amp; 0x88) === 0) {
+							if (protectiveMoves.indexOf(Board0x88Config.keySquares[square]) == -1) {
+								if (this.cache[&#x27;board&#x27;][square]) {
+									if ((WHITE &amp;&amp; this.cache[&#x27;board&#x27;][square] &amp; 0x8) || ( !WHITE &amp;&amp; !(this.cache[&#x27;board&#x27;][square] &amp; 0x8))) {
+										paths.push(square);
+									}
+								} else {
+									paths.push(square);
+								}
+							}
+						}
+					}
+					if (kingSideCastle &amp;&amp; protectiveMoves.indexOf(Board0x88Config.keySquares[piece.s]) == -1 &amp;&amp; protectiveMoves.indexOf(Board0x88Config.keySquares[piece.s + 1]) == -1 &amp;&amp; protectiveMoves.indexOf(Board0x88Config.keySquares[piece.s + 2]) == -1) {
+						paths.push(piece.s + 2);
+					}
+					if (queenSideCastle &amp;&amp; protectiveMoves.indexOf(Board0x88Config.keySquares[piece.s]) == -1 &amp;&amp; protectiveMoves.indexOf(Board0x88Config.keySquares[piece.s - 1]) == -1 &amp;&amp; protectiveMoves.indexOf(Board0x88Config.keySquares[piece.s - 2]) == -1) {
+						paths.push(piece.s - 2);
+					}
+					break;
+			}
+			if (validSquares &amp;&amp; piece.t != 0x03 &amp;&amp; piece.t != 0x0B) {
+				paths = this.excludeInvalidSquares(paths, validSquares);
+			}
+			ret[piece.s] = paths;
+			totalCountMoves += paths.length;
+		}
+		var result = 0;
+		if (checks &amp;&amp; !totalCountMoves) {
+			result = color === &#x27;black&#x27; ? 1 : -1;
+		}
+		else if (!checks &amp;&amp; !totalCountMoves) {
+			result = .5;
+		}
+		return { moves:ret, result:result, check:checks };
+	},
+
+	excludeInvalidSquares:function (squares, validSquares) {
+		var ret = [];
+		for (var i = 0; i &lt; squares.length; i++) {
+			if (validSquares.indexOf(squares[i]) &gt;= 0) {
+				ret.push(squares[i]);
+			}
+		}
+		return ret;
+	},
+
+	&#x2F;* This method returns a commaseparated string of moves since it&#x27;s faster to work with than arrays*&#x2F;
+	getCaptureAndProtectiveMoves:function (color) {
+		var ret = [], directions, square, a;
+
+		var pieces = this.cache[color];
+		var oppositeKingSquare = this.getKing(color === &#x27;white&#x27; ? &#x27;black&#x27; : &#x27;white&#x27;).s;
+
+		for (var i = 0; i &lt; pieces.length; i++) {
+			var piece = pieces[i];
+			switch (piece.t) {
+				&#x2F;&#x2F; pawns
+				case 0x01:
+					if (((piece.s + 15) &amp; 0x88) === 0) ret.push(piece.s + 15);
+					if (((piece.s + 17) &amp; 0x88) === 0) ret.push(piece.s + 17);
+					break;
+				case 0x09:
+					if (((piece.s - 15) &amp; 0x88) === 0) ret.push(piece.s - 15);
+					if (((piece.s - 17) &amp; 0x88) === 0) ret.push(piece.s - 17);
+					break;
+				&#x2F;&#x2F; Sliding pieces
+				case 0x05:
+				case 0x07:
+				case 0x06:
+				case 0x0D:
+				case 0x0E:
+				case 0x0F:
+					directions = Board0x88Config.movePatterns[piece.t];
+					for (a = 0; a &lt; directions.length; a++) {
+						square = piece.s + directions[a];
+						while ((square &amp; 0x88) === 0) {
+							if (this.cache[&#x27;board&#x27;][square] &amp;&amp; square !== oppositeKingSquare) {
+								ret.push(square);
+								break;
+							}
+							ret.push(square);
+							square += directions[a];
+						}
+					}
+					break;
+				&#x2F;&#x2F; knight
+				case 0x02:
+				case 0x0A:
+					&#x2F;&#x2F; White knight
+					directions = Board0x88Config.movePatterns[piece.t];
+					for (a = 0; a &lt; directions.length; a++) {
+						square = piece.s + directions[a];
+						if ((square &amp; 0x88) === 0) {
+							ret.push(square);
+						}
+					}
+					break;
+				&#x2F;&#x2F; king
+				case 0X03:
+				case 0X0B:
+					directions = Board0x88Config.movePatterns[piece.t];
+					for (a = 0; a &lt; directions.length; a++) {
+						square = piece.s + directions[a];
+						if ((square &amp; 0x88) === 0) {
+							ret.push(square);
+						}
+					}
+					break;
+			}
+
+		}
+		return &#x27;,&#x27; + ret.join(&#x27;,&#x27;) + &#x27;,&#x27;;
+	},
+
+	getSlidingPiecesAttackingKing:function (color) {
+		var ret = [];
+		var king = this.cache[&#x27;king&#x27; + (color === &#x27;white&#x27; ? &#x27;black&#x27; : &#x27;white&#x27;)];
+		var pieces = this.cache[color];
+		for (var i = 0; i &lt; pieces.length; i++) {
+			var piece = pieces[i];
+			if (piece.t &amp; 0x4) {
+				var numericDistance = king.s - piece.s;
+				var boardDistance = (king.s - piece.s) &#x2F; this.getDistance(king.s, piece.s);
+
+				switch (piece.t) {
+					&#x2F;&#x2F; Bishop
+					case 0x05:
+					case 0x0D:
+						if (numericDistance % 15 === 0 || numericDistance % 17 === 0) {
+							ret.push({ s:piece.s, p:boardDistance});
+						}
+						break;
+					&#x2F;&#x2F; Rook
+					case 0x06:
+					case 0x0E:
+						if (numericDistance % 16 === 0) {
+							ret.push({ s:piece.s, p:boardDistance});
+						}
+						else if ((piece.s &amp; 240) == (king.s &amp; 240)) {
+							ret.push({ s:piece.s, p:numericDistance &gt; 0 ? 1 : -1})
+						}
+						break;
+					&#x2F;&#x2F; Queen
+					case 0x07:
+					case 0x0F:
+						if (numericDistance % 15 === 0 || numericDistance % 17 === 0 || numericDistance % 16 === 0) {
+							ret.push({ s:piece.s, p:boardDistance});
+						}
+						else if ((piece.s &amp; 240) == (king.s &amp; 240)) {
+							ret.push({ s:piece.s, p:numericDistance &gt; 0 ? 1 : -1})
+						}
+						break;
+				}
+			}
+		}
+		return ret;
+	},
+
+	&#x2F;**
+	 * Return array of the squares where pieces are pinned, i.e. cannot move.
+	 * Squares are in the 0x88 format. You can use Board0x88Config.numberToSquareMapping
+	 * to translate to readable format, example: Board0x88Config.numberToSquareMapping[16] will give you &#x27;a2&#x27;
+	 * @method getPined
+	 * @param {String} color
+	 * @return {Array}
+	 *&#x2F;
+	getPinned:function (color) {
+		var ret = {};
+		var pieces = this.getSlidingPiecesAttackingKing((color === &#x27;white&#x27; ? &#x27;black&#x27; : &#x27;white&#x27;));
+		var WHITE = color === &#x27;white&#x27;;
+		var king = this.cache[&#x27;king&#x27; + color];
+		var i = 0;
+		while (i &lt; pieces.length) {
+			var piece = pieces[i];
+			var square = piece.s + piece.p;
+			var countPieces = 0;
+
+			var pinning = &#x27;&#x27;;
+			while (square !== king.s &amp;&amp; countPieces &lt; 2) {
+
+				if (this.cache[&#x27;board&#x27;][square]) {
+					countPieces++;
+					if ((!WHITE &amp;&amp; this.cache[&#x27;board&#x27;][square] &amp; 0x8) || (WHITE &amp;&amp; !(this.cache[&#x27;board&#x27;][square] &amp; 0x8))) {
+
+						pinning = square;
+					} else {
+						break;
+					}
+				}
+				square += piece.p;
+			}
+			if (countPieces === 1) {
+				ret[pinning] = { &#x27;by&#x27;:piece.s, &#x27;direction&#x27;:piece.p };
+			}
+			i++;
+		}
+		if (ret.length === 0) {
+			return null;
+		}
+		return ret;
+	},
+
+	getValidSquaresOnCheck:function (color) {
+		var ret = [], checks;
+		var king = this.cache[&#x27;king&#x27; + color];
+		var pieces = this.cache[color === &#x27;white&#x27; ? &#x27;black&#x27; : &#x27;white&#x27;];
+
+
+		for (var i = 0; i &lt; pieces.length; i++) {
+			var piece = pieces[i];
+
+			switch (piece.t) {
+				case 0x01:
+					if (king.s === piece.s + 15 || king.s === piece.s + 17) {
+						return [piece.s];
+					}
+					break;
+				case 0x09:
+					if (king.s === piece.s - 15 || king.s === piece.s - 17) {
+						return [piece.s];
+					}
+					break;
+				&#x2F;&#x2F; knight
+				case 0x02:
+				case 0x0A:
+					if (this.getDistance(piece.s, king.s) === 2) {
+						var directions = Board0x88Config.movePatterns[piece.t];
+						for (var a = 0; a &lt; directions.length; a++) {
+							var square = piece.s + directions[a];
+							if (square === king.s) {
+								return [piece.s];
+							}
+						}
+					}
+					break;
+				&#x2F;&#x2F; Bishop
+				case 0x05:
+				case 0x0D:
+					checks = this.getBishopCheckPath(piece, king);
+					if (checks) {
+						return checks;
+					}
+					break;
+				&#x2F;&#x2F; Rook
+				case 0x06:
+				case 0x0E:
+					checks = this.getRookCheckPath(piece, king);
+					if (checks) {
+						return checks;
+					}
+					break;
+				case 0x07:
+				case 0x0F:
+					checks = this.getRookCheckPath(piece, king);
+					if (checks) {
+						return checks;
+					}
+					checks = this.getBishopCheckPath(piece, king);
+					if (checks) {
+						return checks;
+					}
+					break;
+			}
+
+		}
+
+		return ret;
+	},
+
+	getBishopCheckPath:function (piece, king) {
+		if ((king.s - piece.s) % 15 === 0 || (king.s - piece.s) % 17 === 0) {
+			var direction = (king.s - piece.s) &#x2F; this.getDistance(piece.s, king.s);
+			var square = piece.s + direction;
+			var pieceFound = false;
+			var squares = [piece.s];
+			while (square !== king.s &amp;&amp; !pieceFound) {
+				squares.push(square);
+				if (this.cache[&#x27;board&#x27;][square]) {
+					pieceFound = true;
+				}
+				square += direction;
+			}
+			if (!pieceFound) {
+				return squares;
+			}
+		}
+		return null;
+	},
+
+	getRookCheckPath:function (piece, king) {
+		var direction = null;
+		if (this.isOnSameFile(piece.s, king.s)) {
+			direction = (king.s - piece.s) &#x2F; this.getDistance(piece.s, king.s);
+		} else if (this.isOnSameRank(piece.s, king.s)) {
+			direction = king.s &gt; piece.s ? 1 : -1;
+		}
+		if (direction) {
+			var square = piece.s + direction;
+			var pieceFound = false;
+			var squares = [piece.s];
+			while (square !== king.s &amp;&amp; !pieceFound) {
+				squares.push(square);
+				if (this.cache[&#x27;board&#x27;][square]) {
+					pieceFound = true;
+				}
+				square += direction;
+			}
+			if (!pieceFound) {
+				return squares;
+			}
+		}
+		return undefined;
+	},
+
+
+	getCountChecks:function (kingColor, moves) {
+		var king = this.cache[&#x27;king&#x27; + kingColor];
+		var index = moves.indexOf(Board0x88Config.keySquares[king.s]);
+		if (index &gt; 0) {
+			if (moves.indexOf(Board0x88Config.keySquares[king.s], index + 3) &gt;= 0) {
+				return 2;
+			}
+			return 1;
+		}
+		return 0;
+	},
+
+	&#x2F;**
+	 * Returns distance between two sqaures
+	 * @method getDistance
+	 * @param {Number} sq1
+	 * @param {Number} sq2
+	 * @return {Number} distance
+	 *&#x2F;
+	getDistance:function (sq1, sq2) {
+		return Board0x88Config.distances[sq2 - sq1 + (sq2 | 7) - (sq1 | 7) + 240];
+	},
+
+
+	getPiecesInvolvedInMove:function (move) {
+		var ret = [
+			{ from:move.from, to:move.to }
+		];
+		var square;
+		move = {
+			from:Board0x88Config.mapping[move.from],
+			to:Board0x88Config.mapping[move.to],
+			promoteTo:move.promoteTo
+		};
+
+		var color = (this.cache[&#x27;board&#x27;][move.from] &amp; 0x8) ? &#x27;black&#x27; : &#x27;white&#x27;;
+
+		if (this.isEnPassantMove(move)) {
+			if (color == &#x27;black&#x27;) {
+				square = move.to + 16;
+
+			} else {
+				square = move.to - 16;
+			}
+			ret.push({ capture:Board0x88Config.numberToSquareMapping[square]})
+		}
+
+		if (this.isCastleMove(move)) {
+			if ((move.from &amp; 15) &lt; (move.to &amp; 15)) {
+				ret.push({
+					from:&#x27;h&#x27; + (color == &#x27;white&#x27; ? 1 : 8),
+					to:&#x27;f&#x27; + (color == &#x27;white&#x27; ? 1 : 8)
+				});
+			} else {
+				ret.push({
+					from:&#x27;a&#x27; + (color == &#x27;white&#x27; ? 1 : 8),
+					to:&#x27;d&#x27; + (color == &#x27;white&#x27; ? 1 : 8)
+				});
+			}
+		}
+
+		if (move.promoteTo) {
+			ret.push({
+				promoteTo:move.promoteTo, square:Board0x88Config.numberToSquareMapping[move.to]
+			});
+		}
+		return ret;
+	},
+
+	&#x2F;**
+	 Returns true if a move is an &quot;en passant&quot; move. Move is given in this format:
+	 @method isEnPassantMove
+	 @param {Object} move
+	 @return {Boolean}
+	 @example
+	 var move = {
+	 		from: Board0x88Config.mapping[&#x27;e5&#x27;],
+	 		to: Board0x88Config.mapping[&#x27;e6&#x27;]
+	 	}
+	 console.log(parser.isEnPassantMove(move);
+
+	 Move is an object and requires properties &quot;from&quot; and &quot;to&quot; which is a numeric square(according to a 0x88 board).
+	 *&#x2F;
+	isEnPassantMove:function (move) {
+		if ((this.cache[&#x27;board&#x27;][move.from] === 0x01 || this.cache[&#x27;board&#x27;][move.from] == 0x09)) {
+			if (
+				!this.cache[&#x27;board&#x27;][move.to] &amp;&amp;
+					((move.from - move.to) % 17 === 0 || (move.from - move.to) % 15 === 0)) {
+				return true;
+			}
+		}
+		return false;
+	},
+
+	&#x2F;**
+	 Returns true if a move is a castle move. This method does not validate if the king is allowed
+	 to move to the designated square.
+	 @method isCastleMove
+	 @param {Object} move
+	 @return {Boolean}
+	 *&#x2F;
+	isCastleMove:function (move) {
+		if ((this.cache[&#x27;board&#x27;][move.from] === 0x03 || this.cache[&#x27;board&#x27;][move.from] == 0x0B)) {
+			if (this.getDistance(move.from, move.to) === 2) {
+				return true;
+			}
+		}
+		return false;
+	},
+
+	&#x2F;**
+	 Make a move by notation
+	 @method makeMoveByNotation
+	 @param {String} notation
+	 @return undefined
+	 @example
+	 var parser = new chess.parser.FenParser0x88(&#x27;rnbqkbnr&#x2F;pppppppp&#x2F;8&#x2F;8&#x2F;8&#x2F;8&#x2F;PPPPPPPP&#x2F;RNBQKBNR w KQkq - 0 1&#x27;);
+	 parser.makeMoveByNotation(&#x27;e4&#x27;);
+	 console.log(parser.getFen());
+	 *&#x2F;
+	makeMoveByNotation:function (notation) {
+		this.makeMove(this.getFromAndToByNotation(notation));
+	},
+
+	&#x2F;**
+	 Make a move by an object
+	 @method makeMove
+	 @param {Object} move
+	 @example
+	 var parser = new chess.parser.FenParser0x88(&#x27;rnbqkbnr&#x2F;pppppppp&#x2F;8&#x2F;8&#x2F;8&#x2F;8&#x2F;PPPPPPPP&#x2F;RNBQKBNR w KQkq - 0 1&#x27;);
+	 parser.makeMove({from:&#x27;e2&#x27;,to:&#x27;e4&#x27;});
+	 console.log(parser.getFen());
+	 *&#x2F;
+	makeMove:function (move) {
+		this.updateBoardData(move);
+		this.fen = undefined;
+	},
+
+	&#x2F;**
+	 * Returns true when last position in the game has occured 2 or more times, i.e. 3 fold
+	 * repetition.(if 2, it will be 3 fold after the next move, a &quot;claimed&quot; draw).
+	 * @method hasThreeFoldRepetition
+	 * @param fens
+	 * @return {Boolean}
+	 *&#x2F;
+	hasThreeFoldRepetition:function (fens) {
+		if (fens === undefined || fens.length === 0)return false;
+		var shortenedFens = {};
+		for (var i = 0; i &lt; fens.length; i++) {
+			var fen = this.getTruncatedFenWithColorAndCastle(fens[i]);
+			if (shortenedFens[fen] === undefined) {
+				shortenedFens[fen] = 0;
+			}
+			shortenedFens[fen]++;
+		}
+		var lastFen = this.getTruncatedFenWithColorAndCastle(fens[fens.length - 1]);
+		return shortenedFens[lastFen] &gt;= 2;
+	},
+
+	getTruncatedFenWithColorAndCastle:function (fen) {
+		return fen.split(&#x2F;\s&#x2F;g).slice(0, 3).join(&#x27; &#x27;);
+	},
+
+	getPromoteByNotation:function (notation) {
+		if (notation.indexOf(&#x27;=&#x27;) &gt; 0) {
+			var piece = notation.replace(&#x2F;^.*?=([QRBN]).*$&#x2F;, &#x27;$1&#x27;);
+			return Board0x88Config.pieceAbbr[piece];
+		}
+		if (notation.match(&#x2F;[a-h][18][NBRQ]&#x2F;)) {
+			notation = notation.replace(&#x2F;[^a-h18NBRQ]&#x2F;g, &#x27;&#x27;);
+			return Board0x88Config.pieceAbbr[notation.substr(notation.length - 1, 1)];
+		}
+		return &#x27;&#x27;;
+	},
+
+	getFromAndToByNotation:function (notation) {
+		var ret = { promoteTo:this.getPromoteByNotation(notation)};
+		var color = this.getColor();
+		var offset = 0;
+		if (color === &#x27;black&#x27;) {
+			offset = 112;
+		}
+		var validMoves = this.getValidMovesAndResult().moves;
+
+		var foundPieces = [], offsets, sq, i;
+		if (notation === &#x27;OO&#x27;)notation = &#x27;O-O&#x27;;
+		if (notation === &#x27;OOO&#x27;)notation = &#x27;O-O-O&#x27;;
+		if (notation.length === 2) {
+			var square = Board0x88Config.mapping[notation];
+			ret.to = Board0x88Config.mapping[notation];
+			var direction = color === &#x27;white&#x27; ? -16 : 16;
+			if (this.cache[&#x27;board&#x27;][square + direction]) {
+				foundPieces.push(square + direction);
+			} else {
+				foundPieces.push(square + (direction * 2));
+			}
+
+		} else {
+			var fromRank = this.getFromRankByNotation(notation);
+			var fromFile = this.getFromFileByNotation(notation);
+
+			notation = notation.replace(&#x2F;=[QRBN]&#x2F;, &#x27;&#x27;);
+			notation = notation.replace(&#x2F;[\+#!\?]&#x2F;g, &#x27;&#x27;);
+			notation = notation.replace(&#x2F;^(.*?)[QRBN]$&#x2F;g, &#x27;$1&#x27;);
+			var pieceType = this.getPieceTypeByNotation(notation, color);
+
+			ret.to = this.getToSquareByNotation(notation);
+
+			switch (pieceType) {
+				case 0x01:
+				case 0x09:
+					if (color === &#x27;black&#x27;) {
+						offsets = [15, 17, 16];
+						if (ret.to &gt; 48) {
+							offsets.push(32);
+						}
+					} else {
+						offsets = [-15, -17, -16];
+						if (ret.to &lt; 64) {
+							offsets.push(-32);
+						}
+					}
+					for (i = 0; i &lt; offsets.length; i++) {
+						sq = ret.to + offsets[i];
+						if (this.cache[&#x27;board&#x27;][sq] &amp;&amp; this.cache[&#x27;board&#x27;][sq] === pieceType &amp;&amp; validMoves[sq].indexOf(ret.to) &gt;= 0) {
+							foundPieces.push(sq);
+						}
+					}
+
+
+					break;
+				case 0x03:
+				case 0x0B:
+
+					if (notation === &#x27;O-O&#x27;) {
+						foundPieces.push(offset + 4);
+						ret.to = offset + 6;
+					} else if (notation === &#x27;O-O-O&#x27;) {
+						foundPieces.push(offset + 4);
+						ret.to = offset + 2;
+					} else {
+						foundPieces.push(this.getKing(color).s);
+					}
+					break;
+				case 0x02:
+				case 0x0A:
+					var pattern = Board0x88Config.movePatterns[pieceType];
+					for (i = 0; i &lt; pattern.length; i++) {
+						sq = ret.to + pattern[i];
+						if (!(sq &amp; 0x88)) {
+							if (this.cache[&#x27;board&#x27;][sq] &amp;&amp; this.cache[&#x27;board&#x27;][sq] === pieceType &amp;&amp; validMoves[sq].indexOf(ret.to) &gt;= 0) {
+								foundPieces.push(sq);
+								if (fromRank === null &amp;&amp; fromFile === null) {
+									break;
+								}
+							}
+						}
+					}
+
+					break;
+				&#x2F;&#x2F; Sliding pieces
+				default:
+					var patterns = Board0x88Config.movePatterns[pieceType];
+
+					for (i = 0; i &lt; patterns.length; i++) {
+						sq = ret.to + patterns[i];
+						while (!(sq &amp; 0x88)) {
+							if (this.cache[&#x27;board&#x27;][sq] &amp;&amp; this.cache[&#x27;board&#x27;][sq] === pieceType &amp;&amp; validMoves[sq].indexOf(ret.to) &gt;= 0) {
+								foundPieces.push(sq);
+								if (fromRank === null &amp;&amp; fromFile === null) {
+									break;
+								}
+							}
+							sq += patterns[i];
+						}
+					}
+					break;
+			}
+		}
+
+		if (foundPieces.length === 1) {
+			ret.from = foundPieces[0];
+		} else {
+
+			if (fromRank &gt;= 0 &amp;&amp; fromRank !== null) {
+				for (i = 0; i &lt; foundPieces.length; i++) {
+					if (this.isOnSameRank(foundPieces[i], fromRank)) {
+						ret.from = foundPieces[i];
+						break;
+					}
+				}
+			}
+			else if (fromFile &gt;= 0 &amp;&amp; fromFile !== null) {
+				for (i = 0; i &lt; foundPieces.length; i++) {
+					if (this.isOnSameFile(foundPieces[i], fromFile)) {
+						ret.from = foundPieces[i];
+						break;
+					}
+				}
+			}
+		}
+		ret.from = Board0x88Config.numberToSquareMapping[ret.from];
+		ret.to = Board0x88Config.numberToSquareMapping[ret.to];
+
+		return ret;
+	},
+	&#x2F;**
+	 Get from rank by notation, 0 is first rank, 16 is second rank, 32 is third rank etc.
+	 @method getFromRankByNotation
+	 @param {String} notation
+	 @return {Number}
+	 *&#x2F;
+	getFromRankByNotation:function (notation) {
+		notation = notation.replace(&#x2F;^.+([0-9]).+[0-9].*$&#x2F;g, &#x27;$1&#x27;);
+		if (notation.length &gt; 1) {
+			return null;
+		}
+		return (notation - 1) * 16;
+	},
+
+	&#x2F;**
+	 * Get from rank by notation. 0 is first file(a), 1 is second file(b), 2 is third file etc.
+	 * @method getFromFileByNotation
+	 * @param {String} notation
+	 * @return {Number}
+	 *&#x2F;
+	getFromFileByNotation:function (notation) {
+		notation = notation.replace(&#x2F;^.*([a-h]).*[a-h].*$&#x2F;g, &#x27;$1&#x27;);
+		if (notation.length &gt; 1) {
+			return null;
+		}
+		return Board0x88Config.files[notation];
+	},
+	&#x2F;**
+	 * Return numeric destination square by notation.
+	 * @method getToSquareByNotation
+	 * @param {String} notation
+	 * @return {Number} square
+	 *&#x2F;
+	getToSquareByNotation:function (notation) {
+		return Board0x88Config.mapping[notation.replace(&#x2F;.*([a-h][1-8]).*&#x2F;g, &#x27;$1&#x27;)];
+	},
+
+	getPieceTypeByNotation:function (notation, color) {
+		notation = notation.replace(&#x2F;=[NBRQ]&#x2F;, &#x27;&#x27;);
+		if (notation === &#x27;O-O-O&#x27; || notation === &#x27;O-O&#x27;) {
+			notation = &#x27;K&#x27;;
+		} else {
+			notation = notation.replace(&#x2F;.*?([NRBQK]).*&#x2F;g, &#x27;$1&#x27;);
+			if (!notation || notation.length &gt; 1) {
+				notation = &#x27;P&#x27;;
+			}
+		}
+
+		notation = Board0x88Config.pieces[notation];
+		if (color === &#x27;black&#x27;) {
+			notation += 8;
+		}
+
+		return notation;
+	},
+
+	move:function (move) {
+		if (ludo.util.isString(move)) {
+			move = this.getFromAndToByNotation(move);
+		}
+		if (!move.promoteTo &amp;&amp; move.m &amp;&amp; move.m.indexOf(&#x27;=&#x27;) &gt;= 0) {
+			move.promoteTo = this.getPromoteByNotation(move.m);
+		}
+		this.fen = undefined;
+		this.piecesInvolved = this.getPiecesInvolvedInMove(move);
+		this.notation = this.getNotationForAMove(move);
+		this.longNotation = this.getLongNotationForAMove(move, this.notation);
+		this.updateBoardData(move);
+
+		var config = this.getValidMovesAndResult();
+
+		if (config.result === 1 || config.result === -1) {
+			this.notation += &#x27;#&#x27;;
+			this.longNotation += &#x27;#&#x27;;
+		} else {
+			if (config.check) {
+				this.notation += &#x27;+&#x27;;
+				this.longNotation += &#x27;+&#x27;;
+			}
+		}
+	},
+
+	setNewColor:function () {
+		this.fenParts[&#x27;color&#x27;] = (this.fenParts[&#x27;color&#x27;] == &#x27;w&#x27;) ? &#x27;b&#x27; : &#x27;w&#x27;;
+
+	},
+
+	setCastle:function (castle) {
+		if (!castle) {
+			castle = &#x27;-&#x27;;
+		}
+		this.fenParts[&#x27;castle&#x27;] = castle;
+	},
+	getCastle:function () {
+		return this.fenParts[&#x27;castle&#x27;];
+	},
+
+	updateBoardData:function (move) {
+		move = {
+			from:Board0x88Config.mapping[move.from],
+			to:Board0x88Config.mapping[move.to],
+			promoteTo:move.promoteTo
+		};
+		var movedPiece = this.cache[&#x27;board&#x27;][move.from];
+		var color = (movedPiece &amp; 0x8) ? &#x27;black&#x27; : &#x27;white&#x27;;
+		var enPassant = &#x27;-&#x27;;
+
+		var incrementHalfMoves = this.cache[&#x27;board&#x27;][move.to] ? false : true;
+
+		if ((this.cache[&#x27;board&#x27;][move.from] === 0x01 || this.cache[&#x27;board&#x27;][move.from] == 0x09)) {
+			incrementHalfMoves = false;
+			if (this.isEnPassantMove(move)) {
+				if (color == &#x27;black&#x27;) {
+					this.cache[&#x27;board&#x27;][move.to + 16] = undefined;
+				} else {
+					this.cache[&#x27;board&#x27;][move.to - 16] = undefined;
+				}
+			}
+
+			if ((move.from &amp; 15) == (move.to &amp; 15) &amp;&amp; this.getDistance(move.from, move.to) == 2) {
+				if (this.cache[&#x27;board&#x27;][move.to - 1] || this.cache[&#x27;board&#x27;][move.to + 1]) {
+					if (color === &#x27;white&#x27;) {
+						enPassant = Board0x88Config.numberToSquareMapping[move.from + 16];
+					} else {
+						enPassant = Board0x88Config.numberToSquareMapping[move.from - 16];
+					}
+				}
+			}
+		}
+
+		this.setEnPassantSquare(enPassant);
+		var castleNotation, pieceType, offset;
+		if (this.isCastleMove({ from:move.from, to:move.to })) {
+			var castle = this.getCastle();
+			if (color == &#x27;white&#x27;) {
+				castleNotation = new RegExp(&#x27;[KQ]&#x27;, &#x27;g&#x27;);
+				pieceType = 0x06;
+				offset = 0;
+			} else {
+				castleNotation = new RegExp(&#x27;[kq]&#x27;, &#x27;g&#x27;);
+				pieceType = 0x0E;
+				offset = 112;
+			}
+
+			if (move.from &lt; move.to) {
+				this.cache[&#x27;board&#x27;][7 + offset] = undefined;
+				this.cache[&#x27;board&#x27;][5 + offset] = pieceType;
+
+			} else {
+				this.cache[&#x27;board&#x27;][0 + offset] = undefined;
+				this.cache[&#x27;board&#x27;][3 + offset] = pieceType;
+			}
+			castle = castle.replace(castleNotation, &#x27;&#x27;);
+			this.setCastle(castle);
+		} else {
+			this.updateCastleForMove(movedPiece, move.from);
+		}
+
+		if (color === &#x27;black&#x27;) {
+			this.incrementFullMoves();
+		}
+		if (incrementHalfMoves) {
+			this.incrementHalfMoves();
+		} else {
+			this.resetHalfMoves();
+		}
+		this.cache[&#x27;board&#x27;][move.to ] = this.cache[&#x27;board&#x27;][move.from ];
+		this.cache[&#x27;board&#x27;][move.from ] = undefined;
+		if (move.promoteTo) {
+			this.cache[&#x27;board&#x27;][move.to] = Board0x88Config.typeToNumberMapping[move.promoteTo];
+			if (color === &#x27;black&#x27;) {
+				this.cache[&#x27;board&#x27;][move.to] += 8;
+			}
+		}
+		this.setNewColor();
+		this.updatePieces();
+	},
+
+	updateCastleForMove:function (movedPiece, from) {
+		switch (movedPiece) {
+			case 0x03:
+				this.setCastle(this.getCastle().replace(&#x2F;[KQ]&#x2F;g, &#x27;&#x27;));
+				break;
+			case 0x0B:
+				this.setCastle(this.getCastle().replace(&#x2F;[kq]&#x2F;g, &#x27;&#x27;));
+				break;
+			case 0x06:
+				if (from === 0) {
+					this.setCastle(this.getCastle().replace(&#x2F;[Q]&#x2F;g, &#x27;&#x27;));
+				}
+				if (from === 7) {
+					this.setCastle(this.getCastle().replace(&#x2F;[K]&#x2F;g, &#x27;&#x27;));
+				}
+				break;
+			case 0x0E:
+				if (from === 112) {
+					this.setCastle(this.getCastle().replace(&#x2F;[q]&#x2F;g, &#x27;&#x27;));
+				}
+				if (from === 119) {
+					this.setCastle(this.getCastle().replace(&#x2F;[k]&#x2F;g, &#x27;&#x27;));
+				}
+				break;
+		}
+
+	},
+
+	updatePieces:function () {
+		this.cache[&#x27;white&#x27;] = [];
+		this.cache[&#x27;black&#x27;] = [];
+		var piece = null;
+		for (var i = 0; i &lt; 120; i++) {
+			if (i &amp; 0x88) {
+				i += 8;
+			}
+			if (piece = this.cache[&#x27;board&#x27;][i]) {
+				var color = piece &amp; 0x8 ? &#x27;black&#x27; : &#x27;white&#x27;;
+				var obj = {
+					t:piece,
+					s:i
+				};
+				this.cache[color].push(obj);
+
+				if (piece == 0x03 || piece == 0x0B) {
+					this.cache[&#x27;king&#x27; + color] = obj;
+				}
+			}
+		}
+	},
+
+	incrementFullMoves:function () {
+		this.fenParts[&#x27;fullMoves&#x27;]++;
+	},
+	incrementHalfMoves:function () {
+		this.fenParts[&#x27;halfMoves&#x27;]++;
+	},
+	resetHalfMoves:function () {
+		this.fenParts[&#x27;halfMoves&#x27;] = 0;
+	},
+
+	getPiecesInvolvedInLastMove:function () {
+		return this.piecesInvolved;
+	},
+
+	getNotation:function () {
+		return this.notation;
+	},
+	getLongNotation:function () {
+		return this.longNotation;
+	},
+	&#x2F;**
+	 * Return current fen position
+	 * @method getFen
+	 * @return {String} fen
+	 *&#x2F;
+	getFen:function () {
+		if (!this.fen) {
+			this.fen = this.setNewFen();
+		}
+		return this.fen;
+	},
+
+	&#x2F;**
+	 * Return long notation for a move
+	 * @method getLongNotationForAMove
+	 * @param {Object} move
+	 * @param {String} shortNotation
+	 * @return {String} long notation
+	 *&#x2F;
+	getLongNotationForAMove:function (move, shortNotation) {
+		if (shortNotation.indexOf(&#x27;O-&#x27;) &gt;= 0) {
+			return shortNotation;
+		}
+		var fromSquare = move.from;
+		var toSquare = move.to;
+
+
+		var type = this.cache[&#x27;board&#x27;][Board0x88Config.mapping[move.from]];
+		type = Board0x88Config.typeMapping[type];
+		var separator = shortNotation.indexOf(&#x27;x&#x27;) &gt;= 0 ? &#x27;x&#x27; : &#x27;-&#x27;;
+
+		var ret = chess.language.pieces[type] + fromSquare + separator + toSquare;
+
+		if (move.promoteTo) {
+			ret += &#x27;=&#x27; + chess.language.pieces[move.promoteTo];
+		}
+		return ret;
+	},
+
+	&#x2F;**
+	 Return short notation for a move
+	 @method getNotationForAMove
+	 @param {Object} move
+	 @return {String}
+	 @example
+	 alert(parser.getNotationForAMove({from:&#x27;g1&#x27;,to:&#x27;f3&#x27;});
+	 *&#x2F;
+	getNotationForAMove:function (move) {
+		move = {
+			from:Board0x88Config.mapping[move.from],
+			to:Board0x88Config.mapping[move.to],
+			promoteTo:move.promoteTo
+		};
+
+		var type = this.cache[&#x27;board&#x27;][move.from];
+
+		var ret = chess.language.pieces[Board0x88Config.typeMapping[this.cache[&#x27;board&#x27;][move.from]]];
+
+		switch (type) {
+			case 0x01:
+			case 0x09:
+				if (this.isEnPassantMove(move) || this.cache[&#x27;board&#x27;][move.to]) {
+					ret += Board0x88Config.fileMapping[move.from &amp; 15] + &#x27;x&#x27;;
+				}
+
+				ret += Board0x88Config.fileMapping[move.to &amp; 15] + &#x27;&#x27; + Board0x88Config.rankMapping[move.to &amp; 240];
+
+				if (move.promoteTo) {
+					ret += &#x27;=&#x27; + chess.language.pieces[move.promoteTo];
+				}
+				break;
+			case 0x02:
+			case 0x05:
+			case 0x06:
+			case 0x07:
+			case 0x0A:
+			case 0x0D:
+			case 0x0E:
+			case 0x0F:
+				var config = this.getValidMovesAndResult();
+				for (var square in config.moves) {
+					if (square != move.from &amp;&amp; this.cache[&#x27;board&#x27;][square] === type) {
+						if (config.moves[square].indexOf(move.to) &gt;= 0) {
+							if ((square &amp; 15) != (move.from &amp; 15)) {
+								ret += Board0x88Config.fileMapping[move.from &amp; 15];
+							}
+							else if ((square &amp; 240) != (move.from &amp; 240)) {
+								ret += Board0x88Config.rankMapping[move.from &amp; 240];
+							}
+						}
+					}
+				}
+				if (this.cache[&#x27;board&#x27;][move.to]) {
+					ret += &#x27;x&#x27;;
+				}
+				ret += Board0x88Config.fileMapping[move.to &amp; 15] + &#x27;&#x27; + Board0x88Config.rankMapping[move.to &amp; 240];
+				break;
+			case 0x03:
+			case 0x0B:
+				if (this.isCastleMove(move)) {
+					if (move.to &gt; move.from) {
+						ret = &#x27;O-O&#x27;;
+					} else {
+						ret = &#x27;O-O-O&#x27;;
+					}
+				} else {
+					if (this.cache[&#x27;board&#x27;][move.to]) {
+						ret += &#x27;x&#x27;;
+					}
+					ret += Board0x88Config.fileMapping[move.to &amp; 15] + &#x27;&#x27; + Board0x88Config.rankMapping[move.to &amp; 240];
+				}
+				break;
+
+		}
+		return ret;
+	},
+
+	setNewFen:function () {
+		var board = this.cache[&#x27;board&#x27;];
+		var fen = &#x27;&#x27;;
+		var emptyCounter = 0;
+
+		for (var rank = 7; rank &gt;= 0; rank--) {
+
+			for (var file = 0; file &lt; 8; file++) {
+				var index = (rank * 8) + file;
+
+				if (board[Board0x88Config.numericMapping[index]]) {
+					if (emptyCounter) {
+						fen += emptyCounter;
+					}
+					fen += Board0x88Config.pieceMapping[board[Board0x88Config.numericMapping[index]]];
+					emptyCounter = 0;
+				} else {
+					emptyCounter++;
+				}
+			}
+			if (rank) {
+				if (emptyCounter) {
+					fen += emptyCounter;
+				}
+				fen += &#x27;&#x2F;&#x27;;
+				emptyCounter = 0;
+			}
+		}
+
+		if (emptyCounter) {
+			fen += emptyCounter;
+		}
+
+		return [fen, this.getColorCode(), this.getCastle(), this.fenParts[&#x27;enPassant&#x27;], this.getHalfMoves(), this.getFullMoves()].join(&#x27; &#x27;);
+	}
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

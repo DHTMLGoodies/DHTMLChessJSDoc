@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>chess.controller.Controller - DHTML Chess</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.5.1&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.5.1&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;www.dhtml-chess.com&#x2F;images&#x2F;logo.png" title="DHTML Chess"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 0.0.2</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/chess.controller.AnalysisController.html">chess.controller.AnalysisController</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.controller.Controller.html">chess.controller.Controller</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.controller.TacticController.html">chess.controller.TacticController</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.dataSource.FolderTree.html">chess.dataSource.FolderTree</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.dataSource.GameList.html">chess.dataSource.GameList</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.model.Game.html">chess.model.Game</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.model.Move.html">chess.model.Move</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.parser.FenParser0x88.html">chess.parser.FenParser0x88</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.parser.Move0x88.html">chess.parser.Move0x88</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.parser.PositionValidator.html">chess.parser.PositionValidator</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.remote.GameReader.html">chess.remote.GameReader</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.board.Board.html">chess.view.board.Board</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.board.GUI.html">chess.view.board.GUI</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.board.Piece.html">chess.view.board.Piece</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.Comment.html">chess.view.dialog.Comment</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.GameImport.html">chess.view.dialog.GameImport</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.NewGame.html">chess.view.dialog.NewGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.OverwriteMove.html">chess.view.dialog.OverwriteMove</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.Promote.html">chess.view.dialog.Promote</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.eco.VariationTree.html">chess.view.eco.VariationTree</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.folder.Tree.html">chess.view.folder.Tree</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.gamelist.Grid.html">chess.view.gamelist.Grid</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.highlight.Arrow.html">chess.view.highlight.Arrow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.highlight.Square.html">chess.view.highlight.Square</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.installer.Installer.html">chess.view.installer.Installer</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.menuItems.GameImport.html">chess.view.menuItems.GameImport</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.menuItems.NewGame.html">chess.view.menuItems.NewGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.message.TacticMessage.html">chess.view.message.TacticMessage</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.metadata.FenField.html">chess.view.metadata.FenField</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.metadata.Game.html">chess.view.metadata.Game</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.metadata.Move.html">chess.view.metadata.Move</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.notation.Panel.html">chess.view.notation.Panel</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Board.html">chess.view.position.Board</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Castling.html">chess.view.position.Castling</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Dialog.html">chess.view.position.Dialog</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Pieces.html">chess.view.position.Pieces</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.SideToMove.html">chess.view.position.SideToMove</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.SaveGame.NewGame.html">chess.view.SaveGame.NewGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.Controller.html">chess.view.user.Controller</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.Country.html">chess.view.user.Country</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.LoginButton.html">chess.view.user.LoginButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.LoginWindow.html">chess.view.user.LoginWindow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.LogoutButton.html">chess.view.user.LogoutButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.Panel.html">chess.view.user.Panel</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.ProfileWindow.html">chess.view.user.ProfileWindow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.RegisterButton.html">chess.view.user.RegisterButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.RegisterWindow.html">chess.view.user.RegisterWindow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.SettingsButton.html">chess.view.user.SettingsButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/Board.html">Board</a></li>
+            
+                <li><a href="..&#x2F;modules/Controller.html">Controller</a></li>
+            
+                <li><a href="..&#x2F;modules/DataSource.html">DataSource</a></li>
+            
+                <li><a href="..&#x2F;modules/Dialog.html">Dialog</a></li>
+            
+                <li><a href="..&#x2F;modules/Grid.html">Grid</a></li>
+            
+                <li><a href="..&#x2F;modules/Installer.html">Installer</a></li>
+            
+                <li><a href="..&#x2F;modules/Menu.html">Menu</a></li>
+            
+                <li><a href="..&#x2F;modules/Model.html">Model</a></li>
+            
+                <li><a href="..&#x2F;modules/Parser.html">Parser</a></li>
+            
+                <li><a href="..&#x2F;modules/Tree.html">Tree</a></li>
+            
+                <li><a href="..&#x2F;modules/User.html">User</a></li>
+            
+                <li><a href="..&#x2F;modules/View.html">View</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>chess.controller.Controller Class</h1>
+<div class="box meta">
+    
+
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l1"><code>..&#x2F;api&#x2F;src&#x2F;controller&#x2F;controller.js:1</code></a>
+        </div>
+    
+
+    
+        
+            Module: <a href="../modules/Controller.html">Controller</a>
+        
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>Game controller base class. This class acts as the glue between
+game models and views. When something happens in current game, it sends a message/event to the
+controller. The controller delegates this message to the views and all views interested</p>
+</div>
+
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+        
+        
+            <li class="api-class-tab events"><a href="#events">Events</a></li>
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                        
+                            <li class="index-item method">
+                                <a href="#method_addMove">addMove</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_flipBoard">flipBoard</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_getCurrentModel">getCurrentModel</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_loadNextGame">loadNextGame</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_loadPreviousGame">loadPreviousGame</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_nextMove">nextMove</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_pauseGame">pauseGame</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_playMoves">playMoves</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_previousMove">previousMove</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_selectDatabase">selectDatabase</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_toEnd">toEnd</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_toStart">toStart</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+
+            
+                <div class="index-section events">
+                    <h3>Events</h3>
+
+                    <ul class="index-list events">
+                        
+                            <li class="index-item event">
+                                <a href="#event_commentAfter">commentAfter</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event">
+                                <a href="#event_commentBefore">commentBefore</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event">
+                                <a href="#event_flip">flip</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event">
+                                <a href="#event_newGameDialog">newGameDialog</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event">
+                                <a href="#event_nextGame">nextGame</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event">
+                                <a href="#event_selectDatabase">selectDatabase</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+        </div>
+
+        
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method_addMove" class="method item">
+    <h3 class="name"><code>addMove</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>move</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l229"><code>..&#x2F;api&#x2F;src&#x2F;controller&#x2F;controller.js:229</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Add a move to current model</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">move</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                    undefined
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_flipBoard" class="method item">
+    <h3 class="name"><code>flipBoard</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l215"><code>..&#x2F;api&#x2F;src&#x2F;controller&#x2F;controller.js:215</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Flip board. The only thing this method does is to fire the flipBoard event.</p>
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                    undefined
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getCurrentModel" class="method item">
+    <h3 class="name"><code>getCurrentModel</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l387"><code>..&#x2F;api&#x2F;src&#x2F;controller&#x2F;controller.js:387</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Return active game</p>
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                    object chess.model.Game
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_loadNextGame" class="method item">
+    <h3 class="name"><code>loadNextGame</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l156"><code>..&#x2F;api&#x2F;src&#x2F;controller&#x2F;controller.js:156</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Load next game in selected database. This method will only work if you have
+a grid with list of games. The only thing this method does is to fire the "nextGame"
+event which the list of games grid listens to. The grid will go to next game and fire it's
+selectGame event</p>
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                    undefined
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_loadPreviousGame" class="method item">
+    <h3 class="name"><code>loadPreviousGame</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l172"><code>..&#x2F;api&#x2F;src&#x2F;controller&#x2F;controller.js:172</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Load previous game from selected database. For info, see loadNextGame</p>
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                    undefined
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_nextMove" class="method item">
+    <h3 class="name"><code>nextMove</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l298"><code>..&#x2F;api&#x2F;src&#x2F;controller&#x2F;controller.js:298</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Go to next move</p>
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                    undefined
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_pauseGame" class="method item">
+    <h3 class="name"><code>pauseGame</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l314"><code>..&#x2F;api&#x2F;src&#x2F;controller&#x2F;controller.js:314</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Pause auto play of moves</p>
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                    undefined
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_playMoves" class="method item">
+    <h3 class="name"><code>playMoves</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l306"><code>..&#x2F;api&#x2F;src&#x2F;controller&#x2F;controller.js:306</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Start auto play of moves in current game from current position</p>
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                    undefined
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_previousMove" class="method item">
+    <h3 class="name"><code>previousMove</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l290"><code>..&#x2F;api&#x2F;src&#x2F;controller&#x2F;controller.js:290</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Go to previous move</p>
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                    undefined
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_selectDatabase" class="method item">
+    <h3 class="name"><code>selectDatabase</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>database</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l142"><code>..&#x2F;api&#x2F;src&#x2F;controller&#x2F;controller.js:142</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Select a database</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">database</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_toEnd" class="method item">
+    <h3 class="name"><code>toEnd</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l282"><code>..&#x2F;api&#x2F;src&#x2F;controller&#x2F;controller.js:282</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Go to end of current game</p>
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                    undefined
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_toStart" class="method item">
+    <h3 class="name"><code>toStart</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l274"><code>..&#x2F;api&#x2F;src&#x2F;controller&#x2F;controller.js:274</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Go to start of current game</p>
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                    undefined
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+
+        
+            <div id="events" class="api-class-tabpanel">
+                <h2 class="off-left">Events</h2>
+
+                
+                    <div id="event_commentAfter" class="events item">
+    <h3 class="name"><code>commentAfter</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l260"><code>..\api\src\controller\controller.js:260</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Event fired when the Comment after a move dialog should be shown.</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Event Payload:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">currentModel</code>
+                        <span class="type"><a href="../classes/chess.model.Game.html" class="crosslink">chess.model.Game</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">move</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_commentBefore" class="events item">
+    <h3 class="name"><code>commentBefore</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l250"><code>..\api\src\controller\controller.js:250</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Event fired when the Comment before a move dialog should be shown.</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Event Payload:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">currentModel</code>
+                        <span class="type"><a href="../classes/chess.model.Game.html" class="crosslink">chess.model.Game</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">move</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_flip" class="events item">
+    <h3 class="name"><code>flip</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l221"><code>..\api\src\controller\controller.js:221</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>flip event. A board is example of a view listening to this event. When it's fired, the board
+will be flipped</p>
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_newGameDialog" class="events item">
+    <h3 class="name"><code>newGameDialog</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l81"><code>..\api\src\controller\controller.js:81</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>New game dialog event</p>
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_nextGame" class="events item">
+    <h3 class="name"><code>nextGame</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l165"><code>..\api\src\controller\controller.js:165</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>next game event</p>
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_selectDatabase" class="events item">
+    <h3 class="name"><code>selectDatabase</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_controller_controller.js.html#l149"><code>..\api\src\controller\controller.js:149</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Select database event</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Event Payload:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">database</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+
+    
+</div>
+
+                
+            </div>
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

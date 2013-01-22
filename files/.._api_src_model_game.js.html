@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js - DHTML Chess</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.5.1&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.5.1&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;www.dhtml-chess.com&#x2F;images&#x2F;logo.png" title="DHTML Chess"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 0.0.2</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/chess.controller.AnalysisController.html">chess.controller.AnalysisController</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.controller.Controller.html">chess.controller.Controller</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.controller.TacticController.html">chess.controller.TacticController</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.dataSource.FolderTree.html">chess.dataSource.FolderTree</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.dataSource.GameList.html">chess.dataSource.GameList</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.model.Game.html">chess.model.Game</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.model.Move.html">chess.model.Move</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.parser.FenParser0x88.html">chess.parser.FenParser0x88</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.parser.Move0x88.html">chess.parser.Move0x88</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.parser.PositionValidator.html">chess.parser.PositionValidator</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.remote.GameReader.html">chess.remote.GameReader</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.board.Board.html">chess.view.board.Board</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.board.GUI.html">chess.view.board.GUI</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.board.Piece.html">chess.view.board.Piece</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.Comment.html">chess.view.dialog.Comment</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.GameImport.html">chess.view.dialog.GameImport</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.NewGame.html">chess.view.dialog.NewGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.OverwriteMove.html">chess.view.dialog.OverwriteMove</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.dialog.Promote.html">chess.view.dialog.Promote</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.eco.VariationTree.html">chess.view.eco.VariationTree</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.folder.Tree.html">chess.view.folder.Tree</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.gamelist.Grid.html">chess.view.gamelist.Grid</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.highlight.Arrow.html">chess.view.highlight.Arrow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.highlight.Square.html">chess.view.highlight.Square</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.installer.Installer.html">chess.view.installer.Installer</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.menuItems.GameImport.html">chess.view.menuItems.GameImport</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.menuItems.NewGame.html">chess.view.menuItems.NewGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.message.TacticMessage.html">chess.view.message.TacticMessage</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.metadata.FenField.html">chess.view.metadata.FenField</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.metadata.Game.html">chess.view.metadata.Game</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.metadata.Move.html">chess.view.metadata.Move</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.notation.Panel.html">chess.view.notation.Panel</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Board.html">chess.view.position.Board</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Castling.html">chess.view.position.Castling</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Dialog.html">chess.view.position.Dialog</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.Pieces.html">chess.view.position.Pieces</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.position.SideToMove.html">chess.view.position.SideToMove</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.SaveGame.NewGame.html">chess.view.SaveGame.NewGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.Controller.html">chess.view.user.Controller</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.Country.html">chess.view.user.Country</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.LoginButton.html">chess.view.user.LoginButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.LoginWindow.html">chess.view.user.LoginWindow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.LogoutButton.html">chess.view.user.LogoutButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.Panel.html">chess.view.user.Panel</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.ProfileWindow.html">chess.view.user.ProfileWindow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.RegisterButton.html">chess.view.user.RegisterButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.RegisterWindow.html">chess.view.user.RegisterWindow</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.SettingsButton.html">chess.view.user.SettingsButton</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/Board.html">Board</a></li>
+            
+                <li><a href="..&#x2F;modules/Controller.html">Controller</a></li>
+            
+                <li><a href="..&#x2F;modules/DataSource.html">DataSource</a></li>
+            
+                <li><a href="..&#x2F;modules/Dialog.html">Dialog</a></li>
+            
+                <li><a href="..&#x2F;modules/Grid.html">Grid</a></li>
+            
+                <li><a href="..&#x2F;modules/Installer.html">Installer</a></li>
+            
+                <li><a href="..&#x2F;modules/Menu.html">Menu</a></li>
+            
+                <li><a href="..&#x2F;modules/Model.html">Model</a></li>
+            
+                <li><a href="..&#x2F;modules/Parser.html">Parser</a></li>
+            
+                <li><a href="..&#x2F;modules/Tree.html">Tree</a></li>
+            
+                <li><a href="..&#x2F;modules/User.html">User</a></li>
+            
+                <li><a href="..&#x2F;modules/View.html">View</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: ..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * Chess game model
+ * @module Model
+ * @namespace chess.model
+ * @class Game
+ * @uses {chess.parser.Move0x88}
+ * @uses {chess.remote.GameReader}
+ *
+ *&#x2F;
+chess.model.Game = new Class({
+	Extends:Events,
+	&#x2F;**
+	 * @attribute {chess.parser.FenParser0x88} moveParser
+	 *&#x2F;
+	moveParser:undefined,
+	model:{ },
+	currentMove:null,
+	currentBranch:[],
+	moveCache:{},
+	defaultFen:&#x27;rnbqkbnr&#x2F;pppppppp&#x2F;8&#x2F;8&#x2F;8&#x2F;8&#x2F;PPPPPPPP&#x2F;RNBQKBNR w KQkq - 0 1&#x27;,
+	gameReader:null,
+	dirty:false,
+
+	moveBranchMap:{},
+	moveParentMap:{},
+	movePreviousMap:{},
+
+
+
+	INCLUDE_COMMENT_MOVES:1,
+
+	state:{
+		autoplay:false
+	},
+
+	&#x2F;**
+	 * id of initial game to load from server.
+	 * @config id
+	 * @type {Number}
+	 * @default undefined
+	 * @optional
+	 *&#x2F;
+	id:undefined,
+
+	initialize:function (config) {
+		config = config || {};
+		this.moveParser = new chess.parser.Move0x88();
+		this.gameReader = new chess.remote.GameReader();
+		this.gameReader.addEvent(&#x27;load&#x27;, this.populate.bind(this));
+		this.gameReader.addEvent(&#x27;newMove&#x27;, this.appendRemoteMove.bind(this));
+		this.gameReader.addEvent(&#x27;saved&#x27;, this.updateGameFromServer.bind(this));
+		this.setDefaultModel();
+		if (config.id) {
+			this.loadGame(config.id);
+		} else {
+			this.setDirty();
+		}
+		if (config.metadata !== undefined) {
+			this.setMetadata(config.metadata);
+		}
+
+		if (config.databaseId !== undefined)this.databaseId = config.databaseId;
+	},
+
+	getId:function () {
+		return this.model.id;
+	},
+	&#x2F;**
+	 * Load a game from server
+	 * @method loadGame
+	 * @param {Number} gameId
+	 *&#x2F;
+	loadGame:function (gameId) {
+		this.gameReader.loadGame(gameId);
+	},
+	&#x2F;**
+	 * Load a random game from selected database
+	 * @method loadRandomGame
+	 * @param {Number} databaseId
+	 *&#x2F;
+	loadRandomGame:function (databaseId) {
+		this.gameReader.loadRandomGame(databaseId);
+	},
+
+	getEngineMove:function () {
+		var pos = this.getLastPositionInGame();
+		this.gameReader.getEngineMove(pos);
+	},
+
+	appendRemoteMove:function (move) {
+		this.toEnd();
+		this.appendMove(move);
+	},
+
+	&#x2F;**
+	 * Empty model and reset to standard position
+	 * @method newGame
+	 *&#x2F;
+	newGame:function () {
+		this.setPosition(this.defaultFen);
+	},
+	&#x2F;**
+	 * Activate model. This will fire newGame and setPosition events
+	 * @method activate
+	 *&#x2F;
+	activate:function () {
+		&#x2F;**
+		 * new game event. Fired when a new model is created or an old model is activated
+		 * @event newGame
+		 * @param {String} eventName
+		 * @param {chess.model.Game} model
+		 *&#x2F;
+		this.fire(&#x27;newGame&#x27;);
+		&#x2F;**
+		 * Fired when current chess position is changed, example by moving to a different move
+		 * @event setPosition
+		 * @param {String} eventName
+		 * @param {chess.model.Game} model
+		 *&#x2F;
+		this.fire(&#x27;setPosition&#x27;);
+	},
+
+	setPosition:function (fen) {
+		this.setDefaultModel();
+		this.model.metadata.fen = fen;
+		&#x2F;**
+		 * Fired when there are no moves in the game
+		 * @event noMoves
+		 * @param {String} eventName
+		 * @param {chess.model.Game} model
+		 *&#x2F;
+		this.fire(&#x27;noMoves&#x27;);
+		this.fire(&#x27;newGame&#x27;);
+		this.fire(&#x27;setPosition&#x27;);
+	},
+
+	populate:function (gameData) {
+		this.setDefaultModel();
+		this.model.id = gameData.id || gameData.metadata.id || this.model.id;
+		this.model.metadata.fen = gameData.fen || gameData.metadata.fen;
+		this.model.result = this.getResult();
+		this.model.moves = gameData.moves || [];
+		this.model.metadata = gameData.metadata || {};
+		this.databaseId = gameData.databaseId;
+		this.currentBranch = this.model.moves;
+		this.currentMove = null;
+		this.registerMoves(this.model.moves, this.model.metadata.fen);
+		this.fire(&#x27;newGame&#x27;);
+		this.toStart();
+	},
+
+	getModel:function () {
+		return this.model;
+	},
+
+	registerMoves:function (moves, pos, parent) {
+		var move;
+		moves = moves || [];
+		for (var i = 0; i &lt; moves.length; i++) {
+			move = moves[i];
+			if (this.isChessMove(move)) {
+				move = this.getValidMove(move, pos);
+				if (move.variations &amp;&amp; move.variations.length &gt; 0) {
+					for (var j = 0; j &lt; move.variations.length; j++) {
+						this.registerMoves(move.variations[j], pos, move);
+					}
+				}
+				pos = move.fen;
+			}
+			move.id = &#x27;move-&#x27; + String.uniqueID();
+			this.moveCache[move.id] = move;
+			move.index = i;
+			if (parent) {
+				this.registerParentMap(move, parent);
+			}
+			this.registerBranchMap(move, moves);
+
+			if (i &gt; 0) {
+				this.registerPreviousMap(move, moves[i - 1]);
+			}
+			moves[i] = move;
+		}
+	},
+
+	registerPreviousMap:function (move, previous) {
+		this.movePreviousMap[move.id] = previous;
+	},
+
+	registerParentMap:function (move, parent) {
+		this.moveParentMap[move.id] = parent;
+	},
+
+	registerBranchMap:function (move, branch) {
+		this.moveBranchMap[move.id] = branch;
+	},
+
+	getBranch:function (move) {
+		return this.moveBranchMap[move.id];
+	},
+
+	setDefaultModel:function () {
+		this.moveCache = {};
+		this.model = {
+			&quot;id&quot;:&#x27;temp-id-&#x27; + String.uniqueID(),
+			&quot;metadata&quot;:{
+				fen:this.defaultFen
+			},
+			&quot;moves&quot;:[]
+		};
+		this.currentBranch = this.model.moves;
+		this.currentMove = null;
+
+	},
+
+	&#x2F;**
+	 Update game information
+	 @method setMetadata
+	 @param {Object} metadata
+	 @example
+	 	model.setMetadata({white:&#x27;John&#x27;,&#x27;black:&#x27;Jane&#x27;});
+	 *&#x2F;
+	setMetadata:function (metadata) {
+		for (var key in metadata) {
+			if (metadata.hasOwnProperty(key)) {
+				this.setMetadataValue(key, metadata[key]);
+			}
+		}
+	},
+	&#x2F;**
+	 Update particular info about the game
+	 @method setMetadata
+	 @param {String} key
+	 @param {String} value
+	 @example
+	 	model.setMetadataValue(&#x27;white&#x27;,&#x27;John&#x27;);
+	 *&#x2F;
+	setMetadataValue:function (key, value) {
+		this.model.metadata[key] = value;
+		&#x2F;**
+		 * Fired when metadata is updated
+		 * @event updateMetadata
+		 * @param {String} eventName
+		 * @param {chess.model.Game} model
+		 * @param {Object} metadata, example {key:&#x27;white&#x27;,&#x27;value&#x27;:&#x27;John&#x27;}
+		 *&#x2F;
+		this.fire(&#x27;updateMetadata&#x27;, { key:key, value:value});
+
+	},
+
+	&#x2F;**
+	 * Return all game metadata info
+	 * @method getMetadata
+	 * @return {Object}
+	 *&#x2F;
+	getMetadata:function () {
+		return this.model.metadata;
+	},
+	&#x2F;**
+	 Return a specific metadata key
+	 @method getMetadataValue
+	 @param {String} key
+	 @return {String} value
+	 @example
+	 	var whitePlayer = model.getMetadataValue(&#x27;white&#x27;);
+	 *&#x2F;
+	getMetadataValue:function (key) {
+		return this.model.metadata[key];
+	},
+
+	&#x2F;**
+	 * Return array of moves in game
+	 * @method getMoves
+	 * @return {Array}
+	 *&#x2F;
+	getMoves:function () {
+		return this.model.moves || [];
+	},
+
+	&#x2F;**
+	 * Return start position of game
+	 * @method getStartPosition
+	 * @return {String} position
+	 *&#x2F;
+	getStartPosition:function () {
+		return this.model.metadata.fen;
+	},
+
+	&#x2F;**
+	 * Try to guess next move in a game
+	 @method tryNextMove
+	 @param {Object} move
+	 @return {Boolean} correctMove
+	 @example
+	 	var correctMove = model.tryNextMove({
+	 		from:&#x27;e7&#x27;,
+	 		to:&#x27;e8&#x27;,
+	 		promoteTo:&#x27;queen&#x27;
+	 	});
+	 *&#x2F;
+	tryNextMove:function (move) {
+		var pos = this.getCurrentPosition();
+		if (!move.promoteTo &amp;&amp; this.moveParser.isPromotionMove(move, pos)) {
+			this.fire(&#x27;verifyPromotion&#x27;, move);
+			return true;
+		}
+		var nextMoves = this.getAllNextMoves(this.currentMove);
+		for (var i = 0; i &lt; nextMoves.length; i++) {
+			if (this.isCorrectGuess(move, nextMoves[i])) {
+				if (nextMoves[i].promoteTo) {
+					move.promoteTo = nextMoves[i].promoteTo;
+				}
+				this.fire(&#x27;correctGuess&#x27;, nextMoves[i]);
+				if (i === 0) {
+					this.nextMove();
+				} else {
+					this.goToMove(nextMoves[i]);
+				}
+				return true;
+			}
+		}
+		this.fire(&#x27;wrongGuess&#x27;);
+		return false;
+	},
+
+	isCorrectGuess:function (guess, nextMove) {
+		if (nextMove.from == guess.from &amp;&amp; nextMove.to == guess.to) {
+			return !(guess.promoteTo &amp;&amp; !this.isMovePromotedTo(nextMove, guess.promoteTo));
+		}
+		return false;
+	},
+
+	isMovePromotedTo:function (move, promotedTo) {
+		var moves = move.moves;
+		for (var i = 0; i &lt; moves.length; i++) {
+			if (moves[i].promoteTo &amp;&amp; moves[i].promoteTo == promotedTo) {
+				return true;
+			}
+		}
+		return false;
+	},
+	&#x2F;**
+	 * Return result of game, either from metadata(&quot;result&quot;) or by trying to calculate final
+	 * position. Return value will be 1 for white win, -1 for black win. 0.5 for draw and 0 for
+	 * undecided.
+	 * @method getResult
+	 * @return {Number}
+	 *&#x2F;
+	getResult:function () {
+		if (this.model.result !== undefined &amp;&amp; this.model.result !== 0) {
+			return this.model.result;
+		}
+		var result = this.getMetadataValue(&#x27;result&#x27;);
+		if (result == &#x27;1-0&#x27;) {
+			this.model.result = 1;
+			return 1;
+		}
+		if (result == &#x27;0-1&#x27;) {
+			this.model.result = -1;
+			return -1;
+		}
+		var lastMove = this.getLastMoveInGame();
+		if (lastMove) {
+			var parser = new chess.parser.FenParser0x88();
+			parser.setFen(lastMove.fen);
+			var moveObj = parser.getValidMovesAndResult();
+			this.model.result = moveObj.result;
+			return moveObj.result;
+		}
+		return 0;
+	},
+
+	&#x2F;**
+	 * Returns true if user can claim draw in current position
+	 * @method canClaimDraw
+	 * @return {Boolean} can claim draw
+	 *&#x2F;
+	canClaimDraw:function(){
+		return this.moveParser.hasThreeFoldRepetition(this.getAllFens());
+	},
+
+	&#x2F;**
+	 * Returns array of all FEN&#x27;s in main line(Not variations)
+	 * @method getAllFens
+	 * @return {Array}
+	 *&#x2F;
+	getAllFens:function(){
+		var moves = this.getMoves();
+		var ret = [];
+		for(var i=0;i&lt;moves.length;i++){
+			if(moves[i].fen !== undefined)ret.push(moves[i].fen);
+		}
+		return ret;
+	},
+
+	&#x2F;**
+	 * Return last move in game
+	 * @method getLastMoveInGame
+	 * @return {chess.model.Move} move
+	 *&#x2F;
+	getLastMoveInGame:function () {
+		if (this.model.moves.length &gt; 0) {
+			return this.model.moves[this.model.moves.length - 1];
+		}
+		return undefined;
+	},
+
+	&#x2F;**
+	 * Return last position in game
+	 * @method getLastPositionInGame
+	 * @return {String} fen
+	 *&#x2F;
+	getLastPositionInGame:function () {
+		if (this.model.moves.length &gt; 0) {
+
+			return this.model.moves[this.model.moves.length - 1].fen;
+		}
+		return this.model.metadata.fen;
+	},
+
+	&#x2F;**
+	 * Returns array of remaining moves
+	 * @method getAllNextMoves
+	 * @param {chess.model.Move} nextOf
+	 * @return {Array}
+	 *&#x2F;
+	getAllNextMoves:function (nextOf) {
+		nextOf = nextOf || this.currentMove;
+		if (!nextOf) {
+			return [this.model.moves[0]];
+		}
+		var ret = [];
+		var nextMove = this.getNextMove(nextOf);
+		if (nextMove) {
+			ret.push(nextMove);
+		}
+		if (nextOf.variations.length &gt; 0) {
+			for (var i = 0; i &lt; nextOf.variations.length; i++) {
+				var move = nextOf.variations[i][0];
+				ret.push(move);
+			}
+		}
+		return ret;
+
+	},
+
+	&#x2F;**
+	 Append move to the model
+	 @method appendMove
+	 @param {chess.model.Move|String} move
+	 @return {Boolean} success
+	 @example
+	 	var model = new chess.model.Game();
+	 	model.appendMove({ &#x27;from&#x27;: &#x27;e2&#x27;, &#x27;to&#x27; : &#x27;e4&#x27; }); &#x2F;&#x2F; Using objects
+	 	model.appendMove(&#x27;e7&#x27;); &#x2F;&#x2F; Using notation
+	 	alert(model.getCurrentPosition());
+	 *&#x2F;
+	appendMove:function (move) {
+		var pos = this.getCurrentPosition();
+		if(ludo.util.isString(move)){
+			move = this.moveParser.getMoveByNotation(move, pos);
+		}
+		if (!move.promoteTo &amp;&amp; this.moveParser.isPromotionMove(move, pos)) {
+			&#x2F;**
+			 * verify promotion event. This event is fired when you try to append a promotion move
+			 * where the promoteTo info is missing
+			 * @event verifyPromotion
+			 * @param {String} eventName
+			 * @param {chess.model.Game} model
+			 * @param {chess.model.Move} appendedMove
+			 *&#x2F;
+			this.fire(&#x27;verifyPromotion&#x27;, move);
+			return false;
+		}
+
+		var nextMove = this.getNextMove(this.currentMove);
+		if (nextMove) {
+			if (move.from !== nextMove.from || move.to != nextMove.to) {
+				var duplicateVariationMove;
+				if (duplicateVariationMove = this.getDuplicateVariationMove(move)) {
+					this.goToMove(duplicateVariationMove);
+					return false;
+				}
+				if (move = this.getValidMove(move, pos)) {
+					&#x2F;**
+					  Fired when appending a move in the middle of a game. This method sends a message to the controller
+					  saying that it needs to know if appended move should be added as variation or if it should overwrite
+					  current next move
+					  @event overwriteOrVariation
+					  @param {String} eventName
+					  @param {chess.model.Game} model
+					  @param {Object} newMove, nextMove
+					 *&#x2F;
+					this.fire(&#x27;overwriteOrVariation&#x27;, { newMove:move, oldMove:nextMove });
+					return false;
+				}
+			} else {
+				this.nextMove();
+				return false;
+			}
+		}
+
+		if (move = this.getValidMove(move, pos)) {
+			this.registerMove(move);
+			&#x2F;**
+			  Fired when a new move is appended to the game.
+			  @event newMove
+			  @param {String} eventName
+			  @param {chess.model.Game} model
+			  @param {chess.model.Move} appendedMove
+			 *&#x2F;
+			this.fire(&#x27;newMove&#x27;, move);
+			&#x2F;**
+			  Fired when current move is last move in branch, either last move in game or last move inside a variation.
+			  @event endOfBranch
+			  @param {String} eventName
+			  @param {chess.model.Game} model
+			 *&#x2F;
+			this.fire(&#x27;endOfBranch&#x27;);
+			if (this.isAtEndOfGame()) {
+				&#x2F;**
+				  Fired when current move is last move in game.
+				  @event endOfBranch
+				  @param {String} eventName
+				  @param {chess.model.Game} model
+				 *&#x2F;
+				this.fire(&#x27;endOfGame&#x27;);
+			}
+			return true;
+		} else {
+			&#x2F;**
+			  Fired when you try to append an invalid move to the game
+			  @event endOfBranch
+			  @param {String} eventName
+			  @param {chess.model.Game} model
+			  @param {chess.model.Move} move
+			 *&#x2F;
+			this.fire(&#x27;invalidMove&#x27;, move);
+
+			return false;
+		}
+	},
+
+	overwriteMove:function (oldMove, newMove) {
+		var move = this.findMove(oldMove);
+		if (move) {
+			this.deleteMove(oldMove);
+			this.appendMove(newMove);
+		}
+	},
+
+	getValidMove:function (move, pos) {
+		if (this.moveParser.isValid(move, pos)) {
+			return this.moveParser.getMoveConfig(move, pos);
+		}
+		return null;
+	},
+
+	&#x2F;**
+	 * Add a new move as a variation. If current move is allready first move in variation it will go to this move
+	 * and not create a new variation.
+	 * @method newVariation
+	 * @param {chess.model.Move} move
+	 * @return undefined
+	 *&#x2F;
+	newVariation:function (move) {
+		if (this.isDuplicateVariationMove(move)) {
+			this.goToMove(this.getNextMove(this.currentMove));
+			return false;
+		}
+		var previousPosition = this.getPreviousPosition();
+		if (previousPosition) {
+			if (move = this.getValidMove(move, previousPosition)) {
+				this.newVariationBranch();
+
+				var prMove = this.getPreviousMove(this.currentMove);
+				this.registerMove(move);
+
+				this.registerParentMap(move, this.currentMove);
+				this.registerPreviousMap(move, prMove);
+
+				&#x2F;**
+				  Fired after creating a new variation
+				  @event newVariation
+				  @param {String} eventName
+				  @param {chess.model.Game} model
+				  @param {chess.model.Move} parentMove
+				 *&#x2F;
+				this.fire(&#x27;newVariation&#x27;, this.getParentMove(move));
+
+				this.fire(&#x27;newMove&#x27;, move);
+				this.fire(&#x27;endOfBranch&#x27;);
+			} else {
+				this.fire(&#x27;invalidMove&#x27;, move);
+			}
+		}
+	},
+
+	isDuplicateVariationMove:function (move) {
+		return this.getDuplicateVariationMove(move) ? true : false;
+	},
+
+	getDuplicateVariationMove:function (move) {
+		var nextMove;
+
+		if (nextMove = this.getNextMove(this.currentMove)) {
+			var variations = nextMove.variations;
+			for (var i = 0; i &lt; variations.length; i++) {
+				var variationMove = variations[i][0];
+				if (variationMove.from === move.from &amp;&amp; variationMove.to === move.to) {
+					return variationMove;
+				}
+			}
+		}
+		return null;
+	},
+
+	newVariationBranch:function () {
+		this.currentMove.variations = this.currentMove.variations || [];
+		var variation = [];
+		this.currentMove.variations.push(variation);
+		this.currentBranch = variation;
+	},
+
+	getCurrentPosition:function () {
+		if (this.currentMove &amp;&amp; this.currentMove.fen) {
+			return this.currentMove.fen;
+		}
+		return this.model.metadata.fen;
+	},
+
+	getPreviousPosition:function () {
+		if (this.currentMove) {
+			var previous = this.getPreviousMove(this.currentMove);
+			if (previous) {
+				return previous.fen;
+			} else {
+				return this.model.metadata.fen;
+			}
+		}
+		return this.model.metadata.fen;
+	},
+
+	&#x2F;**
+	 * Delete a move
+	 * @method deleteMove
+	 * @param {chess.model.Move} moveToDelete
+	 *&#x2F;
+	deleteMove:function (moveToDelete) {
+		var move = this.findMove(moveToDelete);
+		if (move) {
+			var previousMove = this.getPreviousMove(move);
+			var isLastInVariation = this.isLastMoveInVariation(move);
+			this.clearMovesInBranch(this.getBranch(move), move.index);
+			if (moveToDelete.action) {
+				&#x2F;**
+				  Special event not yet implemented. Supporting for adding info to games such as video links, automatic start and stop
+				  of auto play for lecture purpose will be added as actions later.
+				  @event deleteAction
+				  @param {String} eventName
+				  @param {chess.model.Game} model
+				  @param {chess.model.Move} move
+				 *&#x2F;
+				this.fire(&#x27;deleteAction&#x27;, move);
+			} else {
+				&#x2F;**
+				  Fired when a move is deleted. It will only be fired for one move and not the following moves which of course
+				  also will be deleted.
+				  @event deleteMove
+				  @param {String} eventName
+				  @param {chess.model.Game} model
+				  @param {chess.model.Move} deleted move
+				 *&#x2F;
+				this.fire(&#x27;deleteMove&#x27;, move);
+				this.fire(&#x27;endOfBranch&#x27;);
+				if (this.isAtEndOfGame()) {
+					this.fire(&#x27;endOfGame&#x27;);
+				} else {
+					&#x2F;**
+					  Fired when going to a move which is not last move in game
+					  @event notEndOfGame
+					  @param {String} eventName
+					  @param {chess.model.Game} model
+					 *&#x2F;
+					this.fire(&#x27;notEndOfGame&#x27;);
+				}
+				if (!this.hasMovesInBranch(move)) {
+					this.fire(&#x27;noMoves&#x27;);
+				}
+				if (previousMove) {
+					this.setCurrentMove(previousMove);
+				} else {
+					this.clearCurrentMove();
+				}
+				if (isLastInVariation) {
+					this.fire(&#x27;deleteVariation&#x27;, move);
+				}
+			}
+		}
+	},
+
+	&#x2F;**
+	 * true if given move is last move in current variation, i.e. the variation active on the board
+	 * @method isLastMoveInVariation
+	 * @param {chess.model.Move} move
+	 * @return {Boolean}
+	 *&#x2F;
+	isLastMoveInVariation:function (move) {
+		var parent = this.getParentMove(move);
+		if(parent !== undefined){
+			var branch = this.getBranch(move);
+			if(branch.length === 0)return true;
+			if(move === branch[0])return true;
+		}
+		return false;
+	},
+
+	&#x2F;**
+	 * true if move displayed on board, i.e. current model move is last move in game.
+	 * @method isAtEndOfGame
+	 * @return {Boolean}
+	 *&#x2F;
+
+	isAtEndOfGame:function () {
+		if (this.model.moves.length === 0) {
+			return true;
+		}
+		return this.currentMove &amp;&amp; this.currentMove.id == this.model.moves[this.model.moves.length - 1].id;
+	},
+
+	hasMovesInBranch:function (branch) {
+		if (branch.length === 0) {
+			return true;
+		}
+		for (var i = 0; i &lt; branch.length; i++) {
+			if (branch[i].m) {
+				return true;
+			}
+		}
+		return false;
+	},
+
+	clearMovesInBranch:function (branch, fromIndex) {
+		for (var i = fromIndex; i &lt; branch.length; i++) {
+			delete this.moveCache[branch[i].id];
+		}
+		branch.length = fromIndex;
+	},
+
+	findMove:function (moveToFind) {
+		return this.moveCache[moveToFind.id] ? this.moveCache[moveToFind.id] : null;
+	},
+
+	clearCurrentMove:function () {
+		this.currentMove = null;
+		this.currentBranch = this.model.moves;
+		this.fire(&#x27;clearCurrentMove&#x27;);
+	},
+
+	goToMove:function (move) {
+		if (this.setCurrentMove(move)) {
+			this.fire(&#x27;setPosition&#x27;, move);
+		}
+	},
+
+	backward:function(numberOfMoves){
+		if(!this.currentMove)return;
+		numberOfMoves = numberOfMoves || 1;
+		var branch = this.currentBranch;
+		var index = branch.indexOf(this.currentMove);
+		var currentMove;
+		while(index &gt;=0 &amp;&amp; numberOfMoves&gt;0){
+			index--;
+			if(index &lt; 0 &amp;&amp; numberOfMoves&gt;0){
+				var parent = this.getParentMove(move);
+				if(parent){
+					move = parent;
+					branch = this.getBranch(move);
+					index = branch.indexOf(move);
+					index--;
+				}
+			}
+			if(index &gt;=0){
+				var move = branch[index];
+				if(this.isChessMove(move)){
+					currentMove = move;
+					numberOfMoves--;
+				}
+			}
+
+		}
+		if(this.isChessMove(currentMove)){
+			return this.setCurrentMove(currentMove);
+		}
+	},
+
+	getMove:function (move) {
+		return this.findMove(move);
+	},
+
+	resetPosition:function () {
+		if (this.currentMove) {
+			this.goToMove(this.currentMove);
+		} else {
+			this.toStart();
+		}
+	},
+
+	setCurrentMove:function (newCurrentMove) {
+		var move = this.findMove(newCurrentMove);
+		if (move) {
+			this.currentMove = move;
+			this.currentBranch = this.getBranch(move);
+			this.fire(&#x27;notStartOfGame&#x27;);
+			if (this.getNextMove(move)) {
+				this.fire(&#x27;notEndOfBranch&#x27;);
+				this.fire(&#x27;notEndOfGame&#x27;);
+			} else {
+				this.fire(&#x27;endOfBranch&#x27;);
+				if (this.isAtEndOfGame()) {
+					this.fire(&#x27;endOfGame&#x27;);
+				}
+			}
+
+			return true;
+		}
+		return false;
+	},
+
+	getColorToMove:function () {
+		var fens = this.getCurrentPosition().split(&#x27; &#x27;);
+		var colors = {&#x27;w&#x27;:&#x27;white&#x27;, &#x27;b&#x27;:&#x27;black&#x27;};
+		return colors[fens[1]];
+	},
+
+	getCurrentMove:function () {
+		return this.currentMove;
+	},
+
+	getCurrentBranch:function () {
+		return this.getCurrentBranch();
+	},
+
+	previousMove:function () {
+		var move = this.getPreviousMove(this.currentMove);
+		if (move) {
+			this.setCurrentMove(move);
+			this.fire(&#x27;setPosition&#x27;, move);
+		} else {
+			this.toStart();
+		}
+	},
+
+	nextMove:function () {
+		var move;
+		if (this.hasCurrentMove()) {
+			move = this.getNextMove(this.currentMove);
+		} else {
+			move = this.getFirstMoveInGame();
+		}
+
+		if (move) {
+			this.setCurrentMove(move);
+			this.fire(&#x27;nextmove&#x27;, move);
+		}
+	},
+
+	toStart:function () {
+		this.fire(&#x27;startOfGame&#x27;);
+		this.clearCurrentMove();
+		this.fire(&#x27;setPosition&#x27;);
+		if (this.model.moves.length &gt; 0) {
+			this.fire(&#x27;notEndOfBranch&#x27;);
+			this.fire(&#x27;notEndOfGame&#x27;);
+		} else {
+			this.fire(&#x27;endOfBranch&#x27;);
+			this.fire(&#x27;endOfGame&#x27;);
+		}
+	},
+
+	toEnd:function () {
+		if (this.model.moves.length &gt; 0) {
+			this.currentMove = this.model.moves[this.model.moves.length - 1];
+			this.fire(&#x27;setPosition&#x27;);
+			this.fire(&#x27;endOfBranch&#x27;);
+			this.fire(&#x27;notStartOfGame&#x27;);
+			this.fire(&#x27;endOfGame&#x27;);
+		}
+	},
+	toEndOfCurrentBranch:function () {
+		if (this.currentBranch.length &gt; 0) {
+			this.currentMove = this.currentBranch[this.currentBranch.length - 1];
+			this.fire(&#x27;setPosition&#x27;);
+			this.fire(&#x27;endOfBranch&#x27;);
+			this.fire(&#x27;notStartOfGame&#x27;);
+			if (this.isAtEndOfGame()) {
+				this.fire(&#x27;endOfGame&#x27;);
+			}
+		}
+	},
+
+	hasCurrentMove:function () {
+		return this.currentMove ? true : false;
+	},
+
+	getFirstMoveInGame:function () {
+		for (var i = 0; i &lt; this.model.moves.length; i++) {
+			var move = this.model.moves[i];
+			if (this.isChessMove(move)) {
+				return move;
+			}
+		}
+		return null;
+	},
+
+	getParentMove:function (move) {
+		move = this.findMove(move);
+		if (move) {
+			return this.moveParentMap[move.id];
+		}
+		return undefined;
+	},
+
+	getPreviousMoveInBranch:function (move) {
+		if (move.index &gt; 0) {
+			var index = move.index - 1;
+			var branch = this.getBranch(move);
+			var previousMove = branch[index];
+
+			while (!this.isChessMove(previousMove) &amp;&amp; index &gt; 0) {
+				index--;
+				previousMove = branch[index];
+			}
+			if (this.isChessMove(previousMove)) {
+				return previousMove;
+			}
+
+		}
+		return null;
+	},
+
+	getPreviousMove:function (move, includeComments) {
+		includeComments = includeComments || false;
+		move = this.findMove(move);
+		if (move) {
+			var pr = this.movePreviousMap[move.id];
+			if (pr) {
+				if (includeComments &amp;&amp; pr.comment) {
+					return pr;
+				}
+				if (!pr.from) {
+					return this.getPreviousMove(pr);
+				}
+				return pr;
+			}
+			if (move.index &gt; 0) {
+				var branch = this.getBranch(move);
+				var previousMove = branch[move.index - 1];
+				pr = this.movePreviousMap[move.id];
+				if (includeComments &amp;&amp; pr &amp;&amp; pr.comment) {
+					return pr;
+				}
+				if (!previousMove.from &amp;&amp; !includeComments) {
+					return this.getPreviousMove(previousMove);
+				}
+				return branch[move.index - 1];
+			}
+			var parent = this.getParentMove(move);
+			if (parent) {
+				return this.getPreviousMove(parent);
+			}
+		}
+		return undefined;
+	},
+
+	&#x2F;**
+	 * Get next move of
+	 * @method getNextMove
+	 * @param {chess.model.Move} nextOf
+	 * @return {chess.model.Move} next move
+	 *&#x2F;
+	getNextMove:function (nextOf) {
+		if (!nextOf &amp;&amp; this.currentMove) {
+			nextOf = this.currentMove;
+		}
+		if (!nextOf) {
+			if (!this.currentMove &amp;&amp; this.model.moves.length &gt; 0) {
+				nextOf = this.model.moves[0];
+				if (!this.isChessMove(nextOf)) {
+					return this.getNextMove(nextOf);
+				}
+				return this.model.moves[0];
+			}
+			return null;
+		}
+		nextOf = this.findMove(nextOf);
+		if (nextOf) {
+			var branch = this.getBranch(nextOf);
+			if (nextOf.index &lt; branch.length - 1) {
+				return branch[nextOf.index + 1];
+			}
+		}
+		return undefined;
+	},
+
+	addAction:function (action) {
+		action = Object.clone(action);
+
+		if (this.currentMove) {
+			var index = this.currentMove.index + 1;
+			this.registerMove(action, index);
+		} else {
+			this.registerMove(action);
+		}
+		this.fire(&#x27;newaction&#x27;);
+	},
+
+	&#x2F;**
+	  Grade a move
+	 @method gradeMove
+  	 @param move
+  	 @param grade
+	 @example
+	 	model.gradeMove(model.getCurrentMove(), &#x27;!&#x27;);
+	 	...
+	 	...
+	 	model.gradeMove(model.getCurrentMove(), &#x27;??&#x27;);
+	 *&#x2F;
+	gradeMove:function (move, grade) {
+		move = this.findMove(move);
+		if (move) {
+			move.m = move.m.replace(&#x2F;[!\?]&#x2F;g, &#x27;&#x27;);
+			move.lm = move.lm.replace(&#x2F;[!\?]&#x2F;g, &#x27;&#x27;);
+			grade = grade.replace(&#x2F;[^!\?]&#x2F;g, &#x27;&#x27;);
+			if (grade || grade == &#x27;&#x27;) {
+				move.m = move.m + grade;
+				move.lm = move.lm + grade;
+				this.fire(&#x27;updateMove&#x27;, move);
+			}
+		}
+	},
+
+	registerMove:function (move, atIndex) {
+		move.id = &#x27;move-&#x27; + String.uniqueID();
+		this.moveCache[move.id] = move;
+		this.registerBranchMap(move, this.currentBranch);
+
+		if (atIndex) {
+			move.index = atIndex;
+			this.createSpaceForAction();
+			this.currentBranch[atIndex] = move;
+		} else {
+			move.index = this.currentBranch.length;
+			this.currentBranch.push(move);
+		}
+		if (this.isChessMove(move)) {
+			this.setCurrentMove(move);
+		}
+	},
+
+	createSpaceForAction:function () {
+		var index = this.currentMove.index + 1;
+		var newLength = this.currentBranch.length;
+
+		for (var i = newLength; i &gt; index; i--) {
+			this.currentBranch[i] = this.currentBranch[i - 1];
+			this.currentBranch[i].index++;
+		}
+	},
+	&#x2F;**
+	 * Return comment before move, i.e. get comment of previous move
+	 * @method getCommentBefore
+	 * @param {chess.model.Move} move
+	 * @return {String} comment
+	 *&#x2F;
+	getCommentBefore:function (move) {
+		move = this.findMove(move);
+		if (move) {
+			var previousMove;
+			if (previousMove = this.getPreviousMove(move, this.INCLUDE_COMMENT_MOVES)) {
+				return previousMove.comment ? previousMove.comment : &#x27;&#x27;;
+			}
+		}
+		return &#x27;&#x27;;
+	},
+	&#x2F;**
+	 * Get comment of current move
+	 * @method getCommentAfter
+	 * @param {chess.model.Move} move
+	 * @return {String} comment
+	 *&#x2F;
+	getCommentAfter:function (move) {
+		move = this.findMove(move);
+		if (move) {
+			return move.comment ? move.comment : &#x27;&#x27;;
+		}
+		return &#x27;&#x27;;
+	},
+
+	&#x2F;**
+	 * Set comment before a move, i.e. set comment of previous move, or in case of first move in game, set &quot;commment&quot; attribute of
+	 * game metadata.
+	 * @method setCommentBefore
+	 * @param {String} comment
+	 * @param {chess.model.Move} move
+	 *&#x2F;
+	setCommentBefore:function (comment, move) {
+		move = this.findMove(move);
+		if (move) {
+			var previousMove = this.getPreviousMove(move, this.INCLUDE_COMMENT_MOVES);
+			if (previousMove) {
+				this.setComment(previousMove, comment);
+			} else {
+				move = this.findMove(move);
+				var branch = this.getBranch(move);
+				this.createEmptySpaceAtStartOfBranch(branch);
+				branch[0] = {
+					comment:comment,
+					index:0,
+					id:&#x27;move-&#x27; + String.uniqueID()
+				};
+				this.moveCache[move.id] = move;
+				this.registerPreviousMap(move, branch[0]);
+				this.fire(&#x27;updateMove&#x27;, branch[0]);
+			}
+		}
+	},
+	&#x2F;**
+	 * Set comment after a move
+	 * @method setCommentAfter
+	 * @param {String} comment
+	 * @param {chess.model.Move} move
+	 *&#x2F;
+	setCommentAfter:function (comment, move) {
+		move = this.findMove(move);
+		if (move) {
+			this.setComment(move, comment);
+		}
+	},
+
+	createEmptySpaceAtStartOfBranch:function (branch) {
+		for (var i = branch.length; i &gt;= 1; i--) {
+			branch[i] = branch[i - 1];
+			branch[i].index++;
+		}
+	},
+
+	setComment:function (move, comment) {
+		move.comment = comment;
+		this.fire(&#x27;updateMove&#x27;, move);
+	},
+
+	isChessMove:function (move) {
+		return ((move.from &amp;&amp; move.to) || (move.m &amp;&amp; move.m == &#x27;--&#x27;)) ? true : false
+	},
+
+	fire:function (eventName, param) {
+		if (eventName === &#x27;updateMove&#x27; || eventName == &#x27;newMove&#x27; || eventName == &#x27;updateMetadata&#x27;) {
+			this.setDirty();
+		}
+		var event = chess.events.game[eventName];
+		this.fireEvent(event, [event, this, param]);
+	},
+
+	&#x2F;**
+	 * Start autoplay of moves
+	 * @method startAutoPlay
+	 *&#x2F;
+	startAutoPlay:function () {
+		this.state.autoplay = true;
+		this.fire(&#x27;startAutoplay&#x27;);
+		this.nextAutoPlayMove();
+	},
+	&#x2F;**
+	 * Stop autoplay of moves
+	 * @method startAutoPlay
+	 *&#x2F;
+	stopAutoPlay:function () {
+		this.state.autoplay = false;
+		this.fire(&#x27;stopAutoplay&#x27;);
+	},
+
+	nextAutoPlayMove:function () {
+		if (this.state.autoplay) {
+			var nextMove = this.getNextMove(this.currentMove);
+			if (nextMove) {
+				this.nextMove.delay(1000, this);
+			} else {
+				this.stopAutoPlay();
+			}
+		}
+	},
+
+	&#x2F;**
+	 * Returns true if in auto play mode
+	 * @method isInAutoPlayMode
+	 * @return {Boolean}
+	 *&#x2F;
+	isInAutoPlayMode:function () {
+		return this.state.autoplay;
+	},
+
+	getDatabaseId:function () {
+		return this.databaseId;
+	},
+
+	setDirty:function () {
+		this.dirty = true;
+		&#x2F;**
+		 * Event fired when model is changed but not saved
+		 * @event dirty
+		 * @param {chess.model.Game} this
+		 *&#x2F;
+		this.fireEvent(&#x27;dirty&#x27;, this);
+	},
+
+	setClean:function () {
+		this.dirty = false;
+		&#x2F;**
+		 * Event fired when model is clean, i.e. right after being saved to the server.
+		 * @event dirty
+		 * @param {chess.model.Game} this
+		 *&#x2F;
+		this.fireEvent(&#x27;clean&#x27;, this);
+	},
+
+	isDirty:function () {
+		return this.dirty;
+	},
+
+	&#x2F;**
+	 * Save model to server
+	 * @method save
+	 *&#x2F;
+	save:function () {
+		this.gameReader.save(this.model);
+		this.setClean();
+	},
+
+	updateGameFromServer:function (data) {
+		if (data.id) {
+			this.model.id = data.id;
+		}
+	}
+});
+
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>
