@@ -12,3 +12,5 @@ To update
 inside, the doc folder, type
 
 git pull origin master
+
+open doc/out/index.html in a web browser(on a web server) to see the documentation.
