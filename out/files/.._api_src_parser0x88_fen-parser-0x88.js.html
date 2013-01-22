@@ -263,6 +263,7 @@ chess.parser.FenParser0x88 = new Class({
 		};
 	},
 
+
 	parseFen:function () {
 		var pos = 0;
 
@@ -312,7 +313,7 @@ chess.parser.FenParser0x88 = new Class({
 	 Returns pieces of a color
 	 @method getPiecesOfAColor
 	 @param color
-	 @return {array}
+	 @return {Array}
 	 @example
 	 	var parser = new chess.parser.FenParser0x88(&#x27;5k2&#x2F;8&#x2F;8&#x2F;3pP3&#x2F;8&#x2F;8&#x2F;8&#x2F;7K w - d6 0 1&#x27;);
 	 	var pieces = parser.getPiecesOfAColor(&#x27;white&#x27;);
@@ -1059,11 +1060,12 @@ chess.parser.FenParser0x88 = new Class({
 	},
 
 	&#x2F;**
-	 * Returns true when last position in the game has occured 2 or more times, i.e. 3 fold
-	 * repetition.(if 2, it will be 3 fold after the next move, a &quot;claimed&quot; draw).
-	 * @method hasThreeFoldRepetition
-	 * @param fens
-	 * @return {Boolean}
+	 Returns true when last position in the game has occured 2 or more times, i.e. 3 fold
+	 repetition.(if 2, it will be 3 fold after the next move, a &quot;claimed&quot; draw).
+	 @method hasThreeFoldRepetition
+	 @param {Array} fens
+	 @return {Boolean}
+	 This method is called from the game model where the fen of the last moves is sent.
 	 *&#x2F;
 	hasThreeFoldRepetition:function (fens) {
 		if (fens === undefined || fens.length === 0)return false;

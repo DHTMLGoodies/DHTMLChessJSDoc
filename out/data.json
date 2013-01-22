@@ -1,0 +1,4212 @@
+{
+    "project": {
+        "name": "DHTML Chess",
+        "description": "Chess Software for the Web",
+        "version": "0.0.2",
+        "url": "http://dhtml-chess.com/",
+        "logo": "http://www.dhtml-chess.com/images/logo.png"
+    },
+    "files": {
+        "..\\api\\src\\controller\\analysis-controller.js": {
+            "name": "..\\api\\src\\controller\\analysis-controller.js",
+            "modules": {},
+            "classes": {
+                "chess.controller.AnalysisController": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.controller": 1
+            }
+        },
+        "..\\api\\src\\controller\\controller.js": {
+            "name": "..\\api\\src\\controller\\controller.js",
+            "modules": {
+                "Controller": 1
+            },
+            "classes": {
+                "chess.controller.Controller": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.controller": 1
+            }
+        },
+        "..\\api\\src\\controller\\tactic-controller.js": {
+            "name": "..\\api\\src\\controller\\tactic-controller.js",
+            "modules": {},
+            "classes": {
+                "chess.controller.TacticController": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.controller": 1
+            }
+        },
+        "..\\api\\src\\datasource\\folder-tree.js": {
+            "name": "..\\api\\src\\datasource\\folder-tree.js",
+            "modules": {
+                "DataSource": 1
+            },
+            "classes": {
+                "chess.dataSource.FolderTree": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.dataSource": 1
+            }
+        },
+        "..\\api\\src\\datasource\\game-list.js": {
+            "name": "..\\api\\src\\datasource\\game-list.js",
+            "modules": {},
+            "classes": {
+                "chess.dataSource.GameList": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.dataSource": 1
+            }
+        },
+        "..\\api\\src\\model\\game.js": {
+            "name": "..\\api\\src\\model\\game.js",
+            "modules": {
+                "Model": 1
+            },
+            "classes": {
+                "chess.model.Game": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.model": 1
+            }
+        },
+        "..\\api\\src\\model\\move.js": {
+            "name": "..\\api\\src\\model\\move.js",
+            "modules": {},
+            "classes": {
+                "chess.model.Move": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.model": 1
+            }
+        },
+        "..\\api\\src\\parser0x88\\fen-parser-0x88.js": {
+            "name": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "modules": {
+                "Parser": 1
+            },
+            "classes": {
+                "chess.parser.FenParser0x88": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.parser": 1
+            }
+        },
+        "..\\api\\src\\parser0x88\\move-0x88.js": {
+            "name": "..\\api\\src\\parser0x88\\move-0x88.js",
+            "modules": {},
+            "classes": {
+                "chess.parser.Move0x88": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.parser": 1
+            }
+        },
+        "..\\api\\src\\parser0x88\\position-validator.js": {
+            "name": "..\\api\\src\\parser0x88\\position-validator.js",
+            "modules": {},
+            "classes": {
+                "chess.parser.PositionValidator": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.parser": 1
+            }
+        },
+        "..\\api\\src\\remote\\game-reader.js": {
+            "name": "..\\api\\src\\remote\\game-reader.js",
+            "modules": {},
+            "classes": {
+                "chess.remote.GameReader": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.remote": 1
+            }
+        },
+        "..\\api\\src\\view\\board\\chess-board-gui.js": {
+            "name": "..\\api\\src\\view\\board\\chess-board-gui.js",
+            "modules": {
+                "Board": 1
+            },
+            "classes": {
+                "chess.view.board.GUI": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.board": 1
+            }
+        },
+        "..\\api\\src\\view\\board\\chess-board.js": {
+            "name": "..\\api\\src\\view\\board\\chess-board.js",
+            "modules": {},
+            "classes": {
+                "chess.view.board.Board": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.board": 1
+            }
+        },
+        "..\\api\\src\\view\\board\\chess-piece.js": {
+            "name": "..\\api\\src\\view\\board\\chess-piece.js",
+            "modules": {},
+            "classes": {
+                "chess.view.board.Piece": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.board": 1
+            }
+        },
+        "..\\api\\src\\view\\dialog\\comment.js": {
+            "name": "..\\api\\src\\view\\dialog\\comment.js",
+            "modules": {},
+            "classes": {
+                "chess.view.dialog.Comment": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.dialog": 1
+            }
+        },
+        "..\\api\\src\\view\\dialog\\game-import.js": {
+            "name": "..\\api\\src\\view\\dialog\\game-import.js",
+            "modules": {
+                "Dialog": 1
+            },
+            "classes": {
+                "chess.view.dialog.GameImport": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.dialog": 1
+            }
+        },
+        "..\\api\\src\\view\\dialog\\new-game.js": {
+            "name": "..\\api\\src\\view\\dialog\\new-game.js",
+            "modules": {},
+            "classes": {
+                "chess.view.dialog.NewGame": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.dialog": 1
+            }
+        },
+        "..\\api\\src\\view\\dialog\\overwrite-move.js": {
+            "name": "..\\api\\src\\view\\dialog\\overwrite-move.js",
+            "modules": {},
+            "classes": {
+                "chess.view.dialog.OverwriteMove": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.dialog": 1
+            }
+        },
+        "..\\api\\src\\view\\dialog\\promote.js": {
+            "name": "..\\api\\src\\view\\dialog\\promote.js",
+            "modules": {},
+            "classes": {
+                "chess.view.dialog.Promote": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.dialog": 1
+            }
+        },
+        "..\\api\\src\\view\\eco\\variation-tree.js": {
+            "name": "..\\api\\src\\view\\eco\\variation-tree.js",
+            "modules": {},
+            "classes": {
+                "chess.view.eco.VariationTree": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.eco": 1
+            }
+        },
+        "..\\api\\src\\view\\folder\\tree.js": {
+            "name": "..\\api\\src\\view\\folder\\tree.js",
+            "modules": {
+                "Tree": 1
+            },
+            "classes": {
+                "chess.view.folder.Tree": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.folder": 1
+            }
+        },
+        "..\\api\\src\\view\\gamelist\\grid.js": {
+            "name": "..\\api\\src\\view\\gamelist\\grid.js",
+            "modules": {
+                "Grid": 1
+            },
+            "classes": {
+                "chess.view.gamelist.Grid": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.gamelist": 1
+            }
+        },
+        "..\\api\\src\\view\\highlight\\arrow-svg.js": {
+            "name": "..\\api\\src\\view\\highlight\\arrow-svg.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "..\\api\\src\\view\\highlight\\arrow-tactic.js": {
+            "name": "..\\api\\src\\view\\highlight\\arrow-tactic.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "..\\api\\src\\view\\highlight\\arrow.js": {
+            "name": "..\\api\\src\\view\\highlight\\arrow.js",
+            "modules": {},
+            "classes": {
+                "chess.view.highlight.Arrow": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.highlight": 1
+            }
+        },
+        "..\\api\\src\\view\\highlight\\square.js": {
+            "name": "..\\api\\src\\view\\highlight\\square.js",
+            "modules": {},
+            "classes": {
+                "chess.view.highlight.Square": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.highlight": 1
+            }
+        },
+        "..\\api\\src\\view\\installer\\installer.js": {
+            "name": "..\\api\\src\\view\\installer\\installer.js",
+            "modules": {
+                "Installer": 1
+            },
+            "classes": {
+                "chess.view.installer.Installer": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.installer": 1
+            }
+        },
+        "..\\api\\src\\view\\menu-item\\game-import.js": {
+            "name": "..\\api\\src\\view\\menu-item\\game-import.js",
+            "modules": {
+                "Menu": 1
+            },
+            "classes": {
+                "chess.view.menuItems.GameImport": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.menuItems": 1
+            }
+        },
+        "..\\api\\src\\view\\menu-item\\new-game.js": {
+            "name": "..\\api\\src\\view\\menu-item\\new-game.js",
+            "modules": {},
+            "classes": {
+                "chess.view.menuItems.NewGame": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.menuItems": 1
+            }
+        },
+        "..\\api\\src\\view\\menu-item\\save-game.js": {
+            "name": "..\\api\\src\\view\\menu-item\\save-game.js",
+            "modules": {},
+            "classes": {
+                "chess.view.SaveGame.NewGame": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.SaveGame": 1
+            }
+        },
+        "..\\api\\src\\view\\message\\tactics-message.js": {
+            "name": "..\\api\\src\\view\\message\\tactics-message.js",
+            "modules": {},
+            "classes": {
+                "chess.view.message.TacticMessage": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.message": 1
+            }
+        },
+        "..\\api\\src\\view\\metadata\\fen-field.js": {
+            "name": "..\\api\\src\\view\\metadata\\fen-field.js",
+            "modules": {},
+            "classes": {
+                "chess.view.metadata.FenField": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.metadata": 1
+            }
+        },
+        "..\\api\\src\\view\\metadata\\game.js": {
+            "name": "..\\api\\src\\view\\metadata\\game.js",
+            "modules": {},
+            "classes": {
+                "chess.view.metadata.Game": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.metadata": 1
+            }
+        },
+        "..\\api\\src\\view\\metadata\\move.js": {
+            "name": "..\\api\\src\\view\\metadata\\move.js",
+            "modules": {},
+            "classes": {
+                "chess.view.metadata.Move": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.metadata": 1
+            }
+        },
+        "..\\api\\src\\view\\notation\\panel.js": {
+            "name": "..\\api\\src\\view\\notation\\panel.js",
+            "modules": {},
+            "classes": {
+                "chess.view.notation.Panel": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.notation": 1
+            }
+        },
+        "..\\api\\src\\view\\position\\board.js": {
+            "name": "..\\api\\src\\view\\position\\board.js",
+            "modules": {},
+            "classes": {
+                "chess.view.position.Board": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.position": 1
+            }
+        },
+        "..\\api\\src\\view\\position\\castling.js": {
+            "name": "..\\api\\src\\view\\position\\castling.js",
+            "modules": {},
+            "classes": {
+                "chess.view.position.Castling": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.position": 1
+            }
+        },
+        "..\\api\\src\\view\\position\\dialog.js": {
+            "name": "..\\api\\src\\view\\position\\dialog.js",
+            "modules": {},
+            "classes": {
+                "chess.view.position.Dialog": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.position": 1
+            }
+        },
+        "..\\api\\src\\view\\position\\pieces.js": {
+            "name": "..\\api\\src\\view\\position\\pieces.js",
+            "modules": {},
+            "classes": {
+                "chess.view.position.Pieces": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.position": 1
+            }
+        },
+        "..\\api\\src\\view\\position\\side-to-move.js": {
+            "name": "..\\api\\src\\view\\position\\side-to-move.js",
+            "modules": {},
+            "classes": {
+                "chess.view.position.SideToMove": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.position": 1
+            }
+        },
+        "..\\api\\src\\view\\user\\controller.js": {
+            "name": "..\\api\\src\\view\\user\\controller.js",
+            "modules": {
+                "User": 1
+            },
+            "classes": {
+                "chess.view.user.Controller": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.user": 1
+            }
+        },
+        "..\\api\\src\\view\\user\\country.js": {
+            "name": "..\\api\\src\\view\\user\\country.js",
+            "modules": {},
+            "classes": {
+                "chess.view.user.Country": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.user": 1
+            }
+        },
+        "..\\api\\src\\view\\user\\login-button.js": {
+            "name": "..\\api\\src\\view\\user\\login-button.js",
+            "modules": {},
+            "classes": {
+                "chess.view.user.LoginButton": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.user": 1
+            }
+        },
+        "..\\api\\src\\view\\user\\login-window.js": {
+            "name": "..\\api\\src\\view\\user\\login-window.js",
+            "modules": {},
+            "classes": {
+                "chess.view.user.LoginWindow": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.user": 1
+            }
+        },
+        "..\\api\\src\\view\\user\\logout-button.js": {
+            "name": "..\\api\\src\\view\\user\\logout-button.js",
+            "modules": {},
+            "classes": {
+                "chess.view.user.LogoutButton": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.user": 1
+            }
+        },
+        "..\\api\\src\\view\\user\\panel.js": {
+            "name": "..\\api\\src\\view\\user\\panel.js",
+            "modules": {},
+            "classes": {
+                "chess.view.user.Panel": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.user": 1
+            }
+        },
+        "..\\api\\src\\view\\user\\profile-window.js": {
+            "name": "..\\api\\src\\view\\user\\profile-window.js",
+            "modules": {},
+            "classes": {
+                "chess.view.user.ProfileWindow": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.user": 1
+            }
+        },
+        "..\\api\\src\\view\\user\\register-button.js": {
+            "name": "..\\api\\src\\view\\user\\register-button.js",
+            "modules": {},
+            "classes": {
+                "chess.view.user.RegisterButton": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.user": 1
+            }
+        },
+        "..\\api\\src\\view\\user\\register-window.js": {
+            "name": "..\\api\\src\\view\\user\\register-window.js",
+            "modules": {},
+            "classes": {
+                "chess.view.user.RegisterWindow": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.user": 1
+            }
+        },
+        "..\\api\\src\\view\\user\\settings-button.js": {
+            "name": "..\\api\\src\\view\\user\\settings-button.js",
+            "modules": {},
+            "classes": {
+                "chess.view.user.SettingsButton": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.user": 1
+            }
+        },
+        "..\\api\\src\\view\\user\\user-model.js": {
+            "name": "..\\api\\src\\view\\user\\user-model.js",
+            "modules": {},
+            "classes": {
+                "chess.view.user.UserModel": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.user": 1
+            }
+        }
+    },
+    "modules": {
+        "Controller": {
+            "name": "Controller",
+            "submodules": {},
+            "classes": {
+                "chess.controller.AnalysisController": 1,
+                "chess.controller.Controller": 1,
+                "chess.controller.TacticController": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.controller": 1
+            },
+            "tag": "module",
+            "file": "..\\api\\src\\controller\\tactic-controller.js",
+            "line": 1,
+            "description": "Game controller base class. This class acts as the glue between\ngame models and views. When something happens in current game, it sends a message/event to the\ncontroller. The controller delegates this message to the views and all views interested",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "config",
+                    "description": "",
+                    "type": "Object"
+                }
+            ]
+        },
+        "DataSource": {
+            "name": "DataSource",
+            "submodules": {},
+            "classes": {
+                "chess.dataSource.FolderTree": 1,
+                "chess.dataSource.GameList": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.dataSource": 1
+            },
+            "tag": "module",
+            "file": "..\\api\\src\\datasource\\game-list.js",
+            "line": 1,
+            "description": "Data source for list of folders and databases\nby chess.view.gamelist.Grid",
+            "extends": "dataSource.JSON"
+        },
+        "Model": {
+            "name": "Model",
+            "submodules": {},
+            "classes": {
+                "chess.model.Game": 1,
+                "chess.model.Move": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.model": 1
+            },
+            "tag": "module",
+            "file": "..\\api\\src\\model\\move.js",
+            "line": 1,
+            "description": "Chess game model",
+            "uses": [
+                "{chess.parser.Move0x88}",
+                "{chess.remote.GameReader}"
+            ]
+        },
+        "Parser": {
+            "name": "Parser",
+            "submodules": {},
+            "classes": {
+                "chess.parser.FenParser0x88": 1,
+                "chess.parser.Move0x88": 1,
+                "chess.parser.PositionValidator": 1,
+                "chess.remote.GameReader": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.parser": 1,
+                "chess.remote": 1
+            },
+            "tag": "module",
+            "file": "..\\api\\src\\remote\\game-reader.js",
+            "line": 1,
+            "description": "Chess position parser",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "fen",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "example": [
+                "\nvar parser = new chess.parser.FenParser0x88('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1');\nconsole.log(parser.getValidMovesAndResult('white'));\n"
+            ]
+        },
+        "View": {
+            "name": "View",
+            "submodules": {
+                "Board": 1,
+                "Dialog": 1,
+                "Tree": 1,
+                "Grid": 1,
+                "Menu": 1,
+                "User": 1
+            },
+            "classes": {
+                "chess.view.board.GUI": 1,
+                "chess.view.board.Board": 1,
+                "chess.view.board.Piece": 1,
+                "chess.view.dialog.Comment": 1,
+                "chess.view.dialog.GameImport": 1,
+                "chess.view.dialog.NewGame": 1,
+                "chess.view.dialog.OverwriteMove": 1,
+                "chess.view.dialog.Promote": 1,
+                "chess.view.eco.VariationTree": 1,
+                "chess.view.folder.Tree": 1,
+                "chess.view.gamelist.Grid": 1,
+                "chess.view.highlight.Arrow": 1,
+                "chess.view.highlight.Square": 1,
+                "chess.view.menuItems.GameImport": 1,
+                "chess.view.menuItems.NewGame": 1,
+                "chess.view.SaveGame.NewGame": 1,
+                "chess.view.message.TacticMessage": 1,
+                "chess.view.metadata.FenField": 1,
+                "chess.view.metadata.Game": 1,
+                "chess.view.metadata.Move": 1,
+                "chess.view.notation.Panel": 1,
+                "chess.view.position.Board": 1,
+                "chess.view.position.Castling": 1,
+                "chess.view.position.Dialog": 1,
+                "chess.view.position.Pieces": 1,
+                "chess.view.position.SideToMove": 1,
+                "chess.view.user.Controller": 1,
+                "chess.view.user.Country": 1,
+                "chess.view.user.LoginButton": 1,
+                "chess.view.user.LoginWindow": 1,
+                "chess.view.user.LogoutButton": 1,
+                "chess.view.user.Panel": 1,
+                "chess.view.user.ProfileWindow": 1,
+                "chess.view.user.RegisterButton": 1,
+                "chess.view.user.RegisterWindow": 1,
+                "chess.view.user.SettingsButton": 1,
+                "chess.view.user.UserModel": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.board": 1,
+                "chess.view.dialog": 1,
+                "chess.view.eco": 1,
+                "chess.view.folder": 1,
+                "chess.view.gamelist": 1,
+                "chess.view.highlight": 1,
+                "chess.view.menuItems": 1,
+                "chess.view.SaveGame": 1,
+                "chess.view.message": 1,
+                "chess.view.metadata": 1,
+                "chess.view.notation": 1,
+                "chess.view.position": 1,
+                "chess.view.user": 1
+            },
+            "file": "..\\api\\src\\view\\user\\user-model.js",
+            "line": 1
+        },
+        "Board": {
+            "name": "Board",
+            "submodules": {},
+            "classes": {
+                "chess.view.board.GUI": 1,
+                "chess.view.board.Board": 1,
+                "chess.view.board.Piece": 1,
+                "chess.view.highlight.Arrow": 1,
+                "chess.view.highlight.Square": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {
+                "chess.view.board": 1,
+                "chess.view.highlight": 1
+            },
+            "module": "View",
+            "namespace": "",
+            "file": "..\\api\\src\\view\\highlight\\square.js",
+            "line": 1,
+            "description": "Javascript Class for Chess Board and Pieces on the board\nJSON config type: chess.view.board.Board",
+            "extends": "View",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "config",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "example": [
+                "\n\tchildren:[\n\t{\n\t\t type:'chess.view.board.Board',\n\t\t labels:true,\n\t\t weight:1,\n\t\t addons:[\n\t\t\t {\n\t\t\t\t type:'chess.view.highlight.Arrow',\n\t\t\t\t properties:{\n\t\t\t\t\t 'stroke-width' : 0\n\t\t\t\t }\n\t\t\t }\n\t\t ]\n\t }\n]\n"
+            ]
+        },
+        "Dialog": {
+            "name": "Dialog",
+            "submodules": {},
+            "classes": {
+                "chess.view.dialog.GameImport": 1,
+                "chess.view.dialog.NewGame": 1,
+                "chess.view.dialog.OverwriteMove": 1,
+                "chess.view.dialog.Promote": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {
+                "chess.view.dialog": 1
+            },
+            "module": "View",
+            "namespace": "chess.view.dialog",
+            "file": "..\\api\\src\\view\\dialog\\promote.js",
+            "line": 1,
+            "description": "Game import dialog. Game import is only available to users with game edit privileges.",
+            "extends": "dialog.Dialog"
+        },
+        "Tree": {
+            "name": "Tree",
+            "submodules": {},
+            "classes": {
+                "chess.view.folder.Tree": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {
+                "chess.view.folder": 1
+            },
+            "module": "View",
+            "namespace": "chess.view.eco",
+            "file": "..\\api\\src\\view\\folder\\tree.js",
+            "line": 1,
+            "description": "This view displays a list of folders and databases as a tree."
+        },
+        "Grid": {
+            "name": "Grid",
+            "submodules": {},
+            "classes": {
+                "chess.view.gamelist.Grid": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "View",
+            "namespace": "",
+            "file": "..\\api\\src\\view\\gamelist\\grid.js",
+            "line": 1,
+            "description": "List of games view. List of games is displayed in a grid.",
+            "extends": "grid.Grid",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "config",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "example": [
+                "\n\tchildren:[\n\t... ,\n\t{\n\t\t titleBar:false,\n\t\t type:'chess.view.gamelist.Grid',\n\t\t weight:1,\n\t\t frame:true,\n\t\t fillview:true,\n\t\t cols:['white', 'black', 'result']\n\t }\n\t...\n\t]"
+            ]
+        },
+        "Installer": {
+            "name": "Installer",
+            "submodules": {},
+            "classes": {
+                "chess.view.installer.Installer": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.installer": 1
+            },
+            "tag": "module",
+            "file": "..\\api\\src\\view\\installer\\installer.js",
+            "line": 1,
+            "description": "The DHTML Chess installer dialog",
+            "extends": "dialog.Dialog"
+        },
+        "Menu": {
+            "name": "Menu",
+            "submodules": {},
+            "classes": {
+                "chess.view.menuItems.GameImport": 1,
+                "chess.view.menuItems.NewGame": 1,
+                "chess.view.SaveGame.NewGame": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {
+                "chess.view.menuItems": 1,
+                "chess.view.SaveGame": 1
+            },
+            "module": "View",
+            "namespace": "",
+            "file": "..\\api\\src\\view\\menu-item\\save-game.js",
+            "line": 1,
+            "description": "The game import menu item. This menu item will automatically be disabled when there are no\nvalid user sessions or if the user does not have access to the game import user role.\nOn click it will create a new chess.view.dialog.GameImport"
+        },
+        "User": {
+            "name": "User",
+            "submodules": {},
+            "classes": {
+                "chess.view.user.Controller": 1,
+                "chess.view.user.Country": 1,
+                "chess.view.user.LoginButton": 1,
+                "chess.view.user.LoginWindow": 1,
+                "chess.view.user.LogoutButton": 1,
+                "chess.view.user.Panel": 1,
+                "chess.view.user.ProfileWindow": 1,
+                "chess.view.user.RegisterButton": 1,
+                "chess.view.user.RegisterWindow": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {
+                "chess.view.user": 1
+            },
+            "module": "View",
+            "namespace": "chess.view.position",
+            "file": "..\\api\\src\\view\\user\\register-window.js",
+            "line": 1,
+            "description": "Controller for the user login/registration module",
+            "extends": "controller.Controller"
+        }
+    },
+    "classes": {
+        "chess.controller.AnalysisController": {
+            "name": "chess.controller.AnalysisController",
+            "shortname": "chess.controller.AnalysisController",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Controller",
+            "namespace": "chess.controller",
+            "file": "..\\api\\src\\controller\\analysis-controller.js",
+            "line": 1,
+            "description": "Special controller for analysis boards. It extends chess.controller.Controller but calls the\nenableDragAndDrop method of the board when the events \"setPosition\", \"nextmove\" and \"newMove\" is\nfired by current game model.",
+            "extends": "chess.controller.Controller",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "config",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "example": [
+                "\n\tnew chess.controller.AnalysisController();"
+            ]
+        },
+        "chess.controller.Controller": {
+            "name": "chess.controller.Controller",
+            "shortname": "chess.controller.Controller",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Controller",
+            "namespace": "chess.controller",
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 1,
+            "description": "Game controller base class. This class acts as the glue between\ngame models and views. When something happens in current game, it sends a message/event to the\ncontroller. The controller delegates this message to the views and all views interested"
+        },
+        "chess.controller.TacticController": {
+            "name": "chess.controller.TacticController",
+            "shortname": "chess.controller.TacticController",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Controller",
+            "namespace": "chess.controller",
+            "file": "..\\api\\src\\controller\\tactic-controller.js",
+            "line": 1,
+            "description": "Chess game controller for tactic puzzles, i.e. boards where you make a move\nin a a game and the next move is auto played.",
+            "extends": "chess.controller.Controller",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "config",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "example": [
+                "\n\t var controller = new chess.controller.TacticController({\n\t\t databaseId:4,\n\t\t alwaysPlayStartingColor:true\n\t });\n\t controller.loadRandomGame();"
+            ]
+        },
+        "chess.dataSource.FolderTree": {
+            "name": "chess.dataSource.FolderTree",
+            "shortname": "chess.dataSource.FolderTree",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "DataSource",
+            "namespace": "chess.dataSource",
+            "file": "..\\api\\src\\datasource\\folder-tree.js",
+            "line": 1,
+            "description": "Data source for list of folders and databases\nby chess.view.gamelist.Grid"
+        },
+        "chess.dataSource.GameList": {
+            "name": "chess.dataSource.GameList",
+            "shortname": "chess.dataSource.GameList",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "DataSource",
+            "namespace": "chess.dataSource",
+            "file": "..\\api\\src\\datasource\\game-list.js",
+            "line": 1,
+            "description": "Data source for list of games. An object of this class is automatically created\nby chess.view.gamelist.Grid"
+        },
+        "chess.model.Game": {
+            "name": "chess.model.Game",
+            "shortname": "chess.model.Game",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Model",
+            "namespace": "chess.model",
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 1,
+            "description": "Chess game model"
+        },
+        "chess.model.Move": {
+            "name": "chess.model.Move",
+            "shortname": "chess.model.Move",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Model",
+            "namespace": "chess.model",
+            "file": "..\\api\\src\\model\\move.js",
+            "line": 1,
+            "description": "This is an abstract class for documentation purpose only. It describes the structure of a move in chess.model.Game"
+        },
+        "chess.parser.FenParser0x88": {
+            "name": "chess.parser.FenParser0x88",
+            "shortname": "chess.parser.FenParser0x88",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [
+                "chess.parser.Move0x88"
+            ],
+            "module": "Parser",
+            "namespace": "chess.parser",
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 1,
+            "description": "Chess position parser"
+        },
+        "chess.parser.Move0x88": {
+            "name": "chess.parser.Move0x88",
+            "shortname": "chess.parser.Move0x88",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Parser",
+            "namespace": "chess.parser",
+            "file": "..\\api\\src\\parser0x88\\move-0x88.js",
+            "line": 1,
+            "description": "Class for move validation. This class is used by chess.model.Game",
+            "uses": [
+                "chess.parser.FenParser0x88"
+            ],
+            "is_constructor": 1,
+            "example": [
+                "\n\tvar validator = new chess.parser.Move0x88();\n\tvar valid = validator.isValid(\n\t\t{ from : 'h7', to : 'h6' },\n\t\t'r1bq1rk1/ppppbppp/2n2n2/4p3/2B1P3/2N2N1P/PPPP1PP1/R1BQ1RK1 b - 2 6'\n\t);\n\tif(valid){ alert('Move is valid') } else { alert('Move is invalid') };"
+            ]
+        },
+        "chess.parser.PositionValidator": {
+            "name": "chess.parser.PositionValidator",
+            "shortname": "chess.parser.PositionValidator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Parser",
+            "namespace": "chess.parser",
+            "file": "..\\api\\src\\parser0x88\\position-validator.js",
+            "line": 1,
+            "description": "Class used by position setup dialog to validate positions on the board.\nWhen the position is valid the \"OK\" button will be enabled, otherwise it will be disabled.",
+            "extends": "chess.parser.FenParser0x88"
+        },
+        "chess.remote.GameReader": {
+            "name": "chess.remote.GameReader",
+            "shortname": "chess.remote.GameReader",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Parser",
+            "namespace": "chess.remote",
+            "file": "..\\api\\src\\remote\\game-reader.js",
+            "line": 1,
+            "description": "Class used to load games from server. An object of this class is automatically created by\nchess.model:Game.",
+            "extends": "remote.Reader"
+        },
+        "chess.view.board.GUI": {
+            "name": "chess.view.board.GUI",
+            "shortname": "chess.view.board.GUI",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board",
+            "file": "..\\api\\src\\view\\board\\chess-board-gui.js",
+            "line": 1,
+            "description": "Javascript Class for Chess Board and Pieces on the board\nJSON config type: chess.view.board.Board"
+        },
+        "chess.view.board.Board": {
+            "name": "chess.view.board.Board",
+            "shortname": "chess.view.board.Board",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board",
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 1,
+            "description": "Javascript Class for Chess Board and Pieces on the board\nJSON config type: chess.view.board.Board"
+        },
+        "chess.view.board.Piece": {
+            "name": "chess.view.board.Piece",
+            "shortname": "chess.view.board.Piece",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board",
+            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "line": 1,
+            "description": "You will never have to use this class. Pieces are created dynamically by chess.board.Board"
+        },
+        "chess.view.dialog.Comment": {
+            "name": "chess.view.dialog.Comment",
+            "shortname": "chess.view.dialog.Comment",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "namespace": "chess.view.dialog",
+            "file": "..\\api\\src\\view\\dialog\\comment.js",
+            "line": 1,
+            "description": "Move comment dialog. This dialog is by default created by a chess game controller. It listens to controller events\n\"commentAfter\" and \"commentBefore\". When these events are fired",
+            "extends": "dialog.Dialog"
+        },
+        "chess.view.dialog.GameImport": {
+            "name": "chess.view.dialog.GameImport",
+            "shortname": "chess.view.dialog.GameImport",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "Dialog",
+            "namespace": "chess.view.dialog",
+            "file": "..\\api\\src\\view\\dialog\\game-import.js",
+            "line": 1,
+            "description": "Game import dialog. Game import is only available to users with game edit privileges."
+        },
+        "chess.view.dialog.NewGame": {
+            "name": "chess.view.dialog.NewGame",
+            "shortname": "chess.view.dialog.NewGame",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "Dialog",
+            "namespace": "chess.view.dialog",
+            "file": "..\\api\\src\\view\\dialog\\new-game.js",
+            "line": 1,
+            "description": "New game dialog. This dialog listens to the newGameDialog event from the controller."
+        },
+        "chess.view.dialog.OverwriteMove": {
+            "name": "chess.view.dialog.OverwriteMove",
+            "shortname": "chess.view.dialog.OverwriteMove",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "Dialog",
+            "namespace": "chess.view.dialog",
+            "file": "..\\api\\src\\view\\dialog\\overwrite-move.js",
+            "line": 1,
+            "description": "Displays an overwrite move dialog. This dialog listens to\noverwriteOrVariation of the controller."
+        },
+        "chess.view.dialog.Promote": {
+            "name": "chess.view.dialog.Promote",
+            "shortname": "chess.view.dialog.Promote",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "Dialog",
+            "namespace": "chess.view.dialog",
+            "file": "..\\api\\src\\view\\dialog\\promote.js",
+            "line": 1,
+            "description": "Promotion dialog which will be displayed when controller fires the verifyPromotion event. Which piece to promote to\nis chosen by clicking on images illustrating queen, rook, knight and bishop."
+        },
+        "chess.view.eco.VariationTree": {
+            "name": "chess.view.eco.VariationTree",
+            "shortname": "chess.view.eco.VariationTree",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "namespace": "chess.view.eco",
+            "file": "..\\api\\src\\view\\eco\\variation-tree.js",
+            "line": 1,
+            "description": "Eco variation tree view. This view displays available next moves according to ECO.",
+            "extends": "tree.Tree",
+            "example": [
+                "\n\tchildren:[\n\t ...\n\t {\n\t\t title:'Eco',\n\t\t type:'chess.view.eco.VariationTree'\n\t }\n\t...\n\t]"
+            ]
+        },
+        "chess.view.folder.Tree": {
+            "name": "chess.view.folder.Tree",
+            "shortname": "chess.view.folder.Tree",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "Tree",
+            "namespace": "chess.view.folder",
+            "file": "..\\api\\src\\view\\folder\\tree.js",
+            "line": 1,
+            "description": "This view displays a list of folders and databases as a tree."
+        },
+        "chess.view.gamelist.Grid": {
+            "name": "chess.view.gamelist.Grid",
+            "shortname": "chess.view.gamelist.Grid",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "Grid",
+            "namespace": "chess.view.gamelist",
+            "file": "..\\api\\src\\view\\gamelist\\grid.js",
+            "line": 1,
+            "description": "List of games view. List of games is displayed in a grid."
+        },
+        "chess.view.highlight.Arrow": {
+            "name": "chess.view.highlight.Arrow",
+            "shortname": "chess.view.highlight.Arrow",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.highlight",
+            "file": "..\\api\\src\\view\\highlight\\arrow.js",
+            "line": 1,
+            "description": "Highlight a moves with an arrow. An object of this class is automatically created by\nchess.view.board.Board when added using \"addons\"."
+        },
+        "chess.view.highlight.Square": {
+            "name": "chess.view.highlight.Square",
+            "shortname": "chess.view.highlight.Square",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.highlight",
+            "file": "..\\api\\src\\view\\highlight\\square.js",
+            "line": 1,
+            "description": "Add on for chess board. used to indicate current moves by highlighting squares."
+        },
+        "chess.view.installer.Installer": {
+            "name": "chess.view.installer.Installer",
+            "shortname": "chess.view.installer.Installer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Installer",
+            "namespace": "chess.view.installer",
+            "file": "..\\api\\src\\view\\installer\\installer.js",
+            "line": 1,
+            "description": "The DHTML Chess installer dialog"
+        },
+        "chess.view.menuItems.GameImport": {
+            "name": "chess.view.menuItems.GameImport",
+            "shortname": "chess.view.menuItems.GameImport",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "Menu",
+            "namespace": "chess.view.menuItems",
+            "file": "..\\api\\src\\view\\menu-item\\game-import.js",
+            "line": 1,
+            "description": "The game import menu item. This menu item will automatically be disabled when there are no\nvalid user sessions or if the user does not have access to the game import user role.\nOn click it will create a new chess.view.dialog.GameImport"
+        },
+        "chess.view.menuItems.NewGame": {
+            "name": "chess.view.menuItems.NewGame",
+            "shortname": "chess.view.menuItems.NewGame",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "Menu",
+            "namespace": "chess.view.menuItems",
+            "file": "..\\api\\src\\view\\menu-item\\new-game.js",
+            "line": 1,
+            "description": "Menu item \"New Game\". This menu item is automatically disabled when no user session exists and when\na user does not have access to edit games."
+        },
+        "chess.view.SaveGame.NewGame": {
+            "name": "chess.view.SaveGame.NewGame",
+            "shortname": "chess.view.SaveGame.NewGame",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "Menu",
+            "namespace": "chess.view.SaveGame",
+            "file": "..\\api\\src\\view\\menu-item\\save-game.js",
+            "line": 1,
+            "description": "Menu item \"Save Game\". This menu item is automatically disabled when no user session exists and when\na user does not have access to edit games."
+        },
+        "chess.view.message.TacticMessage": {
+            "name": "chess.view.message.TacticMessage",
+            "shortname": "chess.view.message.TacticMessage",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "namespace": "chess.view.message",
+            "file": "..\\api\\src\\view\\message\\tactics-message.js",
+            "line": 1,
+            "description": "Tactic message showing wrong move or incorrect move. This view listens to controller events\nwrongGuess, correctGuess and newGame. On newGame it will display which color to move.",
+            "extends": "View"
+        },
+        "chess.view.metadata.FenField": {
+            "name": "chess.view.metadata.FenField",
+            "shortname": "chess.view.metadata.FenField",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "namespace": "chess.view.metadata",
+            "file": "..\\api\\src\\view\\metadata\\fen-field.js",
+            "line": 1,
+            "description": "This is a text/input-field showing position of current move. It will be updated when one of the following events is fired by\nthe controller: newGame, setPosition, newMove, nextMove.",
+            "extends": "form.Text"
+        },
+        "chess.view.metadata.Game": {
+            "name": "chess.view.metadata.Game",
+            "shortname": "chess.view.metadata.Game",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "namespace": "chess.view.metadata",
+            "file": "..\\api\\src\\view\\metadata\\game.js",
+            "line": 1,
+            "description": "This class shows metadata(example: white,black etc) of current game. It listens to the \"newGame\" event of the controller",
+            "extends": "View"
+        },
+        "chess.view.metadata.Move": {
+            "name": "chess.view.metadata.Move",
+            "shortname": "chess.view.metadata.Move",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "namespace": "chess.view.metadata",
+            "file": "..\\api\\src\\view\\metadata\\move.js",
+            "line": 1,
+            "description": "Class used to show info about current move. This view is updated when one of the following events is fired by the controller, i.e.\ncontrollers active game model.\nsetPosition, nextmove, newMove, newGame",
+            "extends": "View"
+        },
+        "chess.view.notation.Panel": {
+            "name": "chess.view.notation.Panel",
+            "shortname": "chess.view.notation.Panel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "namespace": "chess.view.notation",
+            "file": "..\\api\\src\\view\\notation\\panel.js",
+            "line": 1,
+            "description": "Game notation panel.",
+            "extends": "View",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "config",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "example": [
+                "\n \tchildren:[\n \t...\n \t{\n\t\t type:'chess.view.notation.Panel',\n\t\t notations:'long',\n\t\t showContextMenu:true\n\t }\n \t..."
+            ]
+        },
+        "chess.view.position.Board": {
+            "name": "chess.view.position.Board",
+            "shortname": "chess.view.position.Board",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "namespace": "chess.view.position",
+            "file": "..\\api\\src\\view\\position\\board.js",
+            "line": 1,
+            "description": "Chess board for the position setup dialog",
+            "extends": "chess.view.board.Board"
+        },
+        "chess.view.position.Castling": {
+            "name": "chess.view.position.Castling",
+            "shortname": "chess.view.position.Castling",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "namespace": "chess.view.position",
+            "file": "..\\api\\src\\view\\position\\castling.js",
+            "line": 1,
+            "description": "Castling panel for the position setup dialog",
+            "extends": "Panel"
+        },
+        "chess.view.position.Dialog": {
+            "name": "chess.view.position.Dialog",
+            "shortname": "chess.view.position.Dialog",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "namespace": "chess.view.position",
+            "file": "..\\api\\src\\view\\position\\dialog.js",
+            "line": 1,
+            "description": "Position setup dialog",
+            "extends": "ludo.dialog.Dialog"
+        },
+        "chess.view.position.Pieces": {
+            "name": "chess.view.position.Pieces",
+            "shortname": "chess.view.position.Pieces",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "namespace": "chess.view.position",
+            "file": "..\\api\\src\\view\\position\\pieces.js",
+            "line": 1,
+            "description": "Piece panel for the position setup dialog",
+            "extends": "View"
+        },
+        "chess.view.position.SideToMove": {
+            "name": "chess.view.position.SideToMove",
+            "shortname": "chess.view.position.SideToMove",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "namespace": "chess.view.position",
+            "file": "..\\api\\src\\view\\position\\side-to-move.js",
+            "line": 1,
+            "description": "Side to move panel for the position setup dialog",
+            "extends": "Panel"
+        },
+        "chess.view.user.Controller": {
+            "name": "chess.view.user.Controller",
+            "shortname": "chess.view.user.Controller",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "User",
+            "namespace": "chess.view.user",
+            "file": "..\\api\\src\\view\\user\\controller.js",
+            "line": 1,
+            "description": "Controller for the user login/registration module"
+        },
+        "chess.view.user.Country": {
+            "name": "chess.view.user.Country",
+            "shortname": "chess.view.user.Country",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "User",
+            "namespace": "chess.view.user",
+            "file": "..\\api\\src\\view\\user\\country.js",
+            "line": 1,
+            "description": "Country input field for the user profile form"
+        },
+        "chess.view.user.LoginButton": {
+            "name": "chess.view.user.LoginButton",
+            "shortname": "chess.view.user.LoginButton",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "User",
+            "namespace": "chess.view.user",
+            "file": "..\\api\\src\\view\\user\\login-button.js",
+            "line": 1,
+            "description": "Login button. This button will be hidden automatically when\na valid user-session is created. It will be shown when there isn't\na valid user session."
+        },
+        "chess.view.user.LoginWindow": {
+            "name": "chess.view.user.LoginWindow",
+            "shortname": "chess.view.user.LoginWindow",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "User",
+            "namespace": "chess.view.user",
+            "file": "..\\api\\src\\view\\user\\login-window.js",
+            "line": 1,
+            "description": "Login dialog."
+        },
+        "chess.view.user.LogoutButton": {
+            "name": "chess.view.user.LogoutButton",
+            "shortname": "chess.view.user.LogoutButton",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "User",
+            "namespace": "chess.view.user",
+            "file": "..\\api\\src\\view\\user\\logout-button.js",
+            "line": 1,
+            "description": "Log out button. This button is hidden when there are no valid\nuser sessions. It will be shown when a valid user session exists."
+        },
+        "chess.view.user.Panel": {
+            "name": "chess.view.user.Panel",
+            "shortname": "chess.view.user.Panel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "User",
+            "namespace": "chess.view.user",
+            "file": "..\\api\\src\\view\\user\\panel.js",
+            "line": 1,
+            "description": "Small user info panel."
+        },
+        "chess.view.user.ProfileWindow": {
+            "name": "chess.view.user.ProfileWindow",
+            "shortname": "chess.view.user.ProfileWindow",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "User",
+            "namespace": "chess.view.user",
+            "file": "..\\api\\src\\view\\user\\profile-window.js",
+            "line": 1,
+            "description": "User profile dialog"
+        },
+        "chess.view.user.RegisterButton": {
+            "name": "chess.view.user.RegisterButton",
+            "shortname": "chess.view.user.RegisterButton",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "User",
+            "namespace": "chess.view.user",
+            "file": "..\\api\\src\\view\\user\\register-button.js",
+            "line": 1,
+            "description": "\"Register\" button. This button is shown when there's no valid user session.\nIf a valid user session exists, it will be hidden. This button fires a click\nevent which is picked up by chess.view.user.Controller."
+        },
+        "chess.view.user.RegisterWindow": {
+            "name": "chess.view.user.RegisterWindow",
+            "shortname": "chess.view.user.RegisterWindow",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "submodule": "User",
+            "namespace": "chess.view.user",
+            "file": "..\\api\\src\\view\\user\\register-window.js",
+            "line": 1,
+            "description": "User registration window."
+        },
+        "chess.view.user.SettingsButton": {
+            "name": "chess.view.user.SettingsButton",
+            "shortname": "chess.view.user.SettingsButton",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "namespace": "chess.view.user",
+            "file": "..\\api\\src\\view\\user\\settings-button.js",
+            "line": 1,
+            "description": "User settings button. This button looks like a gear and will fire a \"click\" event\nwhich is picked up by chess.view.user.Controller. The controller will handle the event\nand fire a \"showProfile\" event which is picked up by chess.view.user.ProfileWindow.\nchess.view.user.ProfileWindow will show it's self when this event is fired.",
+            "extends": "form.Button"
+        },
+        "chess.view.user.UserModel": {
+            "name": "chess.view.user.UserModel",
+            "shortname": "chess.view.user.UserModel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "namespace": "chess.view.user",
+            "file": "..\\api\\src\\view\\user\\user-model.js",
+            "line": 1,
+            "description": "Model for a user session",
+            "extends": "model.Model"
+        }
+    },
+    "classitems": [
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 81,
+            "description": "New game dialog event",
+            "itemtype": "event",
+            "name": "newGameDialog",
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 142,
+            "description": "Select a database",
+            "itemtype": "method",
+            "name": "selectDatabase",
+            "params": [
+                {
+                    "name": "database",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 149,
+            "description": "Select database event",
+            "itemtype": "event",
+            "name": "selectDatabase",
+            "params": [
+                {
+                    "name": "database",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 156,
+            "description": "Load next game in selected database. This method will only work if you have\na grid with list of games. The only thing this method does is to fire the \"nextGame\"\nevent which the list of games grid listens to. The grid will go to next game and fire it's\nselectGame event",
+            "itemtype": "method",
+            "name": "loadNextGame",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 165,
+            "description": "next game event",
+            "itemtype": "event",
+            "name": "nextGame",
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 172,
+            "description": "Load previous game from selected database. For info, see loadNextGame",
+            "itemtype": "method",
+            "name": "loadPreviousGame",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 215,
+            "description": "Flip board. The only thing this method does is to fire the flipBoard event.",
+            "itemtype": "method",
+            "name": "flipBoard",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 221,
+            "description": "flip event. A board is example of a view listening to this event. When it's fired, the board\nwill be flipped",
+            "itemtype": "event",
+            "name": "flip",
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 229,
+            "description": "Add a move to current model",
+            "itemtype": "method",
+            "name": "addMove",
+            "params": [
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "undefined"
+            },
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 250,
+            "description": "Event fired when the Comment before a move dialog should be shown.",
+            "itemtype": "event",
+            "name": "commentBefore",
+            "params": [
+                {
+                    "name": "currentModel",
+                    "description": "",
+                    "type": "chess.model.Game"
+                },
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 260,
+            "description": "Event fired when the Comment after a move dialog should be shown.",
+            "itemtype": "event",
+            "name": "commentAfter",
+            "params": [
+                {
+                    "name": "currentModel",
+                    "description": "",
+                    "type": "chess.model.Game"
+                },
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 274,
+            "description": "Go to start of current game",
+            "itemtype": "method",
+            "name": "toStart",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 282,
+            "description": "Go to end of current game",
+            "itemtype": "method",
+            "name": "toEnd",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 290,
+            "description": "Go to previous move",
+            "itemtype": "method",
+            "name": "previousMove",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 298,
+            "description": "Go to next move",
+            "itemtype": "method",
+            "name": "nextMove",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 306,
+            "description": "Start auto play of moves in current game from current position",
+            "itemtype": "method",
+            "name": "playMoves",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 314,
+            "description": "Pause auto play of moves",
+            "itemtype": "method",
+            "name": "pauseGame",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\controller.js",
+            "line": 387,
+            "description": "Return active game",
+            "itemtype": "method",
+            "name": "getCurrentModel",
+            "return": {
+                "description": "object chess.model.Game"
+            },
+            "class": "chess.controller.Controller",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\tactic-controller.js",
+            "line": 24,
+            "description": "True to always play starting color in game. Otherwise, you will play black\nif black is the winning color and white if white is the winning color. If\nno winner is registered in the game(result or by calculating final position),\nyou will play white",
+            "itemtype": "config",
+            "name": "alwaysPlayStartingColor",
+            "type": "{Boolean}",
+            "default": "false",
+            "class": "chess.controller.TacticController",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\controller\\tactic-controller.js",
+            "line": 125,
+            "description": "Load random game from current database",
+            "itemtype": "method",
+            "name": "loadRandomGame",
+            "return": {
+                "description": "void"
+            },
+            "class": "chess.controller.TacticController",
+            "module": "Controller",
+            "namespace": "chess.controller"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 12,
+            "itemtype": "attribute",
+            "name": "moveParser",
+            "type": "chess.parser.FenParser0x88",
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 36,
+            "description": "id of initial game to load from server.",
+            "itemtype": "config",
+            "name": "id",
+            "type": "{Number}",
+            "default": "undefined",
+            "optional": 1,
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 68,
+            "description": "Load a game from server",
+            "itemtype": "method",
+            "name": "loadGame",
+            "params": [
+                {
+                    "name": "gameId",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 76,
+            "description": "Load a random game from selected database",
+            "itemtype": "method",
+            "name": "loadRandomGame",
+            "params": [
+                {
+                    "name": "databaseId",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 95,
+            "description": "Empty model and reset to standard position",
+            "itemtype": "method",
+            "name": "newGame",
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 102,
+            "description": "Activate model. This will fire newGame and setPosition events",
+            "itemtype": "method",
+            "name": "activate",
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 107,
+            "description": "new game event. Fired when a new model is created or an old model is activated",
+            "itemtype": "event",
+            "name": "newGame",
+            "params": [
+                {
+                    "name": "eventName",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "chess.model.Game"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 114,
+            "description": "Fired when current chess position is changed, example by moving to a different move",
+            "itemtype": "event",
+            "name": "setPosition",
+            "params": [
+                {
+                    "name": "eventName",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "chess.model.Game"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 126,
+            "description": "Fired when there are no moves in the game",
+            "itemtype": "event",
+            "name": "noMoves",
+            "params": [
+                {
+                    "name": "eventName",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "chess.model.Game"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 215,
+            "description": "Update game information",
+            "itemtype": "method",
+            "name": "setMetadata",
+            "params": [
+                {
+                    "name": "metadata",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "example": [
+                "\n\tmodel.setMetadata({white:'John','black:'Jane'});"
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 229,
+            "description": "Update particular info about the game",
+            "itemtype": "method",
+            "name": "setMetadata",
+            "params": [
+                {
+                    "name": "key",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "value",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "example": [
+                "\n\tmodel.setMetadataValue('white','John');"
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 239,
+            "description": "Fired when metadata is updated",
+            "itemtype": "event",
+            "name": "updateMetadata",
+            "params": [
+                {
+                    "name": "eventName",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "chess.model.Game"
+                },
+                {
+                    "name": "metadata,",
+                    "description": "example {key:'white','value':'John'}",
+                    "type": "Object"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 250,
+            "description": "Return all game metadata info",
+            "itemtype": "method",
+            "name": "getMetadata",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 258,
+            "description": "Return a specific metadata key",
+            "itemtype": "method",
+            "name": "getMetadataValue",
+            "params": [
+                {
+                    "name": "key",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "value",
+                "type": "String"
+            },
+            "example": [
+                "\n\tvar whitePlayer = model.getMetadataValue('white');"
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 270,
+            "description": "Return array of moves in game",
+            "itemtype": "method",
+            "name": "getMoves",
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 279,
+            "description": "Return start position of game",
+            "itemtype": "method",
+            "name": "getStartPosition",
+            "return": {
+                "description": "position",
+                "type": "String"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 288,
+            "description": "Try to guess next move in a game",
+            "itemtype": "method",
+            "name": "tryNextMove",
+            "params": [
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "correctMove",
+                "type": "Boolean"
+            },
+            "example": [
+                "\n\t \tvar correctMove = model.tryNextMove({\n\t \t\tfrom:'e7',\n\t \t\tto:'e8',\n\t \t\tpromoteTo:'queen'\n\t \t});"
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 341,
+            "description": "Return result of game, either from metadata(\"result\") or by trying to calculate final\nposition. Return value will be 1 for white win, -1 for black win. 0.5 for draw and 0 for\nundecided.",
+            "itemtype": "method",
+            "name": "getResult",
+            "return": {
+                "description": "",
+                "type": "Number"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 372,
+            "description": "Returns true if user can claim draw in current position",
+            "itemtype": "method",
+            "name": "canClaimDraw",
+            "return": {
+                "description": "can claim draw",
+                "type": "Boolean"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 381,
+            "description": "Returns array of all FEN's in main line(Not variations)",
+            "itemtype": "method",
+            "name": "getAllFens",
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 395,
+            "description": "Return last move in game",
+            "itemtype": "method",
+            "name": "getLastMoveInGame",
+            "return": {
+                "description": "move",
+                "type": "chess.model.Move"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 407,
+            "description": "Return last position in game",
+            "itemtype": "method",
+            "name": "getLastPositionInGame",
+            "return": {
+                "description": "fen",
+                "type": "String"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 420,
+            "description": "Returns array of remaining moves",
+            "itemtype": "method",
+            "name": "getAllNextMoves",
+            "params": [
+                {
+                    "name": "nextOf",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 446,
+            "description": "Append move to the model",
+            "itemtype": "method",
+            "name": "appendMove",
+            "params": [
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "chess.model.Move|String"
+                }
+            ],
+            "return": {
+                "description": "success",
+                "type": "Boolean"
+            },
+            "example": [
+                "\n\tvar model = new chess.model.Game();\n\tmodel.appendMove({ 'from': 'e2', 'to' : 'e4' }); // Using objects\n\tmodel.appendMove('e7'); // Using notation\n\talert(model.getCurrentPosition());"
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 463,
+            "description": "verify promotion event. This event is fired when you try to append a promotion move\nwhere the promoteTo info is missing",
+            "itemtype": "event",
+            "name": "verifyPromotion",
+            "params": [
+                {
+                    "name": "eventName",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "chess.model.Game"
+                },
+                {
+                    "name": "appendedMove",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 484,
+            "description": "Fired when appending a move in the middle of a game. This method sends a message to the controller\nsaying that it needs to know if appended move should be added as variation or if it should overwrite\ncurrent next move",
+            "itemtype": "event",
+            "name": "overwriteOrVariation",
+            "params": [
+                {
+                    "name": "eventName",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "chess.model.Game"
+                },
+                {
+                    "name": "newMove,",
+                    "description": "nextMove",
+                    "type": "Object"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 504,
+            "description": "Fired when a new move is appended to the game.",
+            "itemtype": "event",
+            "name": "newMove",
+            "params": [
+                {
+                    "name": "eventName",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "chess.model.Game"
+                },
+                {
+                    "name": "appendedMove",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 512,
+            "description": "Fired when current move is last move in branch, either last move in game or last move inside a variation.",
+            "itemtype": "event",
+            "name": "endOfBranch",
+            "params": [
+                {
+                    "name": "eventName",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "chess.model.Game"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 520,
+            "description": "Fired when current move is last move in game.",
+            "itemtype": "event",
+            "name": "endOfBranch",
+            "params": [
+                {
+                    "name": "eventName",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "chess.model.Game"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 530,
+            "description": "Fired when you try to append an invalid move to the game",
+            "itemtype": "event",
+            "name": "endOfBranch",
+            "params": [
+                {
+                    "name": "eventName",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "chess.model.Game"
+                },
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 558,
+            "description": "Add a new move as a variation. If current move is allready first move in variation it will go to this move\nand not create a new variation.",
+            "itemtype": "method",
+            "name": "newVariation",
+            "params": [
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "return": {
+                "description": "undefined"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 581,
+            "description": "Fired after creating a new variation",
+            "itemtype": "event",
+            "name": "newVariation",
+            "params": [
+                {
+                    "name": "eventName",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "chess.model.Game"
+                },
+                {
+                    "name": "parentMove",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 643,
+            "description": "Delete a move",
+            "itemtype": "method",
+            "name": "deleteMove",
+            "params": [
+                {
+                    "name": "moveToDelete",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 655,
+            "description": "Special event not yet implemented. Supporting for adding info to games such as video links, automatic start and stop\nof auto play for lecture purpose will be added as actions later.",
+            "itemtype": "event",
+            "name": "deleteAction",
+            "params": [
+                {
+                    "name": "eventName",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "chess.model.Game"
+                },
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 665,
+            "description": "Fired when a move is deleted. It will only be fired for one move and not the following moves which of course\nalso will be deleted.",
+            "itemtype": "event",
+            "name": "deleteMove",
+            "params": [
+                {
+                    "name": "eventName",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "chess.model.Game"
+                },
+                {
+                    "name": "deleted",
+                    "description": "move",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 678,
+            "description": "Fired when going to a move which is not last move in game",
+            "itemtype": "event",
+            "name": "notEndOfGame",
+            "params": [
+                {
+                    "name": "eventName",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "chess.model.Game"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 701,
+            "description": "true if given move is last move in current variation, i.e. the variation active on the board",
+            "itemtype": "method",
+            "name": "isLastMoveInVariation",
+            "params": [
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 717,
+            "description": "true if move displayed on board, i.e. current model move is last move in game.",
+            "itemtype": "method",
+            "name": "isAtEndOfGame",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 975,
+            "description": "Get next move of",
+            "itemtype": "method",
+            "name": "getNextMove",
+            "params": [
+                {
+                    "name": "nextOf",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "return": {
+                "description": "next move",
+                "type": "chess.model.Move"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 1017,
+            "description": "Grade a move",
+            "itemtype": "method",
+            "name": "gradeMove",
+            "params": [
+                {
+                    "name": "move",
+                    "description": ""
+                },
+                {
+                    "name": "grade",
+                    "description": ""
+                }
+            ],
+            "example": [
+                "\n\t \tmodel.gradeMove(model.getCurrentMove(), '!');\n\t \t...\n\t \t...\n\t \tmodel.gradeMove(model.getCurrentMove(), '??');"
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 1069,
+            "description": "Return comment before move, i.e. get comment of previous move",
+            "itemtype": "method",
+            "name": "getCommentBefore",
+            "params": [
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "return": {
+                "description": "comment",
+                "type": "String"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 1085,
+            "description": "Get comment of current move",
+            "itemtype": "method",
+            "name": "getCommentAfter",
+            "params": [
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "return": {
+                "description": "comment",
+                "type": "String"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 1099,
+            "description": "Set comment before a move, i.e. set comment of previous move, or in case of first move in game, set \"commment\" attribute of\ngame metadata.",
+            "itemtype": "method",
+            "name": "setCommentBefore",
+            "params": [
+                {
+                    "name": "comment",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 1127,
+            "description": "Set comment after a move",
+            "itemtype": "method",
+            "name": "setCommentAfter",
+            "params": [
+                {
+                    "name": "comment",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 1164,
+            "description": "Start autoplay of moves",
+            "itemtype": "method",
+            "name": "startAutoPlay",
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 1173,
+            "description": "Stop autoplay of moves",
+            "itemtype": "method",
+            "name": "startAutoPlay",
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 1193,
+            "description": "Returns true if in auto play mode",
+            "itemtype": "method",
+            "name": "isInAutoPlayMode",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 1208,
+            "description": "Event fired when model is changed but not saved",
+            "itemtype": "event",
+            "name": "dirty",
+            "params": [
+                {
+                    "name": "this",
+                    "description": "",
+                    "type": "chess.model.Game"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 1218,
+            "description": "Event fired when model is clean, i.e. right after being saved to the server.",
+            "itemtype": "event",
+            "name": "dirty",
+            "params": [
+                {
+                    "name": "this",
+                    "description": "",
+                    "type": "chess.model.Game"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 1230,
+            "description": "Save model to server",
+            "itemtype": "method",
+            "name": "save",
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\move.js",
+            "line": 8,
+            "description": "from square, example \"e2\"",
+            "itemtype": "property",
+            "name": "from",
+            "type": "String",
+            "example": [
+                "\n\t\t {\n\t\t\t from:'e7',\n\t\t\t to:'e8',\n\t\t\t promoteTo:'queen',\n\t\t\t comment:'My comment',\n\t\t\t m:'e8=Q',\n\t\t\t lm:'e7-e8=Q'\n\t\t }"
+            ],
+            "class": "chess.model.Move",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\move.js",
+            "line": 24,
+            "description": "to square, example \"e4\"",
+            "itemtype": "property",
+            "name": "to",
+            "type": "String",
+            "class": "chess.model.Move",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\move.js",
+            "line": 31,
+            "description": "Promotion info",
+            "itemtype": "property",
+            "name": "promoteTo",
+            "type": "String",
+            "optional": 1,
+            "class": "chess.model.Move",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\move.js",
+            "line": 39,
+            "description": "Short notation",
+            "itemtype": "property",
+            "name": "m",
+            "type": "String",
+            "example": [
+                "\n\tm: 'e4'"
+            ],
+            "class": "chess.model.Move",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\move.js",
+            "line": 47,
+            "description": "Long notation",
+            "itemtype": "property",
+            "name": "lm",
+            "type": "String",
+            "optional": 1,
+            "example": [
+                "\nlm: 'e2-e4'"
+            ],
+            "class": "chess.model.Move",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\move.js",
+            "line": 56,
+            "description": "Comment",
+            "itemtype": "property",
+            "name": "comment",
+            "type": "String",
+            "optional": 1,
+            "example": [
+                "\n\tcomment:'This is my comment'"
+            ],
+            "class": "chess.model.Move",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\move.js",
+            "line": 66,
+            "description": "Array of variations. Each item in the array is an array of moves in that variation.",
+            "itemtype": "property",
+            "name": "variations",
+            "type": "Array",
+            "optional": 1,
+            "class": "chess.model.Move",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 20,
+            "description": "Set a new position",
+            "itemtype": "method",
+            "name": "setFen",
+            "params": [
+                {
+                    "name": "fen",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 104,
+            "description": "Returns pieces of a color",
+            "itemtype": "method",
+            "name": "getPiecesOfAColor",
+            "params": [
+                {
+                    "name": "color",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "example": [
+                "\n\tvar parser = new chess.parser.FenParser0x88('5k2/8/8/3pP3/8/8/8/7K w - d6 0 1');\n\tvar pieces = parser.getPiecesOfAColor('white');\n\tconsole.log(pieces);\neach piece is represented by an object like this:",
+                "\n\t{\n\t\ts : 112,\n\t\tt : 14\n\t}\nwhere s is square and type is type. s is numeric according to the 0x88 chess board where\na1 is 0, a2 is 16, b2 is 17, a3 is 32, i.e. a 128x64 square board.\n\nt is a numeric representation(4 bits).\n\nP : 0001\nN : 0010\nK : 0011\nB : 0101\nR : 0110\nQ : 0111\np : 1001\nn : 1010\nk : 1011\nb : 1101\nr : 1100\nq : 1100\n\nAs you can see, black pieces all have the first bit set to 1, and all the sliding pieces\n(bishop, rook and queen) has the second bit set to 1. This makes it easy to to determine color\nand sliding pieces using the bitwise & operator."
+            ],
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 145,
+            "itemtype": "method",
+            "name": "getEnPassantSquare",
+            "return": {
+                "description": "",
+                "type": "String|null"
+            },
+            "example": [
+                "\n\tvar fen = '5k2/8/8/3pP3/8/8/8/7K w - d6 0 1';\n\tvar parser = new chess.parser.FenParser0x88(fen);\n\talert(parser.getEnPassantSquare()); // alerts 'd6'"
+            ],
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 210,
+            "description": "Returns true if two squares are on the same rank. Squares are in the 0x88 format, i.e.\na1=0,a2=16. You can use Board0x88Config.mapping to get a more readable code.",
+            "itemtype": "method",
+            "name": "isOnSameRank",
+            "params": [
+                {
+                    "name": "square1",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "square2",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "example": [
+                "\n\t \tvar parser = new chess.parser.FenParser0x88();\n\t \tconsole.log(parser.isOnSameSquare(0,16)); // a1 and a2 -> false\n\t \tconsole.log(parser.isOnSameSquare(0,1)); // a1 and b1 -> true"
+            ],
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 226,
+            "description": "Returns true if two squares are on the same file. Squares are in the 0x88 format, i.e.\na1=0,a2=16. You can use Board0x88Config.mapping to get a more readable code.",
+            "itemtype": "method",
+            "name": "isOnSameFile",
+            "params": [
+                {
+                    "name": "square1",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "square2",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "example": [
+                "\n\t \tvar parser = new chess.parser.FenParser0x88();\n\t \tconsole.log(parser.isOnSameFile(0,16)); // a1 and a2 -> true\n\t \tconsole.log(parser.isOnSameFile(0,1)); // a1 and b1 -> false"
+            ],
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 242,
+            "description": "Returns valid moves and results for the position according to the 0x88 chess programming\nalgorithm where position on the board is numeric (A1=0,H1=7,A2=16,H2=23,A3=32,A4=48).\nFirst rank is numbered 0-7. Second rank starts at first rank + 16, i.e. A2 = 16. Third\nrank starts at second rank + 16, i.e. A3 = 32 and so on.",
+            "itemtype": "method",
+            "name": "getValidMovesAndResult",
+            "params": [
+                {
+                    "name": "color",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "example": [
+                "\n\t var fen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';\n\t var parser = new chess.parser.FenParser0x88(fen)\n\t console.log(parser.getValidMovesAndResult());\nreturns an object containing information about number of checks(0,1 or 2 for double check),\nvalid moves and result(0 for undecided, .5 for stalemate, -1 for black win and 1 for white win).\nmoves are returend in the following format:\n\n\tnumeric square : [array of valid squares to move]\nexample for knight on b1:",
+                "\n\t1 : [32,34]\nsince it's located on b1(numeric value 1) and can move to either a3 or c3(32 and 34)."
+            ],
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 559,
+            "description": "Return array of the squares where pieces are pinned, i.e. cannot move.\nSquares are in the 0x88 format. You can use Board0x88Config.numberToSquareMapping\nto translate to readable format, example: Board0x88Config.numberToSquareMapping[16] will give you 'a2'",
+            "itemtype": "method",
+            "name": "getPined",
+            "params": [
+                {
+                    "name": "color",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 728,
+            "description": "Returns distance between two sqaures",
+            "itemtype": "method",
+            "name": "getDistance",
+            "params": [
+                {
+                    "name": "sq1",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "sq2",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "distance",
+                "type": "Number"
+            },
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 785,
+            "description": "Returns true if a move is an \"en passant\" move. Move is given in this format:",
+            "itemtype": "method",
+            "name": "isEnPassantMove",
+            "params": [
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "example": [
+                "\nvar move = {\n\t\tfrom: Board0x88Config.mapping['e5'],\n\t\tto: Board0x88Config.mapping['e6']\n\t}\nconsole.log(parser.isEnPassantMove(move);\n\nMove is an object and requires properties \"from\" and \"to\" which is a numeric square(according to a 0x88 board)."
+            ],
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 810,
+            "description": "Returns true if a move is a castle move. This method does not validate if the king is allowed\nto move to the designated square.",
+            "itemtype": "method",
+            "name": "isCastleMove",
+            "params": [
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 826,
+            "description": "Make a move by notation",
+            "itemtype": "method",
+            "name": "makeMoveByNotation",
+            "params": [
+                {
+                    "name": "notation",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "undefined"
+            },
+            "example": [
+                "\nvar parser = new chess.parser.FenParser0x88('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1');\nparser.makeMoveByNotation('e4');\nconsole.log(parser.getFen());"
+            ],
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 840,
+            "description": "Make a move by an object",
+            "itemtype": "method",
+            "name": "makeMove",
+            "params": [
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "example": [
+                "\nvar parser = new chess.parser.FenParser0x88('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1');\nparser.makeMove({from:'e2',to:'e4'});\nconsole.log(parser.getFen());"
+            ],
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 854,
+            "description": "Returns true when last position in the game has occured 2 or more times, i.e. 3 fold\nrepetition.(if 2, it will be 3 fold after the next move, a \"claimed\" draw).",
+            "itemtype": "method",
+            "name": "hasThreeFoldRepetition",
+            "params": [
+                {
+                    "name": "fens",
+                    "description": "",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "\nThis method is called from the game model where the fen of the last moves is sent.",
+                "type": "Boolean"
+            },
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 1023,
+            "description": "Get from rank by notation, 0 is first rank, 16 is second rank, 32 is third rank etc.",
+            "itemtype": "method",
+            "name": "getFromRankByNotation",
+            "params": [
+                {
+                    "name": "notation",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Number"
+            },
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 1037,
+            "description": "Get from rank by notation. 0 is first file(a), 1 is second file(b), 2 is third file etc.",
+            "itemtype": "method",
+            "name": "getFromFileByNotation",
+            "params": [
+                {
+                    "name": "notation",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Number"
+            },
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 1050,
+            "description": "Return numeric destination square by notation.",
+            "itemtype": "method",
+            "name": "getToSquareByNotation",
+            "params": [
+                {
+                    "name": "notation",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "square",
+                "type": "Number"
+            },
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 1272,
+            "description": "Return current fen position",
+            "itemtype": "method",
+            "name": "getFen",
+            "return": {
+                "description": "fen",
+                "type": "String"
+            },
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 1284,
+            "description": "Return long notation for a move",
+            "itemtype": "method",
+            "name": "getLongNotationForAMove",
+            "params": [
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "shortNotation",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "long notation",
+                "type": "String"
+            },
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 1311,
+            "description": "Return short notation for a move",
+            "itemtype": "method",
+            "name": "getNotationForAMove",
+            "params": [
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "example": [
+                "\nalert(parser.getNotationForAMove({from:'g1',to:'f3'});"
+            ],
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\move-0x88.js",
+            "line": 39,
+            "description": "Returns true if a move is valid",
+            "itemtype": "method",
+            "name": "isValid",
+            "params": [
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "fen",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "chess.parser.Move0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\move-0x88.js",
+            "line": 104,
+            "description": "Returns true if a move is promotion move",
+            "itemtype": "method",
+            "name": "isPromotionMove",
+            "params": [
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "fen",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "valid",
+                "type": "Boolean"
+            },
+            "class": "chess.parser.Move0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\position-validator.js",
+            "line": 11,
+            "description": "Returns true if a position is valid.",
+            "itemtype": "method",
+            "name": "isValid",
+            "params": [
+                {
+                    "name": "fenPosition",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "valid",
+                "type": "Boolean"
+            },
+            "class": "chess.parser.PositionValidator",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 16,
+            "description": "Duration of piece animations in seconds.",
+            "itemtype": "config",
+            "name": "float animationDuration",
+            "default": "0.35",
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 22,
+            "description": "Layout of pieces, examples: \"alphapale\", \"alpha\", \"merida\", \"kingdom\"",
+            "itemtype": "config",
+            "name": "string pieceLayout",
+            "default": "alphapale",
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 28,
+            "description": "Layout of board. The name correspondes to the suffix of the CSS class\nludo-chess-board-container-wood. (In this example wood). If you want to create your own\nboard layout. You can specify a custom value for boardLayout, create your own graphic and\nimplement your own CSS rules. Take a look at css/board/board.css for more info",
+            "itemtype": "config",
+            "name": "string boardLayout",
+            "default": "wood",
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 90,
+            "description": "All DHTML Chess 3 views are using the setController method. It is used to\ncontrol behaviour of the view. So if you want to create your own Chess View component, you\nshould take a look at setController. Example method:<br><br>\n    setController : function(controller){<br>\n        this.parent(controller); // always call supperclass\n        controller.addEvent('newGame', this.doSomethingOnNewGame.bind(this));\n    }\nHere, the method doSomethingOnNewGame will be executed every time the controller loads a new game",
+            "itemtype": "method",
+            "name": "setController",
+            "params": [
+                {
+                    "name": "controller",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 116,
+            "description": "Enable drag and drop feature of the board. It expects a game model as first argument.\nWhen connected to a controller event, the controller always sends current game model as\nfirst argument when it fire events.",
+            "itemtype": "method",
+            "name": "enableDragAndDrop",
+            "params": [
+                {
+                    "name": "model",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "void"
+            },
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 140,
+            "description": "Disable drag and drop feature of the board",
+            "itemtype": "method",
+            "name": "disableDragAndDrop",
+            "return": {
+                "description": "void"
+            },
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 154,
+            "description": "Animate/Play the \"movements\" involved in a move, example: O-O involves two moves,\nmoving the king and moving the rook. By default, this method will be executed when the\ncontroller fires newMove or nextmove event.",
+            "itemtype": "method",
+            "name": "playChainOfMoves",
+            "params": [
+                {
+                    "name": "GameModel",
+                    "description": "model"
+                },
+                {
+                    "name": "Object",
+                    "description": "move, example: ,{ from:'h1', to: 'f1'}] }",
+                    "type": "M: 'O-O', moves : [ from: 'e1', to: 'g1'"
+                }
+            ],
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 244,
+            "description": "Show start position of game",
+            "itemtype": "method",
+            "name": "showStartboard",
+            "params": [
+                {
+                    "name": "GameModel",
+                    "description": "model"
+                }
+            ],
+            "return": {
+                "description": "void"
+            },
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 253,
+            "description": "Show a specific FEN position on the board",
+            "itemtype": "method",
+            "name": "showFen",
+            "params": [
+                {
+                    "name": "String",
+                    "description": "fen"
+                }
+            ],
+            "return": {
+                "description": "void"
+            },
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 282,
+            "description": "Return number of visible pieces on the board",
+            "itemtype": "method",
+            "name": "getCountPiecesOnBoard",
+            "return": {
+                "description": "int"
+            },
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 304,
+            "description": "This method resets the board to the standard position at start of games",
+            "itemtype": "method",
+            "name": "resetBoard",
+            "return": {
+                "description": "void"
+            },
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 311,
+            "description": "Event fired when board is reset to standard start position,\ni.e. fen: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+            "itemtype": "event",
+            "name": "resetboard",
+            "params": [
+                {
+                    "name": "Component",
+                    "description": "this"
+                }
+            ],
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 319,
+            "description": "Remove all pieces from the board",
+            "itemtype": "method",
+            "name": "clearBoard",
+            "return": {
+                "description": "void"
+            },
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 329,
+            "description": "Event fired when all pieces are being removed from the board via the clearBoard() method",
+            "itemtype": "event",
+            "name": "clearboard",
+            "params": [
+                {
+                    "name": "Component",
+                    "description": "this"
+                }
+            ],
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 338,
+            "description": "Event fired when a piece is moved from one square to another",
+            "itemtype": "event",
+            "name": "move",
+            "params": [
+                {
+                    "name": "Object",
+                    "description": "move, example:",
+                    "type": "From: \"e2\", to: \"e4\""
+                }
+            ],
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 349,
+            "description": "Returns JSON object for a piece on a specific square or null if no piece is on the square",
+            "itemtype": "method",
+            "name": "getPieceOnSquare",
+            "params": [
+                {
+                    "name": "string",
+                    "description": "square, example: \"e4\""
+                }
+            ],
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 366,
+            "description": "Flip board",
+            "itemtype": "method",
+            "name": "flip",
+            "return": {
+                "description": "void"
+            },
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 377,
+            "description": "Show whites pieces at the bottom. If white is allready on the bottom, this method will do nothing.",
+            "itemtype": "method",
+            "name": "flipToWhite",
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "line": 386,
+            "description": "Show blacks pieces at the bottom. If black is allready on the bottom, this method will do nothing.",
+            "itemtype": "method",
+            "name": "flipToBlack",
+            "class": "chess.view.board.Board",
+            "module": "View",
+            "submodule": "Board",
+            "namespace": "chess.view.board"
+        },
+        {
+            "file": "..\\api\\src\\view\\dialog\\comment.js",
+            "line": 53,
+            "description": "Show comments before a move. Automatically executed when commentAfter event is fired by controller",
+            "itemtype": "method",
+            "name": "commentBefore",
+            "params": [
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "chess.model.Game"
+                },
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "chess.view.dialog.Comment",
+            "module": "View",
+            "namespace": "chess.view.dialog"
+        },
+        {
+            "file": "..\\api\\src\\view\\dialog\\comment.js",
+            "line": 64,
+            "description": "Show comments after a move. Automatically executed when commentAfter event is fired by controller",
+            "itemtype": "method",
+            "name": "commentAfter",
+            "params": [
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "chess.model.Game"
+                },
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "chess.view.dialog.Comment",
+            "module": "View",
+            "namespace": "chess.view.dialog"
+        },
+        {
+            "file": "..\\api\\src\\view\\dialog\\new-game.js",
+            "line": 51,
+            "description": "New game event. When fired it will send all values from the form as only argument.",
+            "itemtype": "event",
+            "name": "newGame",
+            "params": [
+                {
+                    "name": "metadata",
+                    "description": "values",
+                    "type": "Array"
+                }
+            ],
+            "class": "chess.view.dialog.NewGame",
+            "module": "View",
+            "submodule": "Dialog",
+            "namespace": "chess.view.dialog"
+        },
+        {
+            "file": "..\\api\\src\\view\\dialog\\overwrite-move.js",
+            "line": 33,
+            "description": "Overwrite current move in model with a new move",
+            "itemtype": "event",
+            "name": "overwriteMove",
+            "params": [
+                {
+                    "name": "oldMove",
+                    "description": "",
+                    "type": "chess.model.Move"
+                },
+                {
+                    "name": "newMove",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "class": "chess.view.dialog.OverwriteMove",
+            "module": "View",
+            "submodule": "Dialog",
+            "namespace": "chess.view.dialog"
+        },
+        {
+            "file": "..\\api\\src\\view\\dialog\\overwrite-move.js",
+            "line": 47,
+            "description": "Create a new variation",
+            "itemtype": "event",
+            "name": "newVariation",
+            "params": [
+                {
+                    "name": "oldMove",
+                    "description": "",
+                    "type": "chess.model.Move"
+                },
+                {
+                    "name": "newMove",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "class": "chess.view.dialog.OverwriteMove",
+            "module": "View",
+            "submodule": "Dialog",
+            "namespace": "chess.view.dialog"
+        },
+        {
+            "file": "..\\api\\src\\view\\dialog\\overwrite-move.js",
+            "line": 61,
+            "description": "Cancel new move, i.e. no overwrite and no new variations.",
+            "itemtype": "event",
+            "name": "cancelOverwrite",
+            "class": "chess.view.dialog.OverwriteMove",
+            "module": "View",
+            "submodule": "Dialog",
+            "namespace": "chess.view.dialog"
+        },
+        {
+            "file": "..\\api\\src\\view\\dialog\\promote.js",
+            "line": 61,
+            "description": "Event fired after promoted piece type has been selected. the promoteTo property of the move is updated",
+            "itemtype": "event",
+            "name": "promote",
+            "params": [
+                {
+                    "name": "updatedMove",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "class": "chess.view.dialog.Promote",
+            "module": "View",
+            "submodule": "Dialog",
+            "namespace": "chess.view.dialog"
+        },
+        {
+            "file": "..\\api\\src\\view\\folder\\tree.js",
+            "line": 46,
+            "description": "Fired on click on database in the tree.",
+            "itemtype": "event",
+            "name": "selectDatabase",
+            "params": [
+                {
+                    "name": "record",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "example": [
+                "\n\t{ id:4, type:'database' }\nis example of record sent with the event."
+            ],
+            "class": "chess.view.folder.Tree",
+            "module": "View",
+            "submodule": "Tree",
+            "namespace": "chess.view.folder"
+        },
+        {
+            "file": "..\\api\\src\\view\\gamelist\\grid.js",
+            "line": 38,
+            "description": "Columns to show in grid. Columns correspondes to metadata of games, example\nwhite,black,result, event, eco",
+            "itemtype": "config",
+            "name": "cols",
+            "type": "Array",
+            "optional": 1,
+            "example": [
+                "\n\tcols:['white','black']"
+            ],
+            "class": "chess.view.gamelist.Grid",
+            "module": "View",
+            "submodule": "Grid",
+            "namespace": "chess.view.gamelist"
+        },
+        {
+            "file": "..\\api\\src\\view\\gamelist\\grid.js",
+            "line": 86,
+            "description": "initial database id. Show the games from this database when the grid is first displayed.",
+            "itemtype": "config",
+            "name": "databaseId",
+            "type": "{Number}",
+            "default": "undefined",
+            "class": "chess.view.gamelist.Grid",
+            "module": "View",
+            "submodule": "Grid",
+            "namespace": "chess.view.gamelist"
+        },
+        {
+            "file": "..\\api\\src\\view\\gamelist\\grid.js",
+            "line": 102,
+            "description": "Select a new database",
+            "itemtype": "method",
+            "name": "selectDatabase",
+            "params": [
+                {
+                    "name": "record",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "chess.view.gamelist.Grid",
+            "module": "View",
+            "submodule": "Grid",
+            "namespace": "chess.view.gamelist"
+        },
+        {
+            "file": "..\\api\\src\\view\\gamelist\\grid.js",
+            "line": 139,
+            "description": "Event fired on click on game in grid.",
+            "itemtype": "event",
+            "name": "selectGame",
+            "params": [
+                {
+                    "name": "game",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "chess.view.gamelist.Grid",
+            "module": "View",
+            "submodule": "Grid",
+            "namespace": "chess.view.gamelist"
+        },
+        {
+            "file": "..\\api\\src\\view\\highlight\\arrow-svg.js",
+            "line": 34,
+            "itemtype": "config",
+            "name": "arrowPaint",
+            "type": "{ludo.canvas.Paint}",
+            "example": [
+                ""
+            ],
+            "class": "chess.view.highlight.Arrow",
+            "module": "View",
+            "namespace": "chess.view.gamelist"
+        },
+        {
+            "file": "..\\api\\src\\view\\highlight\\arrow-tactic.js",
+            "line": 3,
+            "description": "Delay before automatically hiding arrow",
+            "itemtype": "config",
+            "name": "delay",
+            "type": "Number",
+            "default": "1",
+            "class": "chess.view.highlight.Arrow",
+            "module": "View",
+            "namespace": "chess.view.gamelist"
+        },
+        {
+            "file": "..\\api\\src\\view\\menu-item\\new-game.js",
+            "line": 16,
+            "description": "Fired on click",
+            "itemtype": "event",
+            "name": "newGame",
+            "class": "chess.view.menuItems.NewGame",
+            "module": "View",
+            "submodule": "Menu",
+            "namespace": "chess.view.menuItems"
+        },
+        {
+            "file": "..\\api\\src\\view\\menu-item\\save-game.js",
+            "line": 16,
+            "description": "Fired on click",
+            "itemtype": "event",
+            "name": "saveGame",
+            "class": "chess.view.SaveGame.NewGame",
+            "module": "View",
+            "submodule": "Menu",
+            "namespace": "chess.view.SaveGame"
+        },
+        {
+            "file": "..\\api\\src\\view\\metadata\\game.js",
+            "line": 12,
+            "description": "How metadata are displayed is configured using \"tpl\".",
+            "itemtype": "config",
+            "name": "tpl",
+            "type": "String",
+            "example": [
+                "\n\t'{white} vs {black}, {result}'"
+            ],
+            "class": "chess.view.metadata.Game",
+            "module": "View",
+            "namespace": "chess.view.metadata"
+        },
+        {
+            "file": "..\\api\\src\\view\\metadata\\move.js",
+            "line": 14,
+            "description": "tpl is used to configure how to display info about current move. You use curly braces to indicate\nwhere to insert move information. You can use the keys available in chess.model.Move",
+            "itemtype": "config",
+            "name": "tpl",
+            "default": "''",
+            "example": [
+                "\n\ttpl:'Current move: {from}-{to}'\n\t...\n\ttpl:'{lm} // long notation\n\t...\n\ttpl:'{m} // short notation"
+            ],
+            "class": "chess.view.metadata.Move",
+            "module": "View",
+            "namespace": "chess.view.metadata"
+        },
+        {
+            "file": "..\\api\\src\\view\\notation\\panel.js",
+            "line": 30,
+            "description": "Long or short notations. Example of long: \"e2-e4\". Example of short: \"e4\".\nValid values : \"short\" and \"long\"",
+            "itemtype": "config",
+            "name": "notations",
+            "type": "{String}",
+            "default": "'short'",
+            "class": "chess.view.notation.Panel",
+            "module": "View",
+            "namespace": "chess.view.notation"
+        },
+        {
+            "file": "..\\api\\src\\view\\notation\\panel.js",
+            "line": 43,
+            "description": "Show context menu for grading of moves, comments etc",
+            "itemtype": "config",
+            "name": "showContextMenu",
+            "type": "{Boolean}",
+            "default": "false",
+            "class": "chess.view.notation.Panel",
+            "module": "View",
+            "namespace": "chess.view.notation"
+        },
+        {
+            "file": "..\\api\\src\\view\\position\\castling.js",
+            "line": 69,
+            "description": "Set castle value, example value: 'qKQ'",
+            "itemtype": "method",
+            "name": "setValue",
+            "params": [
+                {
+                    "name": "castle",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "undefined"
+            },
+            "class": "chess.view.position.Castling",
+            "module": "View",
+            "namespace": "chess.view.position"
+        },
+        {
+            "file": "..\\api\\src\\view\\position\\dialog.js",
+            "line": 213,
+            "itemtype": "event",
+            "name": "setPosition",
+            "params": [
+                {
+                    "name": "String",
+                    "description": "FEN position"
+                }
+            ],
+            "class": "chess.view.position.Dialog",
+            "module": "View",
+            "namespace": "chess.view.position"
+        },
+        {
+            "file": "..\\api\\src\\view\\user\\panel.js",
+            "line": 15,
+            "description": "Text template for the panel",
+            "itemtype": "config",
+            "name": "tpl",
+            "type": "String",
+            "default": "'<b>' + chess.language.signedInAs + ' {username}</b>'",
+            "class": "chess.view.user.Panel",
+            "module": "View",
+            "submodule": "User",
+            "namespace": "chess.view.user"
+        },
+        {
+            "file": "..\\api\\src\\view\\user\\panel.js",
+            "line": 23,
+            "itemtype": "config",
+            "name": "css",
+            "type": "{Object}",
+            "default": "css : {\n\t         'text-align' : 'right'\n\t     }",
+            "class": "chess.view.user.Panel",
+            "module": "View",
+            "submodule": "User",
+            "namespace": "chess.view.user"
+        },
+        {
+            "file": "..\\api\\src\\view\\user\\register-window.js",
+            "line": 67,
+            "description": "Event fired when user registration was successful.",
+            "itemtype": "event",
+            "name": "registerSuccess",
+            "params": [
+                {
+                    "name": "JSON",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "rememberMe",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "chess.view.user.RegisterWindow",
+            "module": "View",
+            "submodule": "User",
+            "namespace": "chess.view.user"
+        }
+    ]
+}
