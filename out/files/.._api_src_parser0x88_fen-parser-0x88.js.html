@@ -214,8 +214,8 @@
  @constructor
  @param {String} fen
  @example
- var parser = new chess.parser.FenParser0x88(&#x27;rnbqkbnr&#x2F;pppppppp&#x2F;8&#x2F;8&#x2F;8&#x2F;8&#x2F;PPPPPPPP&#x2F;RNBQKBNR w KQkq - 0 1&#x27;);
- console.log(parser.getValidMovesAndResult(&#x27;white&#x27;));
+ 	var parser = new chess.parser.FenParser0x88(&#x27;rnbqkbnr&#x2F;pppppppp&#x2F;8&#x2F;8&#x2F;8&#x2F;8&#x2F;PPPPPPPP&#x2F;RNBQKBNR w KQkq - 0 1&#x27;);
+ 	console.log(parser.getValidMovesAndResult(&#x27;white&#x27;));
 
  *&#x2F;
 chess.parser.FenParser0x88 = new Class({
@@ -315,6 +315,7 @@ chess.parser.FenParser0x88 = new Class({
 
 	&#x2F;**
 	 Return king of a color
+	 @method getKing
 	 @param color
 	 @return {Object} king
 	 @example
@@ -1033,7 +1034,7 @@ chess.parser.FenParser0x88 = new Class({
 	 @param {Object} move
 	 @return {Boolean}
 	 @example
-	 var move = {
+	 	var move = {
 	 		from: Board0x88Config.mapping[&#x27;e5&#x27;],
 	 		to: Board0x88Config.mapping[&#x27;e6&#x27;]
 	 	}
@@ -1074,9 +1075,9 @@ chess.parser.FenParser0x88 = new Class({
 	 @param {String} notation
 	 @return undefined
 	 @example
-	 var parser = new chess.parser.FenParser0x88(&#x27;rnbqkbnr&#x2F;pppppppp&#x2F;8&#x2F;8&#x2F;8&#x2F;8&#x2F;PPPPPPPP&#x2F;RNBQKBNR w KQkq - 0 1&#x27;);
-	 parser.makeMoveByNotation(&#x27;e4&#x27;);
-	 console.log(parser.getFen());
+	 	var parser = new chess.parser.FenParser0x88(&#x27;rnbqkbnr&#x2F;pppppppp&#x2F;8&#x2F;8&#x2F;8&#x2F;8&#x2F;PPPPPPPP&#x2F;RNBQKBNR w KQkq - 0 1&#x27;);
+	 	parser.makeMoveByNotation(&#x27;e4&#x27;);
+	 	console.log(parser.getFen());
 	 *&#x2F;
 	makeMoveByNotation:function (notation) {
 		this.makeMove(this.getFromAndToByNotation(notation));
@@ -1087,9 +1088,9 @@ chess.parser.FenParser0x88 = new Class({
 	 @method makeMove
 	 @param {Object} move
 	 @example
-	 var parser = new chess.parser.FenParser0x88(&#x27;rnbqkbnr&#x2F;pppppppp&#x2F;8&#x2F;8&#x2F;8&#x2F;8&#x2F;PPPPPPPP&#x2F;RNBQKBNR w KQkq - 0 1&#x27;);
-	 parser.makeMove({from:&#x27;e2&#x27;,to:&#x27;e4&#x27;});
-	 console.log(parser.getFen());
+	 	var parser = new chess.parser.FenParser0x88(&#x27;rnbqkbnr&#x2F;pppppppp&#x2F;8&#x2F;8&#x2F;8&#x2F;8&#x2F;PPPPPPPP&#x2F;RNBQKBNR w KQkq - 0 1&#x27;);
+	 	parser.makeMove({from:&#x27;e2&#x27;,to:&#x27;e4&#x27;});
+	 	console.log(parser.getFen());
 	 *&#x2F;
 	makeMove:function (move) {
 		this.updateBoardData(move);
@@ -1559,7 +1560,7 @@ chess.parser.FenParser0x88 = new Class({
 	 @param {Object} move
 	 @return {String}
 	 @example
-	 alert(parser.getNotationForAMove({from:&#x27;g1&#x27;,to:&#x27;f3&#x27;});
+	 	alert(parser.getNotationForAMove({from:&#x27;g1&#x27;,to:&#x27;f3&#x27;});
 	 *&#x2F;
 	getNotationForAMove:function (move) {
 		move = {
