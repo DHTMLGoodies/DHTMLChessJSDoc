@@ -3538,6 +3538,20 @@
             "namespace": "chess.parser"
         },
         {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 1459,
+            "description": "Returns new fen based on current board position",
+            "itemtype": "method",
+            "name": "getNewFen",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
             "file": "..\\api\\src\\parser0x88\\move-0x88.js",
             "line": 39,
             "description": "Returns true if a move is valid",

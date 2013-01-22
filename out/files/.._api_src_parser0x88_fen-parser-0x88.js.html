@@ -1554,7 +1554,7 @@ chess.parser.FenParser0x88 = new Class({
 	 *&#x2F;
 	getFen:function () {
 		if (!this.fen) {
-			this.fen = this.setNewFen();
+			this.fen = this.getNewFen();
 		}
 		return this.fen;
 	},
@@ -1664,13 +1664,17 @@ chess.parser.FenParser0x88 = new Class({
 		return ret;
 	},
 
-	setNewFen:function () {
+	&#x2F;**
+	 * Returns new fen based on current board position
+	 * @method getNewFen
+	 * @return {String}
+	 *&#x2F;
+	getNewFen:function () {
 		var board = this.cache[&#x27;board&#x27;];
 		var fen = &#x27;&#x27;;
 		var emptyCounter = 0;
 
 		for (var rank = 7; rank &gt;= 0; rank--) {
-
 			for (var file = 0; file &lt; 8; file++) {
 				var index = (rank * 8) + file;
 
