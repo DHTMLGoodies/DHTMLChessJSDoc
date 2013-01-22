@@ -3031,7 +3031,52 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 104,
+            "line": 58,
+            "description": "Parses current fen and stores board information internally",
+            "itemtype": "method",
+            "name": "parseFen",
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 99,
+            "description": "Return all pieces on board",
+            "itemtype": "method",
+            "name": "getPieces",
+            "return": {
+                "description": "pieces",
+                "type": "Array"
+            },
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 108,
+            "description": "Return king of a color",
+            "params": [
+                {
+                    "name": "color",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "king",
+                "type": "Object"
+            },
+            "example": [
+                "\n   var fen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';\n\tvar parser = new chess.parser.FenParser0x88(fen);\n\tconsole.log(parser.getKing('white'));\nreturns an object containing the properties s for square and t for type.\nboth are numeric according to the 0x88 board."
+            ],
+            "class": "chess.parser.FenParser0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
+            "line": 123,
             "description": "Returns pieces of a color",
             "itemtype": "method",
             "name": "getPiecesOfAColor",
@@ -3047,7 +3092,8 @@
             },
             "example": [
                 "\n\tvar parser = new chess.parser.FenParser0x88('5k2/8/8/3pP3/8/8/8/7K w - d6 0 1');\n\tvar pieces = parser.getPiecesOfAColor('white');\n\tconsole.log(pieces);\neach piece is represented by an object like this:",
-                "\n\t{\n\t\ts : 112,\n\t\tt : 14\n\t}\nwhere s is square and type is type. s is numeric according to the 0x88 chess board where\na1 is 0, a2 is 16, b2 is 17, a3 is 32, i.e. a 128x64 square board.\n\nt is a numeric representation(4 bits).\n\nP : 0001\nN : 0010\nK : 0011\nB : 0101\nR : 0110\nQ : 0111\np : 1001\nn : 1010\nk : 1011\nb : 1101\nr : 1100\nq : 1100\n\nAs you can see, black pieces all have the first bit set to 1, and all the sliding pieces\n(bishop, rook and queen) has the second bit set to 1. This makes it easy to to determine color\nand sliding pieces using the bitwise & operator."
+                "\n\t{\n\t\ts : 112,\n\t\tt : 14\n\t}\nwhere s is square and type is type. s is numeric according to the 0x88 chess board where\na1 is 0, a2 is 16, b2 is 17, a3 is 32, i.e. a 128x64 square board.\n\nt is a numeric representation(4 bits).",
+                "\n\t\t P : 0001\n\t\t N : 0010\n\t\t K : 0011\n\t\t B : 0101\n\t\t R : 0110\n\t\t Q : 0111\n\t\t p : 1001\n\t\t n : 1010\n\t\t k : 1011\n\t\t b : 1101\n\t\t r : 1100\n\t\t q : 1100\n\nAs you can see, black pieces all have the first bit set to 1, and all the sliding pieces\n(bishop, rook and queen) has the second bit set to 1. This makes it easy to to determine color\nand sliding pieces using the bitwise & operator."
             ],
             "class": "chess.parser.FenParser0x88",
             "module": "Parser",
@@ -3055,7 +3101,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 145,
+            "line": 164,
             "itemtype": "method",
             "name": "getEnPassantSquare",
             "return": {
@@ -3071,7 +3117,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 210,
+            "line": 229,
             "description": "Returns true if two squares are on the same rank. Squares are in the 0x88 format, i.e.\na1=0,a2=16. You can use Board0x88Config.mapping to get a more readable code.",
             "itemtype": "method",
             "name": "isOnSameRank",
@@ -3100,7 +3146,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 226,
+            "line": 245,
             "description": "Returns true if two squares are on the same file. Squares are in the 0x88 format, i.e.\na1=0,a2=16. You can use Board0x88Config.mapping to get a more readable code.",
             "itemtype": "method",
             "name": "isOnSameFile",
@@ -3129,7 +3175,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 242,
+            "line": 261,
             "description": "Returns valid moves and results for the position according to the 0x88 chess programming\nalgorithm where position on the board is numeric (A1=0,H1=7,A2=16,H2=23,A3=32,A4=48).\nFirst rank is numbered 0-7. Second rank starts at first rank + 16, i.e. A2 = 16. Third\nrank starts at second rank + 16, i.e. A3 = 32 and so on.",
             "itemtype": "method",
             "name": "getValidMovesAndResult",
@@ -3153,7 +3199,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 559,
+            "line": 578,
             "description": "Return array of the squares where pieces are pinned, i.e. cannot move.\nSquares are in the 0x88 format. You can use Board0x88Config.numberToSquareMapping\nto translate to readable format, example: Board0x88Config.numberToSquareMapping[16] will give you 'a2'",
             "itemtype": "method",
             "name": "getPined",
@@ -3174,7 +3220,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 728,
+            "line": 747,
             "description": "Returns distance between two sqaures",
             "itemtype": "method",
             "name": "getDistance",
@@ -3200,7 +3246,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 785,
+            "line": 804,
             "description": "Returns true if a move is an \"en passant\" move. Move is given in this format:",
             "itemtype": "method",
             "name": "isEnPassantMove",
@@ -3224,7 +3270,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 810,
+            "line": 829,
             "description": "Returns true if a move is a castle move. This method does not validate if the king is allowed\nto move to the designated square.",
             "itemtype": "method",
             "name": "isCastleMove",
@@ -3245,7 +3291,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 826,
+            "line": 845,
             "description": "Make a move by notation",
             "itemtype": "method",
             "name": "makeMoveByNotation",
@@ -3268,7 +3314,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 840,
+            "line": 859,
             "description": "Make a move by an object",
             "itemtype": "method",
             "name": "makeMove",
@@ -3288,7 +3334,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 854,
+            "line": 873,
             "description": "Returns true when last position in the game has occured 2 or more times, i.e. 3 fold\nrepetition.(if 2, it will be 3 fold after the next move, a \"claimed\" draw).",
             "itemtype": "method",
             "name": "hasThreeFoldRepetition",
@@ -3309,7 +3355,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 1023,
+            "line": 1042,
             "description": "Get from rank by notation, 0 is first rank, 16 is second rank, 32 is third rank etc.",
             "itemtype": "method",
             "name": "getFromRankByNotation",
@@ -3330,7 +3376,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 1037,
+            "line": 1056,
             "description": "Get from rank by notation. 0 is first file(a), 1 is second file(b), 2 is third file etc.",
             "itemtype": "method",
             "name": "getFromFileByNotation",
@@ -3351,7 +3397,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 1050,
+            "line": 1069,
             "description": "Return numeric destination square by notation.",
             "itemtype": "method",
             "name": "getToSquareByNotation",
@@ -3372,7 +3418,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 1272,
+            "line": 1291,
             "description": "Return current fen position",
             "itemtype": "method",
             "name": "getFen",
@@ -3386,7 +3432,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 1284,
+            "line": 1303,
             "description": "Return long notation for a move",
             "itemtype": "method",
             "name": "getLongNotationForAMove",
@@ -3412,7 +3458,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 1311,
+            "line": 1330,
             "description": "Return short notation for a move",
             "itemtype": "method",
             "name": "getNotationForAMove",
