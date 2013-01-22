@@ -319,9 +319,9 @@ chess.parser.FenParser0x88 = new Class({
 	 @param color
 	 @return {Object} king
 	 @example
-	    var fen = &#x27;rnbqkbnr&#x2F;pppppppp&#x2F;8&#x2F;8&#x2F;8&#x2F;8&#x2F;PPPPPPPP&#x2F;RNBQKBNR w KQkq - 0 1&#x27;;
-	 	var parser = new chess.parser.FenParser0x88(fen);
-	 	console.log(parser.getKing(&#x27;white&#x27;));
+		var fen = &#x27;rnbqkbnr&#x2F;pppppppp&#x2F;8&#x2F;8&#x2F;8&#x2F;8&#x2F;PPPPPPPP&#x2F;RNBQKBNR w KQkq - 0 1&#x27;;
+		var parser = new chess.parser.FenParser0x88(fen);
+		console.log(parser.getKing(&#x27;white&#x27;));
 	 returns an object containing the properties s for square and t for type.
 	 both are numeric according to the 0x88 board.
 	 *&#x2F;
@@ -522,8 +522,7 @@ chess.parser.FenParser0x88 = new Class({
 		var WHITE = color === &#x27;white&#x27;;
 
 		var protectiveMoves = this.getCaptureAndProtectiveMoves(oppositeColor);
-		var checks;
-		checks = this.getCountChecks(color, protectiveMoves);
+		var checks = this.getCountChecks(color, protectiveMoves);
 		var validSquares = null;
 		var pinned = [], pieces;
 		if (checks === 2) {
@@ -758,6 +757,22 @@ chess.parser.FenParser0x88 = new Class({
 		return &#x27;,&#x27; + ret.join(&#x27;,&#x27;) + &#x27;,&#x27;;
 	},
 
+	&#x2F;**
+	 Returns array of sliding pieces attacking king
+	 @method getSlidingPiecesAttackingKing
+	 @param {String} color
+	 @return {Array}
+	 @example
+	 	fen = &#x27;6k1&#x2F;Q5n1&#x2F;4p3&#x2F;8&#x2F;8&#x2F;8&#x2F;B7&#x2F;5KR1 b - - 0 1&#x27;;
+		parser = new chess.parser.FenParser0x88(fen);
+	 	pieces = parser.getSlidingPiecesAttackingKing(&#x27;white&#x27;);
+	 	console.log(pieces);
+	 will return
+	 @example
+	 	[ { &quot;s&quot; : 16, &quot;p&quot;: 17 }, { &quot;s&quot;: 6, &quot;p&quot;: 16 }]
+	 where &quot;s&quot; is the 0x88 board position of the piece and &quot;p&quot; is the sliding path to the king
+	 of opposite color. A bishop on a1 and a king on h8 will return { &quot;s&quot;: &quot;0&quot;, &quot;p&quot;: 17 }
+	 *&#x2F;
 	getSlidingPiecesAttackingKing:function (color) {
 		var ret = [];
 		var king = this.cache[&#x27;king&#x27; + (color === &#x27;white&#x27; ? &#x27;black&#x27; : &#x27;white&#x27;)];
@@ -782,7 +797,8 @@ chess.parser.FenParser0x88 = new Class({
 						if (numericDistance % 16 === 0) {
 							ret.push({ s:piece.s, p:boardDistance});
 						}
-						else if ((piece.s &amp; 240) == (king.s &amp; 240)) {
+						&#x2F;&#x2F; Rook on same rank as king
+						else if (this.isOnSameRank(piece.s, king.s)) {
 							ret.push({ s:piece.s, p:numericDistance &gt; 0 ? 1 : -1})
 						}
 						break;
@@ -792,7 +808,7 @@ chess.parser.FenParser0x88 = new Class({
 						if (numericDistance % 15 === 0 || numericDistance % 17 === 0 || numericDistance % 16 === 0) {
 							ret.push({ s:piece.s, p:boardDistance});
 						}
-						else if ((piece.s &amp; 240) == (king.s &amp; 240)) {
+						else if (this.isOnSameRank(piece.s, king.s)) {
 							ret.push({ s:piece.s, p:numericDistance &gt; 0 ? 1 : -1})
 						}
 						break;
@@ -823,11 +839,9 @@ chess.parser.FenParser0x88 = new Class({
 
 			var pinning = &#x27;&#x27;;
 			while (square !== king.s &amp;&amp; countPieces &lt; 2) {
-
 				if (this.cache[&#x27;board&#x27;][square]) {
 					countPieces++;
 					if ((!WHITE &amp;&amp; this.cache[&#x27;board&#x27;][square] &amp; 0x8) || (WHITE &amp;&amp; !(this.cache[&#x27;board&#x27;][square] &amp; 0x8))) {
-
 						pinning = square;
 					} else {
 						break;
