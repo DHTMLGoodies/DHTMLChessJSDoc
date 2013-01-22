@@ -772,6 +772,7 @@ chess.parser.FenParser0x88 = new Class({
 	 	[ { &quot;s&quot; : 16, &quot;p&quot;: 17 }, { &quot;s&quot;: 6, &quot;p&quot;: 16 }]
 	 where &quot;s&quot; is the 0x88 board position of the piece and &quot;p&quot; is the sliding path to the king
 	 of opposite color. A bishop on a1 and a king on h8 will return { &quot;s&quot;: &quot;0&quot;, &quot;p&quot;: 17 }
+	 This method returns pieces even when the sliding piece is not checking king.
 	 *&#x2F;
 	getSlidingPiecesAttackingKing:function (color) {
 		var ret = [];
@@ -788,28 +789,28 @@ chess.parser.FenParser0x88 = new Class({
 					case 0x05:
 					case 0x0D:
 						if (numericDistance % 15 === 0 || numericDistance % 17 === 0) {
-							ret.push({ s:piece.s, p:boardDistance});
+							ret.push({ s:piece.s, direction:boardDistance});
 						}
 						break;
 					&#x2F;&#x2F; Rook
 					case 0x06:
 					case 0x0E:
 						if (numericDistance % 16 === 0) {
-							ret.push({ s:piece.s, p:boardDistance});
+							ret.push({ s:piece.s, direction:boardDistance});
 						}
 						&#x2F;&#x2F; Rook on same rank as king
 						else if (this.isOnSameRank(piece.s, king.s)) {
-							ret.push({ s:piece.s, p:numericDistance &gt; 0 ? 1 : -1})
+							ret.push({ s:piece.s, direction:numericDistance &gt; 0 ? 1 : -1})
 						}
 						break;
 					&#x2F;&#x2F; Queen
 					case 0x07:
 					case 0x0F:
 						if (numericDistance % 15 === 0 || numericDistance % 17 === 0 || numericDistance % 16 === 0) {
-							ret.push({ s:piece.s, p:boardDistance});
+							ret.push({ s:piece.s, direction:boardDistance});
 						}
 						else if (this.isOnSameRank(piece.s, king.s)) {
-							ret.push({ s:piece.s, p:numericDistance &gt; 0 ? 1 : -1})
+							ret.push({ s:piece.s, direction:numericDistance &gt; 0 ? 1 : -1})
 						}
 						break;
 				}
@@ -819,12 +820,29 @@ chess.parser.FenParser0x88 = new Class({
 	},
 
 	&#x2F;**
-	 * Return array of the squares where pieces are pinned, i.e. cannot move.
-	 * Squares are in the 0x88 format. You can use Board0x88Config.numberToSquareMapping
-	 * to translate to readable format, example: Board0x88Config.numberToSquareMapping[16] will give you &#x27;a2&#x27;
-	 * @method getPined
-	 * @param {String} color
-	 * @return {Array}
+	 Return array of the squares where pieces are pinned, i.e. cannot move.
+	 Squares are in the 0x88 format. You can use Board0x88Config.numberToSquareMapping
+	 to translate to readable format, example: Board0x88Config.numberToSquareMapping[16] will give you &#x27;a2&#x27;
+	 @method getPined
+	 @param {String} color
+	 @return {Object}
+	 @example
+	 	var fen = &#x27;6k1&#x2F;Q5n1&#x2F;4p3&#x2F;8&#x2F;8&#x2F;1B6&#x2F;B7&#x2F;5KR1 b - - 0 1&#x27;;
+		var parser = new chess.parser.FenParser0x88(fen);
+	 	var pinned = parser.getPinned(&#x27;black&#x27;);
+	 	console.log(pinned);
+	 will output
+	 @example
+ 		{
+	 		84: { &quot;by&quot;: 33, &quot;direction&quot;: 17 }, &#x2F;&#x2F; pawn on e6(84) is pinned by bishop on b3(33).
+	 		102 : { &quot;by&quot;: &quot;6&quot;, &quot;direction&quot;: 16 } &#x2F;&#x2F; knight on g7 is pinned by rook on g1
+	 	}
+	 direction is the path to king which can be
+	 @example
+	 	15   16   17
+	 	-1         1
+	 	17  -16  -15
+	 i.e. 1 to the right, -1 to the left, 17 for higher rank and file etc.
 	 *&#x2F;
 	getPinned:function (color) {
 		var ret = {};
@@ -834,7 +852,7 @@ chess.parser.FenParser0x88 = new Class({
 		var i = 0;
 		while (i &lt; pieces.length) {
 			var piece = pieces[i];
-			var square = piece.s + piece.p;
+			var square = piece.s + piece.direction;
 			var countPieces = 0;
 
 			var pinning = &#x27;&#x27;;
@@ -847,10 +865,10 @@ chess.parser.FenParser0x88 = new Class({
 						break;
 					}
 				}
-				square += piece.p;
+				square += piece.direction;
 			}
 			if (countPieces === 1) {
-				ret[pinning] = { &#x27;by&#x27;:piece.s, &#x27;direction&#x27;:piece.p };
+				ret[pinning] = { &#x27;by&#x27;:piece.s, &#x27;direction&#x27;:piece.direction };
 			}
 			i++;
 		}
