@@ -2109,7 +2109,17 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 215,
+            "line": 201,
+            "description": "Reset model data to default, blank game",
+            "itemtype": "method",
+            "name": "setDefaultModel",
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 219,
             "description": "Update game information",
             "itemtype": "method",
             "name": "setMetadata",
@@ -2129,10 +2139,10 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 229,
+            "line": 233,
             "description": "Update particular info about the game",
             "itemtype": "method",
-            "name": "setMetadata",
+            "name": "setMetadataValue",
             "params": [
                 {
                     "name": "key",
@@ -2154,7 +2164,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 239,
+            "line": 243,
             "description": "Fired when metadata is updated",
             "itemtype": "event",
             "name": "updateMetadata",
@@ -2181,7 +2191,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 250,
+            "line": 254,
             "description": "Return all game metadata info",
             "itemtype": "method",
             "name": "getMetadata",
@@ -2195,7 +2205,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 258,
+            "line": 262,
             "description": "Return a specific metadata key",
             "itemtype": "method",
             "name": "getMetadataValue",
@@ -2219,7 +2229,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 270,
+            "line": 274,
             "description": "Return array of moves in game",
             "itemtype": "method",
             "name": "getMoves",
@@ -2233,7 +2243,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 279,
+            "line": 283,
             "description": "Return start position of game",
             "itemtype": "method",
             "name": "getStartPosition",
@@ -2247,7 +2257,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 288,
+            "line": 292,
             "description": "Try to guess next move in a game",
             "itemtype": "method",
             "name": "tryNextMove",
@@ -2271,7 +2281,35 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 341,
+            "line": 329,
+            "description": "Returns true if passed guess matches next move",
+            "itemtype": "method",
+            "name": "isCorrectGuess",
+            "params": [
+                {
+                    "name": "guess",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "nextMove",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 353,
             "description": "Return result of game, either from metadata(\"result\") or by trying to calculate final\nposition. Return value will be 1 for white win, -1 for black win. 0.5 for draw and 0 for\nundecided.",
             "itemtype": "method",
             "name": "getResult",
@@ -2285,7 +2323,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 372,
+            "line": 384,
             "description": "Returns true if user can claim draw in current position",
             "itemtype": "method",
             "name": "canClaimDraw",
@@ -2299,7 +2337,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 381,
+            "line": 393,
             "description": "Returns array of all FEN's in main line(Not variations)",
             "itemtype": "method",
             "name": "getAllFens",
@@ -2313,7 +2351,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 395,
+            "line": 407,
             "description": "Return last move in game",
             "itemtype": "method",
             "name": "getLastMoveInGame",
@@ -2327,7 +2365,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 407,
+            "line": 419,
             "description": "Return last position in game",
             "itemtype": "method",
             "name": "getLastPositionInGame",
@@ -2341,7 +2379,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 420,
+            "line": 432,
             "description": "Returns array of remaining moves",
             "itemtype": "method",
             "name": "getAllNextMoves",
@@ -2362,7 +2400,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 446,
+            "line": 458,
             "description": "Append move to the model",
             "itemtype": "method",
             "name": "appendMove",
@@ -2386,7 +2424,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 463,
+            "line": 475,
             "description": "verify promotion event. This event is fired when you try to append a promotion move\nwhere the promoteTo info is missing",
             "itemtype": "event",
             "name": "verifyPromotion",
@@ -2413,7 +2451,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 484,
+            "line": 496,
             "description": "Fired when appending a move in the middle of a game. This method sends a message to the controller\nsaying that it needs to know if appended move should be added as variation or if it should overwrite\ncurrent next move",
             "itemtype": "event",
             "name": "overwriteOrVariation",
@@ -2440,7 +2478,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 504,
+            "line": 516,
             "description": "Fired when a new move is appended to the game.",
             "itemtype": "event",
             "name": "newMove",
@@ -2467,7 +2505,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 512,
+            "line": 524,
             "description": "Fired when current move is last move in branch, either last move in game or last move inside a variation.",
             "itemtype": "event",
             "name": "endOfBranch",
@@ -2489,7 +2527,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 520,
+            "line": 532,
             "description": "Fired when current move is last move in game.",
             "itemtype": "event",
             "name": "endOfBranch",
@@ -2511,7 +2549,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 530,
+            "line": 542,
             "description": "Fired when you try to append an invalid move to the game",
             "itemtype": "event",
             "name": "endOfBranch",
@@ -2538,7 +2576,55 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 558,
+            "line": 555,
+            "description": "Overwrite a move with a different move. oldMove has to be a\nmove in the game. When found, this move and all following move will be deleted\nand the new move will be appended.",
+            "itemtype": "method",
+            "name": "overwriteMove",
+            "params": [
+                {
+                    "name": "oldMove",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "newMove",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 571,
+            "description": "Returns valid config object for a move",
+            "itemtype": "method",
+            "name": "getValidMove",
+            "params": [
+                {
+                    "name": "move",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "fen",
+                    "description": "position",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 585,
             "description": "Add a new move as a variation. If current move is allready first move in variation it will go to this move\nand not create a new variation.",
             "itemtype": "method",
             "name": "newVariation",
@@ -2558,7 +2644,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 581,
+            "line": 608,
             "description": "Fired after creating a new variation",
             "itemtype": "event",
             "name": "newVariation",
@@ -2585,7 +2671,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 643,
+            "line": 670,
             "description": "Delete a move",
             "itemtype": "method",
             "name": "deleteMove",
@@ -2602,7 +2688,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 655,
+            "line": 682,
             "description": "Special event not yet implemented. Supporting for adding info to games such as video links, automatic start and stop\nof auto play for lecture purpose will be added as actions later.",
             "itemtype": "event",
             "name": "deleteAction",
@@ -2629,7 +2715,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 665,
+            "line": 692,
             "description": "Fired when a move is deleted. It will only be fired for one move and not the following moves which of course\nalso will be deleted.",
             "itemtype": "event",
             "name": "deleteMove",
@@ -2656,7 +2742,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 678,
+            "line": 705,
             "description": "Fired when going to a move which is not last move in game",
             "itemtype": "event",
             "name": "notEndOfGame",
@@ -2678,7 +2764,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 701,
+            "line": 728,
             "description": "true if given move is last move in current variation, i.e. the variation active on the board",
             "itemtype": "method",
             "name": "isLastMoveInVariation",
@@ -2699,7 +2785,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 717,
+            "line": 744,
             "description": "true if move displayed on board, i.e. current model move is last move in game.",
             "itemtype": "method",
             "name": "isAtEndOfGame",
@@ -2713,7 +2799,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 975,
+            "line": 1002,
             "description": "Get next move of",
             "itemtype": "method",
             "name": "getNextMove",
@@ -2734,7 +2820,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1017,
+            "line": 1044,
             "description": "Grade a move",
             "itemtype": "method",
             "name": "gradeMove",
@@ -2757,7 +2843,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1069,
+            "line": 1096,
             "description": "Return comment before move, i.e. get comment of previous move",
             "itemtype": "method",
             "name": "getCommentBefore",
@@ -2778,7 +2864,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1085,
+            "line": 1112,
             "description": "Get comment of current move",
             "itemtype": "method",
             "name": "getCommentAfter",
@@ -2799,7 +2885,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1099,
+            "line": 1126,
             "description": "Set comment before a move, i.e. set comment of previous move, or in case of first move in game, set \"commment\" attribute of\ngame metadata.",
             "itemtype": "method",
             "name": "setCommentBefore",
@@ -2821,7 +2907,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1127,
+            "line": 1154,
             "description": "Set comment after a move",
             "itemtype": "method",
             "name": "setCommentAfter",
@@ -2843,7 +2929,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1164,
+            "line": 1191,
             "description": "Start autoplay of moves",
             "itemtype": "method",
             "name": "startAutoPlay",
@@ -2853,7 +2939,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1173,
+            "line": 1200,
             "description": "Stop autoplay of moves",
             "itemtype": "method",
             "name": "startAutoPlay",
@@ -2863,7 +2949,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1193,
+            "line": 1220,
             "description": "Returns true if in auto play mode",
             "itemtype": "method",
             "name": "isInAutoPlayMode",
@@ -2877,7 +2963,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1208,
+            "line": 1235,
             "description": "Event fired when model is changed but not saved",
             "itemtype": "event",
             "name": "dirty",
@@ -2894,7 +2980,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1218,
+            "line": 1245,
             "description": "Event fired when model is clean, i.e. right after being saved to the server.",
             "itemtype": "event",
             "name": "dirty",
@@ -2911,7 +2997,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1230,
+            "line": 1257,
             "description": "Save model to server",
             "itemtype": "method",
             "name": "save",
@@ -3254,7 +3340,7 @@
             "line": 614,
             "description": "Return array of the squares where pieces are pinned, i.e. cannot move.\nSquares are in the 0x88 format. You can use Board0x88Config.numberToSquareMapping\nto translate to readable format, example: Board0x88Config.numberToSquareMapping[16] will give you 'a2'",
             "itemtype": "method",
-            "name": "getPined",
+            "name": "getPinned",
             "params": [
                 {
                     "name": "color",
@@ -3539,7 +3625,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\fen-parser-0x88.js",
-            "line": 1459,
+            "line": 1457,
             "description": "Returns new fen based on current board position",
             "itemtype": "method",
             "name": "getNewFen",
