@@ -272,6 +272,13 @@
                             </li>
                         
                             <li class="index-item method">
+                                <a href="#method_backward">backward</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
                                 <a href="#method_canClaimDraw">canClaimDraw</a>
 
                                 
@@ -280,6 +287,20 @@
                         
                             <li class="index-item method">
                                 <a href="#method_deleteMove">deleteMove</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_findMove">findMove</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method private">
+                                <a href="#method_fire">fire</a>
 
                                 
                                 
@@ -831,6 +852,109 @@ alert(model.getCurrentPosition());
 </div>
 
                 
+                    <div id="method_backward" class="method item">
+    <h3 class="name"><code>backward</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>numberOfMoves</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Undefined</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l797"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:797</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Go to previous move</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">numberOfMoves</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Undefined</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
                     <div id="method_canClaimDraw" class="method item">
     <h3 class="name"><code>canClaimDraw</code></h3>
 
@@ -968,6 +1092,219 @@ alert(model.getCurrentPosition());
                     
                         <code class="param-name">moveToDelete</code>
                         <span class="type"><a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_findMove" class="method item">
+    <h3 class="name"><code>findMove</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>moveToFind</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l776"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:776</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">moveToFind</code>
+                        <span class="type"><a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a></span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_fire" class="method item private">
+    <h3 class="name"><code>fire</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>eventName</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>param</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1198"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1198</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">eventName</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">param</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a> | <a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a></span>
                     
 
                     
@@ -1208,7 +1545,7 @@ alert(model.getCurrentPosition());
             
         
         
-        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1112"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1112</code></a>
+        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1127"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1127</code></a>
         
         </p>
 
@@ -1312,7 +1649,7 @@ alert(model.getCurrentPosition());
             
         
         
-        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1096"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1096</code></a>
+        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1111"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1111</code></a>
         
         </p>
 
@@ -1379,7 +1716,7 @@ alert(model.getCurrentPosition());
 
     
         <span class="returns-inline">
-            <span class="type"><a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a></span>
+            <span class="type"><a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a> | Undefined</span>
         </span>
     
 
@@ -1429,7 +1766,7 @@ alert(model.getCurrentPosition());
             <div class="returns-description">
                 
                     
-                        <span class="type"><a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a></span>:
+                        <span class="type"><a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a> | Undefined</span>:
                     
                     move
                 
@@ -1784,7 +2121,7 @@ alert(model.getCurrentPosition());
 
     
         <span class="returns-inline">
-            <span class="type"><a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a></span>
+            <span class="type"><a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a> | Undefined</span>
         </span>
     
 
@@ -1811,7 +2148,7 @@ alert(model.getCurrentPosition());
             
         
         
-        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1002"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1002</code></a>
+        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1017"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1017</code></a>
         
         </p>
 
@@ -1857,7 +2194,7 @@ alert(model.getCurrentPosition());
             <div class="returns-description">
                 
                     
-                        <span class="type"><a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a></span>:
+                        <span class="type"><a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a> | Undefined</span>:
                     
                     next move
                 
@@ -2027,7 +2364,7 @@ undecided.</p>
             
                 <li class="arg">
                     
-                        <code>fen</code>
+                        <code>pos</code>
                     
                 </li>
             
@@ -2037,7 +2374,7 @@ undecided.</p>
 
     
         <span class="returns-inline">
-            <span class="type"></span>
+            <span class="type"><a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a></span>
         </span>
     
 
@@ -2087,7 +2424,7 @@ undecided.</p>
                 <li class="param">
                     
                         <code class="param-name">move</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a> | <a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a></span>
                     
 
                     
@@ -2101,14 +2438,14 @@ undecided.</p>
             
                 <li class="param">
                     
-                        <code class="param-name">fen</code>
+                        <code class="param-name">pos</code>
                         <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
                     
 
                     
 
                     <div class="param-description">
-                        <p>position</p>
+                         
                     </div>
 
                     
@@ -2125,7 +2462,7 @@ undecided.</p>
             <div class="returns-description">
                 
                     
-                        <span class="type"></span>:
+                        <span class="type"><a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a></span>:
                     
                 
             </div>
@@ -2184,7 +2521,7 @@ undecided.</p>
             
         
         
-        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1044"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1044</code></a>
+        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1059"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1059</code></a>
         
         </p>
 
@@ -2488,7 +2825,7 @@ undecided.</p>
             
         
         
-        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1220"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1220</code></a>
+        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1242"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1242</code></a>
         
         </p>
 
@@ -3029,7 +3366,7 @@ and the new move will be appended.</p>
                 <li class="param">
                     
                         <code class="param-name">oldMove</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                        <span class="type"><a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a></span>
                     
 
                     
@@ -3044,7 +3381,7 @@ and the new move will be appended.</p>
                 <li class="param">
                     
                         <code class="param-name">newMove</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                        <span class="type"><a href="../classes/chess.model.Move.html" class="crosslink">chess.model.Move</a></span>
                     
 
                     
@@ -3098,7 +3435,7 @@ and the new move will be appended.</p>
             
         
         
-        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1257"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1257</code></a>
+        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1279"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1279</code></a>
         
         </p>
 
@@ -3168,7 +3505,7 @@ and the new move will be appended.</p>
             
         
         
-        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1154"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1154</code></a>
+        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1169"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1169</code></a>
         
         </p>
 
@@ -3276,7 +3613,7 @@ and the new move will be appended.</p>
             
         
         
-        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1126"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1126</code></a>
+        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1141"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1141</code></a>
         
         </p>
 
@@ -3636,7 +3973,7 @@ game metadata.</p>
             
         
         
-        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1191"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1191</code></a>
+        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1213"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1213</code></a>
         
         </p>
 
@@ -3690,7 +4027,7 @@ game metadata.</p>
             
         
         
-        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1200"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1200</code></a>
+        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1222"><code>..&#x2F;api&#x2F;src&#x2F;model&#x2F;game.js:1222</code></a>
         
         </p>
 
@@ -4217,7 +4554,7 @@ also will be deleted.</p>
             
         
         
-        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1245"><code>..\api\src\model\game.js:1245</code></a>
+        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1267"><code>..\api\src\model\game.js:1267</code></a>
         
         </p>
 
@@ -4283,7 +4620,7 @@ also will be deleted.</p>
             
         
         
-        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1235"><code>..\api\src\model\game.js:1235</code></a>
+        <a href="..&#x2F;files&#x2F;.._api_src_model_game.js.html#l1257"><code>..\api\src\model\game.js:1257</code></a>
         
         </p>
 

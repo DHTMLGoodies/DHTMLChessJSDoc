@@ -2357,7 +2357,7 @@
             "name": "getLastMoveInGame",
             "return": {
                 "description": "move",
-                "type": "chess.model.Move"
+                "type": "chess.model.Move|undefined"
             },
             "class": "chess.model.Game",
             "module": "Model",
@@ -2584,12 +2584,12 @@
                 {
                     "name": "oldMove",
                     "description": "",
-                    "type": "Object"
+                    "type": "chess.model.Move"
                 },
                 {
                     "name": "newMove",
                     "description": "",
-                    "type": "Object"
+                    "type": "chess.model.Move"
                 }
             ],
             "class": "chess.model.Game",
@@ -2606,17 +2606,17 @@
                 {
                     "name": "move",
                     "description": "",
-                    "type": "Object"
+                    "type": "Object|chess.model.Move"
                 },
                 {
-                    "name": "fen",
-                    "description": "position",
+                    "name": "pos",
+                    "description": "",
                     "type": "String"
                 }
             ],
             "return": {
                 "description": "",
-                "type": "*"
+                "type": "chess.model.Move"
             },
             "class": "chess.model.Game",
             "module": "Model",
@@ -2799,7 +2799,48 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1002,
+            "line": 776,
+            "itemtype": "method",
+            "name": "findMove",
+            "params": [
+                {
+                    "name": "moveToFind",
+                    "description": "",
+                    "type": "chess.model.Move"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "chess.model.Move"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 797,
+            "description": "Go to previous move",
+            "itemtype": "method",
+            "name": "backward",
+            "params": [
+                {
+                    "name": "numberOfMoves",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Undefined"
+            },
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 1017,
             "description": "Get next move of",
             "itemtype": "method",
             "name": "getNextMove",
@@ -2812,7 +2853,7 @@
             ],
             "return": {
                 "description": "next move",
-                "type": "chess.model.Move"
+                "type": "chess.model.Move|undefined"
             },
             "class": "chess.model.Game",
             "module": "Model",
@@ -2820,7 +2861,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1044,
+            "line": 1059,
             "description": "Grade a move",
             "itemtype": "method",
             "name": "gradeMove",
@@ -2843,7 +2884,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1096,
+            "line": 1111,
             "description": "Return comment before move, i.e. get comment of previous move",
             "itemtype": "method",
             "name": "getCommentBefore",
@@ -2864,7 +2905,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1112,
+            "line": 1127,
             "description": "Get comment of current move",
             "itemtype": "method",
             "name": "getCommentAfter",
@@ -2885,7 +2926,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1126,
+            "line": 1141,
             "description": "Set comment before a move, i.e. set comment of previous move, or in case of first move in game, set \"commment\" attribute of\ngame metadata.",
             "itemtype": "method",
             "name": "setCommentBefore",
@@ -2907,7 +2948,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1154,
+            "line": 1169,
             "description": "Set comment after a move",
             "itemtype": "method",
             "name": "setCommentAfter",
@@ -2929,7 +2970,31 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1191,
+            "line": 1198,
+            "itemtype": "method",
+            "name": "fire",
+            "params": [
+                {
+                    "name": "eventName",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "param",
+                    "description": "",
+                    "type": "Object|chess.model.Move"
+                }
+            ],
+            "optional": 1,
+            "access": "private",
+            "tagname": "",
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 1213,
             "description": "Start autoplay of moves",
             "itemtype": "method",
             "name": "startAutoPlay",
@@ -2939,7 +3004,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1200,
+            "line": 1222,
             "description": "Stop autoplay of moves",
             "itemtype": "method",
             "name": "startAutoPlay",
@@ -2949,7 +3014,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1220,
+            "line": 1242,
             "description": "Returns true if in auto play mode",
             "itemtype": "method",
             "name": "isInAutoPlayMode",
@@ -2963,7 +3028,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1235,
+            "line": 1257,
             "description": "Event fired when model is changed but not saved",
             "itemtype": "event",
             "name": "dirty",
@@ -2980,7 +3045,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1245,
+            "line": 1267,
             "description": "Event fired when model is clean, i.e. right after being saved to the server.",
             "itemtype": "event",
             "name": "dirty",
@@ -2997,7 +3062,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1257,
+            "line": 1279,
             "description": "Save model to server",
             "itemtype": "method",
             "name": "save",
@@ -3026,25 +3091,31 @@
             "itemtype": "property",
             "name": "to",
             "type": "String",
+            "example": [
+                "\n\t\"to\" : \"e4\""
+            ],
             "class": "chess.model.Move",
             "module": "Model",
             "namespace": "chess.model"
         },
         {
             "file": "..\\api\\src\\model\\move.js",
-            "line": 31,
+            "line": 33,
             "description": "Promotion info",
             "itemtype": "property",
             "name": "promoteTo",
             "type": "String",
             "optional": 1,
+            "example": [
+                "\n\t\"promoteTo\": \"queen\""
+            ],
             "class": "chess.model.Move",
             "module": "Model",
             "namespace": "chess.model"
         },
         {
             "file": "..\\api\\src\\model\\move.js",
-            "line": 39,
+            "line": 43,
             "description": "Short notation",
             "itemtype": "property",
             "name": "m",
@@ -3058,14 +3129,14 @@
         },
         {
             "file": "..\\api\\src\\model\\move.js",
-            "line": 47,
+            "line": 51,
             "description": "Long notation",
             "itemtype": "property",
             "name": "lm",
             "type": "String",
             "optional": 1,
             "example": [
-                "\nlm: 'e2-e4'"
+                "\n\tlm: 'e2-e4'"
             ],
             "class": "chess.model.Move",
             "module": "Model",
@@ -3073,14 +3144,14 @@
         },
         {
             "file": "..\\api\\src\\model\\move.js",
-            "line": 56,
+            "line": 60,
             "description": "Comment",
             "itemtype": "property",
             "name": "comment",
             "type": "String",
             "optional": 1,
             "example": [
-                "\n\tcomment:'This is my comment'"
+                "\n\t\"comment\":\"This is my comment\""
             ],
             "class": "chess.model.Move",
             "module": "Model",
@@ -3088,12 +3159,49 @@
         },
         {
             "file": "..\\api\\src\\model\\move.js",
-            "line": 66,
+            "line": 70,
             "description": "Array of variations. Each item in the array is an array of moves in that variation.",
             "itemtype": "property",
             "name": "variations",
             "type": "Array",
             "optional": 1,
+            "class": "chess.model.Move",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\move.js",
+            "line": 78,
+            "description": "Action - To be implemented",
+            "itemtype": "property",
+            "name": "action",
+            "type": "String",
+            "optional": 1,
+            "example": [
+                "\n\t\"action\": \"startAutoPlay\""
+            ],
+            "class": "chess.model.Move",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\move.js",
+            "line": 88,
+            "description": "Internal move index property",
+            "itemtype": "property",
+            "name": "index",
+            "type": "Number",
+            "class": "chess.model.Move",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\move.js",
+            "line": 95,
+            "description": "Internal id property",
+            "itemtype": "property",
+            "name": "id",
+            "type": "String",
             "class": "chess.model.Move",
             "module": "Model",
             "namespace": "chess.model"
@@ -3639,7 +3747,32 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\move-0x88.js",
-            "line": 39,
+            "line": 34,
+            "itemtype": "method",
+            "name": "getMoveByNotation",
+            "params": [
+                {
+                    "name": "notation",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "pos",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "chess.model.Move"
+            },
+            "class": "chess.parser.Move0x88",
+            "module": "Parser",
+            "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\parser0x88\\move-0x88.js",
+            "line": 45,
             "description": "Returns true if a move is valid",
             "itemtype": "method",
             "name": "isValid",
@@ -3664,7 +3797,7 @@
         },
         {
             "file": "..\\api\\src\\parser0x88\\move-0x88.js",
-            "line": 104,
+            "line": 110,
             "description": "Returns true if a move is promotion move",
             "itemtype": "method",
             "name": "isPromotionMove",

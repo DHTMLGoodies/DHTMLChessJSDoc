@@ -212,7 +212,7 @@
  @namespace chess.model
  @class Move
  *&#x2F;
-chess.model.Game = new Class({
+chess.model.Move = new Class({
 	&#x2F;**
 	 from square, example &quot;e2&quot;
 	 @property from
@@ -233,6 +233,8 @@ chess.model.Game = new Class({
 	 to square, example &quot;e4&quot;
 	 @property to
 	 @type String
+	 @example
+	 	&quot;to&quot; : &quot;e4&quot;
 	 *&#x2F;
 	to:undefined,
 
@@ -241,6 +243,8 @@ chess.model.Game = new Class({
 	 @property promoteTo
 	 @type String
 	 @optional
+	 @example
+	 	&quot;promoteTo&quot;: &quot;queen&quot;
 	 *&#x2F;
 	promoteTo:undefined,
 
@@ -258,7 +262,7 @@ chess.model.Game = new Class({
 	 @type String
 	 @optional
 	 @example
-	 lm: &#x27;e2-e4&#x27;
+	 	lm: &#x27;e2-e4&#x27;
 	 *&#x2F;
 	 lm:undefined,
 	 &#x2F;**
@@ -267,7 +271,7 @@ chess.model.Game = new Class({
 	 @type String
 	 @optional
 	 @example
-	 	comment:&#x27;This is my comment&#x27;
+	 	&quot;comment&quot;:&quot;This is my comment&quot;
 	 *&#x2F;
 	comment:undefined,
 
@@ -277,7 +281,31 @@ chess.model.Game = new Class({
 	 @type Array
 	 @optional
 	 *&#x2F;
-	variations:undefined
+	variations:undefined,
+
+	&#x2F;**
+	 Action - To be implemented
+	 @property action
+	 @type String
+	 @optional
+	 @example
+	 	&quot;action&quot;: &quot;startAutoPlay&quot;
+	 *&#x2F;
+	action:undefined,
+
+	&#x2F;**
+	 * Internal move index property
+	 * @property index
+	 * @type Number
+	 *&#x2F;
+	index:undefined,
+
+	&#x2F;**
+	 * Internal id property
+	 * @property id
+	 * @type String
+	 *&#x2F;
+	id:undefined
 
 
 });
