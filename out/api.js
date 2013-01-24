@@ -49,7 +49,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "chess.view.user.RegisterButton",
         "chess.view.user.RegisterWindow",
         "chess.view.user.SettingsButton",
-        "chess.view.user.UserModel"
+        "chess.view.user.UserModel",
+        "pgn.Parser"
     ],
     "modules": [
         "Board",

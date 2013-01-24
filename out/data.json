@@ -125,6 +125,17 @@
                 "chess.parser": 1
             }
         },
+        "..\\api\\src\\pgn\\parser.js": {
+            "name": "..\\api\\src\\pgn\\parser.js",
+            "modules": {},
+            "classes": {
+                "pgn.Parser": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "pgn": 1
+            }
+        },
         "..\\api\\src\\remote\\game-reader.js": {
             "name": "..\\api\\src\\remote\\game-reader.js",
             "modules": {},
@@ -653,11 +664,13 @@
                 "chess.parser.FenParser0x88": 1,
                 "chess.parser.Move0x88": 1,
                 "chess.parser.PositionValidator": 1,
+                "pgn.Parser": 1,
                 "chess.remote.GameReader": 1
             },
             "fors": {},
             "namespaces": {
                 "chess.parser": 1,
+                "pgn": 1,
                 "chess.remote": 1
             },
             "tag": "module",
@@ -1080,6 +1093,24 @@
             "line": 1,
             "description": "Class used by position setup dialog to validate positions on the board.\nWhen the position is valid the \"OK\" button will be enabled, otherwise it will be disabled.",
             "extends": "chess.parser.FenParser0x88"
+        },
+        "pgn.Parser": {
+            "name": "pgn.Parser",
+            "shortname": "pgn.Parser",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Parser",
+            "namespace": "pgn",
+            "file": "..\\api\\src\\pgn\\parser.js",
+            "line": 1,
+            "description": "Model to PGN parser",
+            "is_constructor": 1,
+            "example": [
+                "\n\t var game = new chess.model.Game();\n\t game.setMetadataValue('white','Magnus Carlsen');\n\t game.setMetadataValue('black','Levon Aronian');\n\t game.appendMove('e4');\n\t game.appendMove('e5');\n\n\t var parser = new chess.pgn.Parser(game);\n\t console.log(parser.getPgn());"
+            ]
         },
         "chess.remote.GameReader": {
             "name": "chess.remote.GameReader",
@@ -2822,7 +2853,7 @@
             "line": 797,
             "description": "Go to previous move",
             "itemtype": "method",
-            "name": "backward",
+            "name": "back",
             "params": [
                 {
                     "name": "numberOfMoves",
@@ -3841,6 +3872,30 @@
             "class": "chess.parser.PositionValidator",
             "module": "Parser",
             "namespace": "chess.parser"
+        },
+        {
+            "file": "..\\api\\src\\pgn\\parser.js",
+            "line": 17,
+            "itemtype": "property",
+            "name": "model",
+            "type": "chess.model.Game",
+            "class": "pgn.Parser",
+            "module": "Parser",
+            "namespace": "pgn"
+        },
+        {
+            "file": "..\\api\\src\\pgn\\parser.js",
+            "line": 26,
+            "description": "Return pgn in string format",
+            "itemtype": "method",
+            "name": "getPgn",
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "pgn.Parser",
+            "module": "Parser",
+            "namespace": "pgn"
         },
         {
             "file": "..\\api\\src\\view\\board\\chess-board.js",
