@@ -61,6 +61,8 @@
             
                 <li><a href="..&#x2F;classes/chess.parser.PositionValidator.html">chess.parser.PositionValidator</a></li>
             
+                <li><a href="..&#x2F;classes/chess.pgn.Parser.html">chess.pgn.Parser</a></li>
+            
                 <li><a href="..&#x2F;classes/chess.remote.GameReader.html">chess.remote.GameReader</a></li>
             
                 <li><a href="..&#x2F;classes/chess.view.board.Board.html">chess.view.board.Board</a></li>
@@ -68,6 +70,24 @@
                 <li><a href="..&#x2F;classes/chess.view.board.GUI.html">chess.view.board.GUI</a></li>
             
                 <li><a href="..&#x2F;classes/chess.view.board.Piece.html">chess.view.board.Piece</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.NextGame.html">chess.view.button.NextGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.PreviousGame.html">chess.view.button.PreviousGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.SaveGame.html">chess.view.button.SaveGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.TacticHint.html">chess.view.button.TacticHint</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.TacticSolution.html">chess.view.button.TacticSolution</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.buttonbar.Game.html">chess.view.buttonbar.Game</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.command.Controller.html">chess.view.command.Controller</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.command.Line.html">chess.view.command.Line</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.command.Panel.html">chess.view.command.Panel</a></li>
             
                 <li><a href="..&#x2F;classes/chess.view.dialog.Comment.html">chess.view.dialog.Comment</a></li>
             
@@ -138,8 +158,6 @@
                 <li><a href="..&#x2F;classes/chess.view.user.SettingsButton.html">chess.view.user.SettingsButton</a></li>
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
-            
-                <li><a href="..&#x2F;classes/pgn.Parser.html">pgn.Parser</a></li>
             
             </ul>
 
@@ -281,7 +299,7 @@ chess.view.board.Board = new Class({
             var config = {
                 square:0,
                 color:&#x27;white&#x27;,
-                type:&#x27;pawn&#x27;,
+                pieceType:&#x27;pawn&#x27;,
                 pieceLayout:this.pieceLayout,
                 squareSize:30,
                 flipped:flipped,
@@ -344,7 +362,9 @@ chess.view.board.Board = new Class({
         this.currentValidMoves = this.positionParser.getValidMovesAndResult().moves;
         this.resetPieceDragAndDrop();
         for (var square in this.currentValidMoves) {
-            this.pieceMap[square].enableDragAndDrop();
+            if(this.currentValidMoves.hasOwnProperty(square)){
+                this.pieceMap[square].enableDragAndDrop();
+            }
         }
     },
     &#x2F;**
@@ -362,12 +382,14 @@ chess.view.board.Board = new Class({
         }
     },
     &#x2F;**
-     * Animate&#x2F;Play the &quot;movements&quot; involved in a move, example: O-O involves two moves,
-     * moving the king and moving the rook. By default, this method will be executed when the
-     * controller fires newMove or nextmove event.
-     * @method playChainOfMoves
-     * @param GameModel model
-     * @param Object move, example: { m: &#x27;O-O&#x27;, moves : [{ from: &#x27;e1&#x27;, to: &#x27;g1&#x27; },{ from:&#x27;h1&#x27;, to: &#x27;f1&#x27;}] }
+     Animate&#x2F;Play the &quot;movements&quot; involved in a move, example: O-O involves two moves,
+     moving the king and moving the rook. By default, this method will be executed when the
+     controller fires newMove or nextmove event.
+     @method playChainOfMoves
+     @param {game.model.Game} model
+     @param {Object} move
+     @example
+        { m: &#x27;O-O&#x27;, moves : [{ from: &#x27;e1&#x27;, to: &#x27;g1&#x27; },{ from:&#x27;h1&#x27;, to: &#x27;f1&#x27;}] }
      *&#x2F;
     playChainOfMoves:function (model, move) {
         if (this.currentAnimation.isBusy) {
@@ -453,8 +475,8 @@ chess.view.board.Board = new Class({
     },
     &#x2F;**
      * Show start position of game
-     * @method showStartboard
-     * @param GameModel model
+     * @method showStartBoard
+     * @param {game.model.Game} model
      * @return void
      *&#x2F;
     showStartBoard:function (model) {
@@ -463,8 +485,8 @@ chess.view.board.Board = new Class({
     &#x2F;**
      * Show a specific FEN position on the board
      * @method showFen
-     * @param String fen
-     * @return void
+     * @param {String} fen
+     * @return undefined
      *&#x2F;
     showFen:function (fen) {
         this.positionParser.setFen(fen);
@@ -477,7 +499,7 @@ chess.view.board.Board = new Class({
             var p = this.pieces[i];
             p.square = pieces[i].s;
             p.color = color;
-            p.type = type;
+            p.pieceType = type;
             p.position();
             p.updateBackgroundImage();
             p.show();
@@ -557,9 +579,11 @@ chess.view.board.Board = new Class({
     },
 
     &#x2F;**
-     * Returns JSON object for a piece on a specific square or null if no piece is on the square
-     * @method getPieceOnSquare
-     * @param string square, example: &quot;e4&quot;
+     Returns JSON object for a piece on a specific square or null if no piece is on the square
+     @method getPieceOnSquare
+     @param {String} square
+     @example
+        alert(board.getPieceOnSquare(&#x27;e4&#x27;);
      *&#x2F;
     getPieceOnSquare:function (square) {
         return this.pieceMap[Board0x88Config.mapping[square]];

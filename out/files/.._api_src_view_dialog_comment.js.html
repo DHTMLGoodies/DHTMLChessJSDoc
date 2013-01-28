@@ -61,6 +61,8 @@
             
                 <li><a href="..&#x2F;classes/chess.parser.PositionValidator.html">chess.parser.PositionValidator</a></li>
             
+                <li><a href="..&#x2F;classes/chess.pgn.Parser.html">chess.pgn.Parser</a></li>
+            
                 <li><a href="..&#x2F;classes/chess.remote.GameReader.html">chess.remote.GameReader</a></li>
             
                 <li><a href="..&#x2F;classes/chess.view.board.Board.html">chess.view.board.Board</a></li>
@@ -68,6 +70,24 @@
                 <li><a href="..&#x2F;classes/chess.view.board.GUI.html">chess.view.board.GUI</a></li>
             
                 <li><a href="..&#x2F;classes/chess.view.board.Piece.html">chess.view.board.Piece</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.NextGame.html">chess.view.button.NextGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.PreviousGame.html">chess.view.button.PreviousGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.SaveGame.html">chess.view.button.SaveGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.TacticHint.html">chess.view.button.TacticHint</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.TacticSolution.html">chess.view.button.TacticSolution</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.buttonbar.Game.html">chess.view.buttonbar.Game</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.command.Controller.html">chess.view.command.Controller</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.command.Line.html">chess.view.command.Line</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.command.Panel.html">chess.view.command.Panel</a></li>
             
                 <li><a href="..&#x2F;classes/chess.view.dialog.Comment.html">chess.view.dialog.Comment</a></li>
             
@@ -138,8 +158,6 @@
                 <li><a href="..&#x2F;classes/chess.view.user.SettingsButton.html">chess.view.user.SettingsButton</a></li>
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
-            
-                <li><a href="..&#x2F;classes/pgn.Parser.html">pgn.Parser</a></li>
             
             </ul>
 
@@ -286,12 +304,13 @@ chess.view.dialog.Comment = new Class({
         this.show();
 
         this.move = model.getMove(move);
-
         var comment = this.commentPos == &#x27;before&#x27; ? model.getCommentBefore(this.move) : model.getCommentAfter(this.move);
         this.child[&#x27;comment&#x27;].setValue(comment);
+        this.setTitle(this.getDialogTitle());
+    },
 
-        this.setTitle(chess.language[ this.commentPos == &#x27;before&#x27; ? &#x27;addCommentBefore&#x27; : &#x27;addCommentAfter&#x27;] + &#x27; (&#x27; + this.move.lm + &#x27;)&#x27;);
-
+    getDialogTitle:function(){
+        return chess.language[ this.commentPos == &#x27;before&#x27; ? &#x27;addCommentBefore&#x27; : &#x27;addCommentAfter&#x27;] + &#x27; (&#x27; + this.move.lm + &#x27;)&#x27;;
     }
 });
     </pre>

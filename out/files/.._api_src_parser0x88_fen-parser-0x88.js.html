@@ -61,6 +61,8 @@
             
                 <li><a href="..&#x2F;classes/chess.parser.PositionValidator.html">chess.parser.PositionValidator</a></li>
             
+                <li><a href="..&#x2F;classes/chess.pgn.Parser.html">chess.pgn.Parser</a></li>
+            
                 <li><a href="..&#x2F;classes/chess.remote.GameReader.html">chess.remote.GameReader</a></li>
             
                 <li><a href="..&#x2F;classes/chess.view.board.Board.html">chess.view.board.Board</a></li>
@@ -68,6 +70,24 @@
                 <li><a href="..&#x2F;classes/chess.view.board.GUI.html">chess.view.board.GUI</a></li>
             
                 <li><a href="..&#x2F;classes/chess.view.board.Piece.html">chess.view.board.Piece</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.NextGame.html">chess.view.button.NextGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.PreviousGame.html">chess.view.button.PreviousGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.SaveGame.html">chess.view.button.SaveGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.TacticHint.html">chess.view.button.TacticHint</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.TacticSolution.html">chess.view.button.TacticSolution</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.buttonbar.Game.html">chess.view.buttonbar.Game</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.command.Controller.html">chess.view.command.Controller</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.command.Line.html">chess.view.command.Line</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.command.Panel.html">chess.view.command.Panel</a></li>
             
                 <li><a href="..&#x2F;classes/chess.view.dialog.Comment.html">chess.view.dialog.Comment</a></li>
             
@@ -138,8 +158,6 @@
                 <li><a href="..&#x2F;classes/chess.view.user.SettingsButton.html">chess.view.user.SettingsButton</a></li>
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
-            
-                <li><a href="..&#x2F;classes/pgn.Parser.html">pgn.Parser</a></li>
             
             </ul>
 
@@ -693,7 +711,7 @@ chess.parser.FenParser0x88 = new Class({
 
 	&#x2F;* This method returns a commaseparated string of moves since it&#x27;s faster to work with than arrays*&#x2F;
 	getCaptureAndProtectiveMoves:function (color) {
-		var ret = [], directions, square, a;
+		var ret = [&#x27;&#x27;], directions, square, a;
 
 		var pieces = this.cache[color];
 		var oppositeKingSquare = this.getKing(color === &#x27;white&#x27; ? &#x27;black&#x27; : &#x27;white&#x27;).s;
@@ -756,7 +774,8 @@ chess.parser.FenParser0x88 = new Class({
 			}
 
 		}
-		return &#x27;,&#x27; + ret.join(&#x27;,&#x27;) + &#x27;,&#x27;;
+        ret.push(&#x27;&#x27;);
+        return ret.join(&#x27;,&#x27;);
 	},
 
 	&#x2F;**

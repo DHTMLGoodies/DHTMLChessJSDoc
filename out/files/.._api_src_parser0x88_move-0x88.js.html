@@ -61,6 +61,8 @@
             
                 <li><a href="..&#x2F;classes/chess.parser.PositionValidator.html">chess.parser.PositionValidator</a></li>
             
+                <li><a href="..&#x2F;classes/chess.pgn.Parser.html">chess.pgn.Parser</a></li>
+            
                 <li><a href="..&#x2F;classes/chess.remote.GameReader.html">chess.remote.GameReader</a></li>
             
                 <li><a href="..&#x2F;classes/chess.view.board.Board.html">chess.view.board.Board</a></li>
@@ -68,6 +70,24 @@
                 <li><a href="..&#x2F;classes/chess.view.board.GUI.html">chess.view.board.GUI</a></li>
             
                 <li><a href="..&#x2F;classes/chess.view.board.Piece.html">chess.view.board.Piece</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.NextGame.html">chess.view.button.NextGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.PreviousGame.html">chess.view.button.PreviousGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.SaveGame.html">chess.view.button.SaveGame</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.TacticHint.html">chess.view.button.TacticHint</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.button.TacticSolution.html">chess.view.button.TacticSolution</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.buttonbar.Game.html">chess.view.buttonbar.Game</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.command.Controller.html">chess.view.command.Controller</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.command.Line.html">chess.view.command.Line</a></li>
+            
+                <li><a href="..&#x2F;classes/chess.view.command.Panel.html">chess.view.command.Panel</a></li>
             
                 <li><a href="..&#x2F;classes/chess.view.dialog.Comment.html">chess.view.dialog.Comment</a></li>
             
@@ -138,8 +158,6 @@
                 <li><a href="..&#x2F;classes/chess.view.user.SettingsButton.html">chess.view.user.SettingsButton</a></li>
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
-            
-                <li><a href="..&#x2F;classes/pgn.Parser.html">pgn.Parser</a></li>
             
             </ul>
 
@@ -237,6 +255,12 @@ chess.parser.Move0x88 = new Class({
         removed:{}
     },
 
+    &#x2F;**
+     * Returns true if last moves in passed fen&#x27;s is threefold repetition.
+     * @method hasThreeFoldRepetition
+     * @param {Array} fens
+     * @return {Boolean}
+     *&#x2F;
 	hasThreeFoldRepetition:function(fens){
 		return this.parser.hasThreeFoldRepetition(fens);
 	},
@@ -276,13 +300,25 @@ chess.parser.Move0x88 = new Class({
 
     },
 
+    &#x2F;**
+     * Lookup mapping table and return numeric value of square according the the 0x88 chess board
+     * @method getNumSquare
+     * @param {String} square
+     * @return {Number}
+     *&#x2F;
     getNumSquare:function (square) {
         return Board0x88Config.mapping[square];
     },
 
-
+    &#x2F;**
+     * Return valid Move object
+     * @method getMoveConfig
+     * @param {Object} move
+     * @param {String} fen
+     * @return {chess.model.Move}
+     * TODO perhaps rename this method
+     *&#x2F;
     getMoveConfig:function (move, fen) {
-
         if(move.m !== undefined &amp;&amp; move.m &amp;&amp; move.m === &#x27;--&#x27;){
             var newFen = this.getFenWithColorSwitched(fen);
             this.parser.setFen(newFen);
@@ -308,6 +344,12 @@ chess.parser.Move0x88 = new Class({
         };
     },
 
+    &#x2F;**
+     * Return fen with color switched
+     * @method getFenWithColorSwitched
+     * @param {String} fen
+     * @return {String}
+     *&#x2F;
     getFenWithColorSwitched : function(fen){
         if(fen.indexOf(&#x27; w &#x27;)&gt;=0){
             fen = fen.replace(&#x27; w &#x27;, &#x27; b &#x27;);
@@ -341,7 +383,12 @@ chess.parser.Move0x88 = new Class({
 
         return false;
     },
-
+    &#x2F;**
+     * Returns true if a pawn is on given square
+     * @method isPawnOnSquare
+     * @param {String} square
+     * @return {Boolean}
+     *&#x2F;
     isPawnOnSquare : function(square) {
         var piece = this.parser.getPieceOnSquare(square);
         return piece.type === &#x27;pawn&#x27;;
