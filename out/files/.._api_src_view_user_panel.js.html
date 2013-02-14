@@ -159,6 +159,8 @@
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
             
+                <li><a href="..&#x2F;classes/seek.View.html">seek.View</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
@@ -267,8 +269,8 @@ chess.view.user.Panel = new Class({
         this.controller.addEvent(&#x27;validSession&#x27;, this.getUserDetails.bind(this));
     },
 
-    getUserDetails:function(token){
-        this.getModel().load(token);
+    getUserDetails:function(userId){
+        this.getModel().load(userId);
         this.show();
     },
 

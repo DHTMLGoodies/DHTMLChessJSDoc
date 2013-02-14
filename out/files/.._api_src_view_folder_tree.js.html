@@ -159,6 +159,8 @@
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
             
+                <li><a href="..&#x2F;classes/seek.View.html">seek.View</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
@@ -240,7 +242,7 @@ chess.view.folder.Tree = new Class({
 	dataSource:{
 		type:&#x27;chess.dataSource.FolderTree&#x27;
 	},
-	nodeTpl:&#x27;&lt;img src=&quot;&#x27; + window.chess.ROOT + &#x27;images&#x2F;{icon}&quot;&gt;&lt;span&gt;{title}&lt;&#x2F;span&gt;&#x27;,
+	nodeTpl:&#x27;&lt;img src=&quot;&#x27; + ludo.config.getDocumentRoot() + &#x27;images&#x2F;{icon}&quot;&gt;&lt;span&gt;{title}&lt;&#x2F;span&gt;&#x27;,
 	expandDepth:3,
 
 	recordConfig:{

@@ -159,6 +159,8 @@
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
             
+                <li><a href="..&#x2F;classes/seek.View.html">seek.View</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
@@ -302,9 +304,9 @@ chess.view.gamelist.Grid = new Class({
 				sortable:true,
 				removable:true
 			},
-			lastMoves:{
+			last_moves:{
 				heading:&#x27;Last moves&#x27;,
-				key:&#x27;lastMoves&#x27;,
+				key:&#x27;last_moves&#x27;,
 				weight:1,
 				sortable:true,
 				removable:true
@@ -325,6 +327,7 @@ chess.view.gamelist.Grid = new Class({
 		controller.addEvent(&#x27;selectDatabase&#x27;, this.selectDatabase.bind(this));
 		controller.addEvent(&#x27;nextGame&#x27;, ds.next.bind(ds));
 		controller.addEvent(&#x27;previousGame&#x27;, ds.previous.bind(ds));
+        controller.addEvent(&#x27;selectPgn&#x27;, this.selectPgn.bind(this));
 	},
 
 	&#x2F;**
@@ -335,6 +338,10 @@ chess.view.gamelist.Grid = new Class({
 	selectDatabase:function (record) {
 		this.loadGames(record.id);
 	},
+
+    selectPgn:function(pgn){
+        this.getDataSource().sendRequest(&#x27;listOfGames&#x27;, pgn);
+    },
 
 	ludoConfig:function (config) {
 		this.parent(config);
@@ -358,9 +365,8 @@ chess.view.gamelist.Grid = new Class({
 	},
 
 	loadGames:function (databaseId) {
-		this.getDataSource().setQueryParam(&#x27;databaseId&#x27;, databaseId);
 		this.databaseId = databaseId;
-		this.load();
+		this.getDataSource().sendRequest(&#x27;games&#x27;, databaseId);
 	},
 
 	selectGame:function (record) {
@@ -369,7 +375,11 @@ chess.view.gamelist.Grid = new Class({
 		 * @event selectGame
 		 * @param {Object} game
 		 *&#x2F;
-		this.fireEvent(&#x27;selectGame&#x27;, record);
+		if(record.gameIndex !== undefined){
+			this.fireEvent(&#x27;selectGame&#x27;, [record, this.getDataSource().getCurrentPgn()]);
+		}else{
+			this.fireEvent(&#x27;selectGame&#x27;, record);
+		}
 	}
 });
     </pre>

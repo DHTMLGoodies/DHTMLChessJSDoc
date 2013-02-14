@@ -159,6 +159,8 @@
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
             
+                <li><a href="..&#x2F;classes/seek.View.html">seek.View</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
@@ -241,17 +243,33 @@ chess.remote.GameReader = new Class({
     },
 
     loadGame : function(id){
-        this.params = {
-            id : id
-        };
-        this.query(&#x27;getGame&#x27;);
+		this.query({
+			&quot;resource&quot;: &quot;Game&quot;,
+			&quot;service&quot;: &quot;read&quot;,
+			&quot;eventOnLoad&quot;: &quot;load&quot;,
+			&quot;arguments&quot;: id
+		});
     },
 
+	loadStaticGame:function(pgn, index){
+
+		this.query({
+			&quot;resource&quot;: &quot;ChessFs&quot;,
+			&quot;service&quot;: &quot;getGame&quot;,
+			&quot;eventOnLoad&quot;: &quot;load&quot;,
+			&quot;arguments&quot;: pgn,
+			&quot;data&quot; : index
+		});
+	},
+
     save:function(game){
-        this.params = {
-            game:game
-        };
-        this.query(&#x27;saveGame&#x27;, &#x27;saved&#x27;);
+		this.query({
+			&quot;resource&quot;: &quot;Game&quot;,
+			&quot;service&quot;: &quot;save&quot;,
+			&quot;eventOnLoad&quot;: &quot;saved&quot;,
+			&quot;arguments&quot;: id,
+			&quot;data&quot;: game
+		});
     },
 
     loadRandomGame : function(databaseId) {
@@ -265,7 +283,7 @@ chess.remote.GameReader = new Class({
         this.params = {
             fen : fen
         };
-        this.query(&#x27;getEngineMove&#x27;,&#x27;newMove&#x27;);
+        this.query(&#x27;EngineMove&#x27;,undefined, &#x27;newMove&#x27;);
     }
 });
     </pre>

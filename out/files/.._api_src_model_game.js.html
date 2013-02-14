@@ -159,6 +159,8 @@
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
             
+                <li><a href="..&#x2F;classes/seek.View.html">seek.View</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
@@ -276,8 +278,13 @@ chess.model.Game = new Class({
 		this.gameReader.addEvent(&#x27;newMove&#x27;, this.appendRemoteMove.bind(this));
 		this.gameReader.addEvent(&#x27;saved&#x27;, this.updateGameFromServer.bind(this));
 		this.setDefaultModel();
-		if (config.id) {
-			this.loadGame(config.id);
+
+		if (config.id || config.pgn) {
+			if(config.pgn){
+				this.loadStaticGame(config.pgn, config.gameIndex);
+			}else{
+				this.loadGame(config.id);
+			}
 		} else {
 			this.setDirty();
 		}
@@ -296,6 +303,7 @@ chess.model.Game = new Class({
 	getId:function () {
 		return this.model.id;
 	},
+
 	&#x2F;**
 	 * Load a game from server
 	 * @method loadGame
@@ -303,6 +311,10 @@ chess.model.Game = new Class({
 	 *&#x2F;
 	loadGame:function (gameId) {
 		this.gameReader.loadGame(gameId);
+	},
+
+	loadStaticGame:function(pgn, index){
+		this.gameReader.loadStaticGame(pgn, index);
 	},
 	&#x2F;**
 	 * Load a random game from selected database
@@ -322,6 +334,17 @@ chess.model.Game = new Class({
 		this.toEnd();
 		this.appendMove(move);
 	},
+
+    &#x2F;**
+     * Returns true if this model is model for given game object
+     * @method isModelFor
+     * @param {Object} game
+     *&#x2F;
+    isModelFor:function(game){
+        if(game.gameIndex)return game.gameIndex === this.model.gameIndex;
+        if(game.id)return game.id === this.model.id;
+        return false;
+    },
 
 	&#x2F;**
 	 * Empty model and reset to standard position
@@ -378,7 +401,9 @@ chess.model.Game = new Class({
      *&#x2F;
 	populate:function (gameData) {
 		this.setDefaultModel();
+        gameData = this.getValidGameData(gameData);
 		this.model.id = gameData.id || gameData.metadata.id || this.model.id;
+		this.model.gameIndex = gameData.gameIndex || undefined;
 		this.model.metadata.fen = gameData.fen || gameData.metadata.fen;
 		this.model.result = this.getResult();
 		this.model.moves = gameData.moves || [];
@@ -390,6 +415,27 @@ chess.model.Game = new Class({
 		this.fire(&#x27;newGame&#x27;);
 		this.toStart();
 	},
+
+    reservedMetadata : [&quot;event&quot;,&quot;site&quot;,&quot;date&quot;,&quot;round&quot;,&quot;white&quot;,&quot;black&quot;,&quot;result&quot;,
+        &quot;annotator&quot;,&quot;termintation&quot;,&quot;fen&quot;,&quot;plycount&quot;,&quot;database_id&quot;,&quot;id&quot;],
+    &#x2F;&#x2F; TODO refactor this to match server
+    &#x2F;**
+     * Move metadata into metadata object
+     * @method getValidMetadata
+     *
+     *&#x2F;
+    getValidGameData:function(gameData){
+        gameData.metadata = gameData.metadata || {};
+        for(var i = 0;i&lt;this.reservedMetadata.length;i++){
+            var key = this.reservedMetadata[i];
+            if(gameData[key] !== undefined){
+                gameData.metadata[key] = gameData[key];
+                delete gameData[key];
+            }
+        }
+
+        return gameData;
+    },
 
     &#x2F;**
      * Return game data
@@ -1754,9 +1800,28 @@ chess.model.Game = new Class({
 	 * @method save
 	 *&#x2F;
 	save:function () {
-		this.gameReader.save(this.model);
+		this.gameReader.save(this.toValidServerModel(this.toValidServerModel(this.model)));
 		this.setClean();
 	},
+    &#x2F;**
+     * Convert to valid server model, i.e. reserved metadata moved from metadata object
+     * @method toValidServerModel
+     * @param {Object} gameData
+     * @return {Object}
+     * @private
+     *&#x2F;
+    toValidServerModel:function(gameData){
+        gameData = Object.clone(gameData);
+        gameData.metadata = gameData.metadata || {};
+        for(var i=0;i&lt;this.reservedMetadata.length;i++){
+            var key = this.reservedMetadata[i];
+            if(gameData.metadata[key] !== undefined){
+                gameData[key] = gameData.metadata[key];
+                delete gameData.metadata[key];
+            }
+        }
+        return gameData;
+    },
 
     &#x2F;**
      * Receive game update from server

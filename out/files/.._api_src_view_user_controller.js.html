@@ -159,6 +159,8 @@
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
             
+                <li><a href="..&#x2F;classes/seek.View.html">seek.View</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
@@ -282,20 +284,21 @@ chess.view.user.Controller = new Class({
             this.fireEvent(&#x27;invalidSession&#x27;);
             return;
         }
-        this.JSONRequest(&#x27;validateSession&#x27;, {
-            url:window.chess.URL,
-            data:{
-                token:token
-            },
-            onSuccess:function (json) {
-                if(json.success){
-                    this.fireEvent(&#x27;validSession&#x27;, json.data.token);
-                    this.fireEvent(&#x27;userAccess&#x27;, json.data.user_access);
-                }else{
-                    this.fireEvent(&#x27;invalidSession&#x27;);
-                }
-            }
-        });
+
+		var req = new ludo.remote.JSON({
+            resource:&#x27;Session&#x27;,
+			listeners:{
+				&quot;success&quot;: function(request){
+					var userDetails = request.getResponseData();
+					this.fireEvent(&#x27;validSession&#x27;, userDetails.id);
+     				this.fireEvent(&#x27;userAccess&#x27;, userDetails.user_access);
+				}.bind(this),
+				&quot;failure&quot;: function(){
+					this.fireEvent(&quot;invalidSession&quot;);
+				}.bind(this)
+			}
+		});
+        req.send(&#x27;authenticate&#x27;, undefined, token);
     },
 
     getSessionToken:function () {
@@ -308,10 +311,7 @@ chess.view.user.Controller = new Class({
         new chess.view.user.ProfileWindow();
     },
 
-    login:function(json, rememberMe){
-        Cookie.write(chess.COOKIE_NAME, json.token, {
-            duration : rememberMe ? 365 : false
-        });
+    login:function(json){
         this.fireEvent(&#x27;validSession&#x27;, json.token);
         this.fireEvent(&#x27;userAccess&#x27;, json.user_access);
     },

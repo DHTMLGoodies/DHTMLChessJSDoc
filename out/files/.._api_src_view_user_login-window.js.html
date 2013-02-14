@@ -159,6 +159,8 @@
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
             
+                <li><a href="..&#x2F;classes/seek.View.html">seek.View</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
@@ -243,13 +245,16 @@ chess.view.user.LoginWindow = new Class({
     module:&#x27;user&#x27;,
     submodule:&#x27;loginWindow&#x27;,
     form:{
-        name : &#x27;login&#x27;,
-        url:window.chess.URL
+        resource:&#x27;Session&#x27;,
+        service:&quot;signIn&quot;
     },
-    layout : &#x27;rows&#x27;,
+    layout:{
+        &quot;type&quot;:&quot;linear&quot;,
+        &quot;orientation&quot;:&quot;vertical&quot;
+    },
     children:[
         {
-            type:&#x27;form.Text&#x27;, name:&#x27;username&#x27;, regex : &#x27;[a-zA-Z0-9\-_\.]&#x27;, label:chess.language.username, required:true, stretchField:true
+            type:&#x27;form.Text&#x27;, name:&#x27;username&#x27;, regex:&#x27;[a-zA-Z0-9\-_\.]&#x27;, label:chess.language.username, required:true, stretchField:true
         },
         {
             type:&#x27;form.Password&#x27;, name:&#x27;password&#x27;, md5:true, label:chess.language.password, required:true, stretchField:true
@@ -258,7 +263,7 @@ chess.view.user.LoginWindow = new Class({
             type:&#x27;form.Checkbox&#x27;, name:&#x27;rememberMe&#x27;, label:chess.language.rememberMe, value:1
         },
         {
-            hidden:true, name:&#x27;errorMessage&#x27;, css: { color : &#x27;red&#x27;, &#x27;padding-left&#x27; : 10, height:30 }
+            hidden:true, name:&#x27;errorMessage&#x27;, css:{ color:&#x27;red&#x27;, &#x27;padding-left&#x27;:10, height:30 }
         }
     ],
 
@@ -271,25 +276,25 @@ chess.view.user.LoginWindow = new Class({
         }
     ],
 
-    ludoEvents:function(){
+    ludoEvents:function () {
         this.parent();
         this.getFormManager().addEvent(&#x27;beforesubmit&#x27;, this.hideErrorMessage.bind(this));
         this.getFormManager().addEvent(&#x27;success&#x27;, this.validLogin.bind(this));
         this.getFormManager().addEvent(&#x27;success&#x27;, this.reset.bind(this));
         this.getFormManager().addEvent(&#x27;failure&#x27;, this.invalidLogin.bind(this));
     },
-    addControllerEvents:function(){
+    addControllerEvents:function () {
         this.controller.addEvent(&#x27;showLogin&#x27;, this.showCentered.bind(this));
     },
-    validLogin:function(json){
+    validLogin:function (json) {
         this.fireEvent(&#x27;loginSuccess&#x27;, [ json.data, this.child[&#x27;rememberMe&#x27;].isChecked()]);
         this.hide();
     },
 
-    hideErrorMessage:function(){
+    hideErrorMessage:function () {
         this.child[&#x27;errorMessage&#x27;].hide();
     },
-    invalidLogin:function(){
+    invalidLogin:function () {
         this.child[&#x27;errorMessage&#x27;].show();
         this.child[&#x27;errorMessage&#x27;].setHtml(chess.language.invalidUserNameOrPassword)
     }

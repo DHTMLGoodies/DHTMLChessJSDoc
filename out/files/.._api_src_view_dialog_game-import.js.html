@@ -159,6 +159,8 @@
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
             
+                <li><a href="..&#x2F;classes/seek.View.html">seek.View</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
@@ -237,8 +239,8 @@ chess.view.dialog.GameImport = new Class({
     Extends:ludo.Window,
     name:&#x27;game-import&#x27;,
     form:{
-        url:window.chess.URL,
-        name:&#x27;game-import&#x27;
+        resource:&#x27;GameImport&#x27;,
+		service:&#x27;import&#x27;
     },
     width:400,
     height:240,
@@ -247,7 +249,7 @@ chess.view.dialog.GameImport = new Class({
     layout:&#x27;rows&#x27;,
     children:[
         {
-            type:&#x27;form.File&#x27;, label:&#x27;Pgn File&#x27;, accept:&#x27;pgn&#x27;, name:&#x27;pgnfile&#x27;, required:true, labelButton:&#x27;Find Pgn file&#x27;, buttonWidth:100
+            type:&#x27;form.File&#x27;, label:&#x27;Pgn File&#x27;, accept:&#x27;pgn&#x27;, name:&#x27;pgnfile&#x27;, resource:&quot;chessFileUpload&quot;, required:true, labelButton:&#x27;Find Pgn file&#x27;, buttonWidth:100
         },
         {
             type:&#x27;form.Checkbox&#x27;, label:&#x27;As new database&#x27;, checked:true, name:&#x27;importAsNew&#x27;, value:&#x27;yes&#x27;

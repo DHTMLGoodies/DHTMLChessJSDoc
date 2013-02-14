@@ -159,6 +159,8 @@
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
             
+                <li><a href="..&#x2F;classes/seek.View.html">seek.View</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
@@ -227,10 +229,13 @@
 <div class="file">
     <pre class="code prettyprint linenums">
 &#x2F;**
- Model to PGN parser
+ Model to PGN parser. Takes a
+ {{#crossLink &quot;chess.model.Game&quot;}}{{&#x2F;crossLink}} as only argument
+ and returns a PGN string for the game.
  @namespace chess.pgn
  @class Parser
  @constructor
+ @param {chess.model.Game} model
  @example
 	 var game = new chess.model.Game();
 	 game.setMetadataValue(&#x27;white&#x27;,&#x27;Magnus Carlsen&#x27;);
@@ -244,8 +249,10 @@
 chess.pgn.Parser = new Class({
 	&#x2F;**
 	 * @property {chess.model.Game} model
+     * @private
 	 *&#x2F;
 	model:undefined,
+
 
 	initialize:function(model){
 		this.model = model;
@@ -254,11 +261,10 @@ chess.pgn.Parser = new Class({
 	&#x2F;**
 	 * Return pgn in string format
 	 * @method getPgn
-	 * @return {*}
+	 * @return {String}
 	 *&#x2F;
 	getPgn:function(){
-		return this.getMetadata() + this.getMoves();
-
+		return [this.getMetadata(),this.getMoves()].join(&quot;\n\n&quot;);
 	},
 
     &#x2F;**
@@ -282,8 +288,61 @@ chess.pgn.Parser = new Class({
      * @private
      *&#x2F;
 	getMoves:function(){
-		return &#x27;&#x27;;
-	}
+        return this.getFirstComment() + this.getMovesInBranch(this.model.getMoves(), 0);
+	},
+
+    &#x2F;**
+     * Return comment before first move
+     * @method getFirstComment
+     * @return {String}
+     * @private
+     *&#x2F;
+    getFirstComment:function(){
+        var m = this.model.getMetadata();
+        if(m[&#x27;comment&#x27;]!==undefined &amp;&amp; m[&#x27;comment&#x27;].length &gt; 0){
+            return &#x27;{&#x27; + m[&#x27;comment&#x27;] + &#x27;} &#x27;;
+        }
+        return &#x27;&#x27;;
+    },
+
+    &#x2F;**
+     * Return main line of moves or a variation
+     * @method getMovesInBranch
+     * @param {Array} moves
+     * @param {Number} moveIndex
+     * @return {String}
+     * @private
+     *&#x2F;
+    getMovesInBranch:function(moves, moveIndex){
+        moveIndex = moveIndex || 0;
+        var ret = [];
+        var insertNumber = true;
+        for(var i=0;i&lt;moves.length;i++){
+            if(moves[i][&#x27;m&#x27;] !== undefined){
+                if(moveIndex % 2 === 0 || insertNumber){
+                    var isWhite = moveIndex % 2 === 0;
+                    ret.push([Math.floor(moveIndex&#x2F;2) + 1, (isWhite ? &#x27;.&#x27; : &#x27;..&#x27;)].join(&#x27;&#x27;));
+                }
+                ret.push(moves[i][&#x27;m&#x27;]);
+                moveIndex++;
+
+                insertNumber = false;
+            }
+            if(moves[i][&#x27;comment&#x27;] !== undefined){
+                ret.push(&quot;{&quot; + moves[i][&#x27;comment&#x27;] + &quot;}&quot;);
+            }
+
+            if(moves[i][&#x27;variations&#x27;] !== undefined &amp;&amp; moves[i][&#x27;variations&#x27;].length &gt; 0){
+                var variations = moves[i][&#x27;variations&#x27;];
+                for(var j=0;j&lt;variations.length;j++){
+                    ret.push(&quot;(&quot; + this.getMovesInBranch(variations[j], moveIndex - 1) + &quot;)&quot;);
+
+                }
+                insertNumber = true;
+            }
+        }
+        return ret.join(&#x27; &#x27;);
+    }
 });
 
     </pre>

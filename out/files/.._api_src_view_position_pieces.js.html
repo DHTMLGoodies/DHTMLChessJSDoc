@@ -159,6 +159,8 @@
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
             
+                <li><a href="..&#x2F;classes/seek.View.html">seek.View</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
@@ -297,7 +299,7 @@ chess.view.position.Piece = new Class({
         this.parent();
         var piece = this.els.piece = new Element(&#x27;div&#x27;);
         piece.setStyles({
-            &#x27;background-image&#x27;:&#x27;url(&#x27; + chess.IMAGE_FOLDER + this.pieceLayout + this.size + this.getColorCode() + this.getTypeCode() + &#x27;.png)&#x27;,
+            &#x27;background-image&#x27;:&#x27;url(&#x27; + ludo.config.getDocumentRoot() + &#x27;&#x2F;images&#x2F;&#x27; + this.pieceLayout + this.size + this.getColorCode() + this.getTypeCode() + &#x27;.png)&#x27;,
             &#x27;background-position&#x27;:&#x27;center center&#x27;,
             &#x27;background-repeat&#x27;:&#x27;no-repeat&#x27;,
             &#x27;cursor&#x27;:&#x27;pointer&#x27;

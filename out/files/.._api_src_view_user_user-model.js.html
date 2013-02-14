@@ -159,6 +159,8 @@
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
             
+                <li><a href="..&#x2F;classes/seek.View.html">seek.View</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
@@ -235,10 +237,10 @@
 chess.view.user.UserModel = new Class({
     Extends:ludo.model.Model,
     type : &#x27;chess.view.user.UserModel&#x27;,
-    name : &#x27;userprofile&#x27;,
-    url : window.chess.URL,
     columns : [&#x27;token&#x27;, &#x27;username&#x27;, &#x27;full_name&#x27;, &#x27;email&#x27;,&#x27;country&#x27;],
     autoload:false,
+    name:&#x27;CurrentPlayer&#x27;,
+    service:&#x27;read&#x27;,
     singleton:true
 });
     </pre>

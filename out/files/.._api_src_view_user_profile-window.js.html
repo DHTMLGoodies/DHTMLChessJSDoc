@@ -159,6 +159,8 @@
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
             
+                <li><a href="..&#x2F;classes/seek.View.html">seek.View</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
@@ -238,6 +240,10 @@ chess.view.user.ProfileWindow = new Class({
     type:&#x27;chess.view.user.ProfileWindow&#x27;,
     left:50, top:50,
     width:500, height:250,
+    layout:{
+        type:&#x27;linear&#x27;,
+        orientation:&#x27;vertical&#x27;
+    },
     title:chess.language.myProfile,
     hidden:true,
     module:&#x27;user&#x27;,
@@ -262,10 +268,10 @@ chess.view.user.ProfileWindow = new Class({
             type:&#x27;chess.view.user.Country&#x27;, id:&#x27;fieldCountry&#x27;, name:&#x27;country&#x27;, label:chess.language.country, required:false, stretchField:true
         },
         {
-            type:&#x27;form.Password&#x27;, name:&#x27;password&#x27;, minLength:5, md5:true, twin:&#x27;repeatpassword&#x27;, label:chess.language.password, stretchField:true
+            type:&#x27;form.Password&#x27;, name:&#x27;password&#x27;, minLength:5, md5:true, twin:&#x27;repeat_password&#x27;, label:chess.language.password, stretchField:true
         },
         {
-            type:&#x27;form.Password&#x27;, name:&#x27;repeatpassword&#x27;, minLength:5, md5:true, label:chess.language.repeatPassword, stretchField:true
+            type:&#x27;form.Password&#x27;, name:&#x27;repeat_password&#x27;, minLength:5, md5:true, label:chess.language.repeatPassword, stretchField:true
         },
         {
             hidden:true, name:&#x27;errorMessage&#x27;, css:{ color:&#x27;red&#x27;, &#x27;padding-left&#x27;:5, height:30 }

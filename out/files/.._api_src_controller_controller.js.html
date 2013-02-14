@@ -159,6 +159,8 @@
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
             
+                <li><a href="..&#x2F;classes/seek.View.html">seek.View</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
@@ -286,7 +288,10 @@ chess.controller.Controller = new Class({
                 view.addEvent(&#x27;pause&#x27;, this.pauseGame.bind(this));
                 view.addEvent(&#x27;flip&#x27;, this.flipBoard.bind(this));
                 break;
+            case &#x27;list-of-pgn-files&#x27;:
 
+                view.addEvent(&#x27;selectPgn&#x27;, this.selectPgn.bind(this));
+                break;
             case &#x27;gameList&#x27;:
                 view.addEvent(&#x27;selectGame&#x27;, this.selectGame.bind(this));
                 break;
@@ -552,33 +557,39 @@ chess.controller.Controller = new Class({
         this.currentModel.nextAutoPlayMove();
     },
 
-    selectGame:function (game) {
+    selectGame:function (game, pgn) {
         var model;
         if (model = this.getModelFromCache(game)) {
             this.currentModel = model;
             this.currentModel.activate();
         } else {
-            this.currentModel = this.getNewModel(game);
+            this.currentModel = this.getNewModel(game, pgn);
         }
+    },
+
+    selectPgn:function(pgn){
+        this.fireEvent(&#x27;selectPgn&#x27;, pgn);
     },
 
     getModelFromCache:function (game) {
         for (var i = 0; i &lt; this.models.length; i++) {
-            if (this.models[i].getId() === game.id) {
+            if(this.models[i].isModelFor(game)){
                 return this.models[i];
             }
         }
         return null;
     },
 
-    getNewModel:function (game) {
+    getNewModel:function (game, pgn) {
+
         game = game || {};
+		if(pgn)game.pgn = pgn;
         var model = new chess.model.Game(game);
+
         this.addEventsToModel(model);
         this.models.push(model);
 
         if (this.models.length &gt; this.modelCacheSize) {
-
             this.models[0].removeEvents();
             delete this.models[0];
 

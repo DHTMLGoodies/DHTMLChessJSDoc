@@ -159,6 +159,8 @@
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
             
+                <li><a href="..&#x2F;classes/seek.View.html">seek.View</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
@@ -310,7 +312,7 @@ chess.parser.FenParser0x88 = new Class({
 
 				&#x2F;&#x2F; King array
 				if (Board0x88Config.typeMapping[type] == &#x27;king&#x27;) {
-					this.cache[&#x27;king&#x27; + (piece.t &amp; 0x8 ? &#x27;black&#x27; : &#x27;white&#x27;)] = piece;
+					this.cache[&#x27;king&#x27; + ((piece.t &amp; 0x8) &gt; 0 ? &#x27;black&#x27; : &#x27;white&#x27;)] = piece;
 				}
 				pos++;
 			} else if (i &lt; len - 1 &amp;&amp; Board0x88Config.numbers[token]) {
@@ -463,8 +465,8 @@ chess.parser.FenParser0x88 = new Class({
 			return {
 				square:Board0x88Config.numberToSquareMapping[square],
 				type:Board0x88Config.typeMapping[piece],
-				color:piece &amp; 0x8 ? &#x27;black&#x27; : &#x27;white&#x27;,
-				sliding:piece &amp; 0x4
+				color:(piece &amp; 0x8) &gt; 0 ? &#x27;black&#x27; : &#x27;white&#x27;,
+				sliding:(piece &amp; 0x4) &gt; 0
 			}
 		}
 		return null;
@@ -573,12 +575,12 @@ chess.parser.FenParser0x88 = new Class({
 						}
 					}
 					if (!pinned[piece.s] || (pinned[piece.s] &amp;&amp; pinned[piece.s].by === piece.s + 15)) {
-						if (enPassantSquare == piece.s + 15 || (this.cache[&#x27;board&#x27;][piece.s + 15]) &amp;&amp; this.cache[&#x27;board&#x27;][piece.s + 15] &amp; 0x8) {
+						if (enPassantSquare == piece.s + 15 || (this.cache[&#x27;board&#x27;][piece.s + 15]) &amp;&amp; (this.cache[&#x27;board&#x27;][piece.s + 15] &amp; 0x8) &gt; 0) {
 							paths.push(piece.s + 15);
 						}
 					}
 					if (!pinned[piece.s] || (pinned[piece.s] &amp;&amp; pinned[piece.s].by === piece.s + 17)) {
-						if (enPassantSquare == piece.s + 17 || (this.cache[&#x27;board&#x27;][piece.s + 17]) &amp;&amp; this.cache[&#x27;board&#x27;][piece.s + 17] &amp; 0x8) {
+						if (enPassantSquare == piece.s + 17 || (this.cache[&#x27;board&#x27;][piece.s + 17]) &amp;&amp; (this.cache[&#x27;board&#x27;][piece.s + 17] &amp; 0x8) &gt; 0) {
 							paths.push(piece.s + 17);
 						}
 					}
@@ -595,12 +597,12 @@ chess.parser.FenParser0x88 = new Class({
 						}
 					}
 					if (!pinned[piece.s] || (pinned[piece.s] &amp;&amp; pinned[piece.s].by === piece.s - 15)) {
-						if (enPassantSquare == piece.s - 15 || (this.cache[&#x27;board&#x27;][piece.s - 15]) &amp;&amp; !(this.cache[&#x27;board&#x27;][piece.s - 15] &amp; 0x8)) {
+						if (enPassantSquare == piece.s - 15 || (this.cache[&#x27;board&#x27;][piece.s - 15]) &amp;&amp; (this.cache[&#x27;board&#x27;][piece.s - 15] &amp; 0x8) === 0) {
 							paths.push(piece.s - 15);
 						}
 					}
 					if (!pinned[piece.s] || (pinned[piece.s] &amp;&amp; pinned[piece.s].by === piece.s - 17)) {
-						if (enPassantSquare == piece.s - 17 || (this.cache[&#x27;board&#x27;][piece.s - 17]) &amp;&amp; !(this.cache[&#x27;board&#x27;][piece.s - 17] &amp; 0x8)) {
+						if (enPassantSquare == piece.s - 17 || (this.cache[&#x27;board&#x27;][piece.s - 17]) &amp;&amp; (this.cache[&#x27;board&#x27;][piece.s - 17] &amp; 0x8) === 0) {
 							paths.push(piece.s - 17);
 						}
 					}
@@ -625,7 +627,7 @@ chess.parser.FenParser0x88 = new Class({
 						square = piece.s + directions[a];
 						while ((square &amp; 0x88) === 0) {
 							if (this.cache[&#x27;board&#x27;][square]) {
-								if ((WHITE &amp;&amp; this.cache[&#x27;board&#x27;][square] &amp; 0x8) || (!WHITE &amp;&amp; !(this.cache[&#x27;board&#x27;][square] &amp; 0x8))) {
+								if ((WHITE &amp;&amp; (this.cache[&#x27;board&#x27;][square] &amp; 0x8) &gt; 0) || (!WHITE &amp;&amp; (this.cache[&#x27;board&#x27;][square] &amp; 0x8) === 0)) {
 									paths.push(square);
 								}
 								break;
@@ -647,7 +649,7 @@ chess.parser.FenParser0x88 = new Class({
 						square = piece.s + directions[a];
 						if ((square &amp; 0x88) === 0) {
 							if (this.cache[&#x27;board&#x27;][square]) {
-								if ((WHITE &amp;&amp; this.cache[&#x27;board&#x27;][square] &amp; 0x8) || ( !WHITE &amp;&amp; !(this.cache[&#x27;board&#x27;][square] &amp; 0x8))) {
+								if ((WHITE &amp;&amp; (this.cache[&#x27;board&#x27;][square] &amp; 0x8) &gt; 0) || ( !WHITE &amp;&amp; (this.cache[&#x27;board&#x27;][square] &amp; 0x8) === 0)) {
 									paths.push(square);
 								}
 							} else {
@@ -666,7 +668,7 @@ chess.parser.FenParser0x88 = new Class({
 						if ((square &amp; 0x88) === 0) {
 							if (protectiveMoves.indexOf(Board0x88Config.keySquares[square]) == -1) {
 								if (this.cache[&#x27;board&#x27;][square]) {
-									if ((WHITE &amp;&amp; this.cache[&#x27;board&#x27;][square] &amp; 0x8) || ( !WHITE &amp;&amp; !(this.cache[&#x27;board&#x27;][square] &amp; 0x8))) {
+									if ((WHITE &amp;&amp; (this.cache[&#x27;board&#x27;][square] &amp; 0x8) &gt; 0) || ( !WHITE &amp;&amp; (this.cache[&#x27;board&#x27;][square] &amp; 0x8) === 0)) {
 										paths.push(square);
 									}
 								} else {
@@ -709,7 +711,7 @@ chess.parser.FenParser0x88 = new Class({
 		return ret;
 	},
 
-	&#x2F;* This method returns a commaseparated string of moves since it&#x27;s faster to work with than arrays*&#x2F;
+	&#x2F;* This method returns a comma separated string of moves since it&#x27;s faster to work with than arrays*&#x2F;
 	getCaptureAndProtectiveMoves:function (color) {
 		var ret = [&#x27;&#x27;], directions, square, a;
 
@@ -801,7 +803,7 @@ chess.parser.FenParser0x88 = new Class({
 		var pieces = this.cache[color];
 		for (var i = 0; i &lt; pieces.length; i++) {
 			var piece = pieces[i];
-			if (piece.t &amp; 0x4) {
+			if ((piece.t &amp; 0x4) &gt; 0) {
 				var numericDistance = king.s - piece.s;
 				var boardDistance = (king.s - piece.s) &#x2F; this.getDistance(king.s, piece.s);
 
@@ -880,7 +882,7 @@ chess.parser.FenParser0x88 = new Class({
 			while (square !== king.s &amp;&amp; countPieces &lt; 2) {
 				if (this.cache[&#x27;board&#x27;][square]) {
 					countPieces++;
-					if ((!WHITE &amp;&amp; this.cache[&#x27;board&#x27;][square] &amp; 0x8) || (WHITE &amp;&amp; !(this.cache[&#x27;board&#x27;][square] &amp; 0x8))) {
+					if ((!WHITE &amp;&amp; (this.cache[&#x27;board&#x27;][square] &amp; 0x8) &gt; 0) || (WHITE &amp;&amp; (this.cache[&#x27;board&#x27;][square] &amp; 0x8) === 0)) {
 						pinning = square;
 					} else {
 						break;
@@ -1262,7 +1264,7 @@ chess.parser.FenParser0x88 = new Class({
 					var pattern = Board0x88Config.movePatterns[pieceType];
 					for (i = 0; i &lt; pattern.length; i++) {
 						sq = ret.to + pattern[i];
-						if (!(sq &amp; 0x88)) {
+						if ((sq &amp; 0x88) === 0) {
 							if (this.cache[&#x27;board&#x27;][sq] &amp;&amp; this.cache[&#x27;board&#x27;][sq] === pieceType &amp;&amp; validMoves[sq].indexOf(ret.to) &gt;= 0) {
 								foundPieces.push(sq);
 								if (fromRank === null &amp;&amp; fromFile === null) {
@@ -1279,7 +1281,7 @@ chess.parser.FenParser0x88 = new Class({
 
 					for (i = 0; i &lt; patterns.length; i++) {
 						sq = ret.to + patterns[i];
-						while (!(sq &amp; 0x88)) {
+						while ((sq &amp; 0x88) === 0) {
 							if (this.cache[&#x27;board&#x27;][sq] &amp;&amp; this.cache[&#x27;board&#x27;][sq] === pieceType &amp;&amp; validMoves[sq].indexOf(ret.to) &gt;= 0) {
 								foundPieces.push(sq);
 								if (fromRank === null &amp;&amp; fromFile === null) {
@@ -1530,11 +1532,11 @@ chess.parser.FenParser0x88 = new Class({
 		this.cache[&#x27;black&#x27;] = [];
 		var piece = null;
 		for (var i = 0; i &lt; 120; i++) {
-			if (i &amp; 0x88) {
+			if ((i &amp; 0x88) &gt; 0){
 				i += 8;
 			}
 			if (piece = this.cache[&#x27;board&#x27;][i]) {
-				var color = piece &amp; 0x8 ? &#x27;black&#x27; : &#x27;white&#x27;;
+				var color = (piece &amp; 0x8) &gt; 0 ? &#x27;black&#x27; : &#x27;white&#x27;;
 				var obj = {
 					t:piece,
 					s:i

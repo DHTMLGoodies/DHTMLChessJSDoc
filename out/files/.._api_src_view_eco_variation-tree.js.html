@@ -159,6 +159,8 @@
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
             
+                <li><a href="..&#x2F;classes/seek.View.html">seek.View</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
@@ -247,15 +249,14 @@ chess.view.eco.VariationTree = new Class({
 	module:&#x27;chess&#x27;,
 	submodule:&#x27;eco.VariationTree&#x27;,
 	dataSource:{
-		requestId:&#x27;getEcoVariations&#x27;,
-		url:window.chess.URL,
+		request:&#x27;Eco&#x2F;moves&#x27;,
 		autoload:false
 	},
 	openingCache:{},
 	currentFen:&#x27;&#x27;,
 	showLines:false,
 
-	nodeTpl:&#x27;&lt;span&gt;&lt;b&gt;{notation} &lt;&#x2F;b&gt;: {eco} {name}&lt;&#x2F;span&gt;&#x27;,
+	nodeTpl:&#x27;&lt;span&gt;&lt;b&gt;{notation} &lt;&#x2F;b&gt;: {eco_code} {opening}&lt;&#x2F;span&gt;&#x27;,
 	treeConfig:{
 		defaultValues:{
 

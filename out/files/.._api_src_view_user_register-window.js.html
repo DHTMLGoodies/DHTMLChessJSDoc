@@ -159,6 +159,8 @@
             
                 <li><a href="..&#x2F;classes/chess.view.user.UserModel.html">chess.view.user.UserModel</a></li>
             
+                <li><a href="..&#x2F;classes/seek.View.html">seek.View</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
@@ -243,8 +245,12 @@ chess.view.user.RegisterWindow = new Class({
     module:&#x27;user&#x27;,
     submodule:&#x27;registerWindow&#x27;,
     form:{
-        name:&#x27;register&#x27;,
-        url:window.chess.URL
+        resource:&#x27;Player&#x27;,
+        service:&#x27;register&#x27;
+    },
+    layout:{
+        &quot;type&quot;: &quot;linear&quot;,
+        &quot;orientation&quot;: &quot;vertical&quot;
     },
     formConfig:{
         labelWidth:150
@@ -257,10 +263,10 @@ chess.view.user.RegisterWindow = new Class({
             type:&#x27;form.Email&#x27;, name:&#x27;email&#x27;, label:chess.language.email, required:true, stretchField:true
         },
         {
-            type:&#x27;form.Password&#x27;, name:&#x27;password&#x27;, minLength:5, md5:true, twin:&#x27;repeatpassword&#x27;, label:chess.language.password, required:true, stretchField:true
+            type:&#x27;form.Password&#x27;, name:&#x27;password&#x27;, minLength:5, md5:true, twin:&#x27;repeat_password&#x27;, label:chess.language.password, required:true, stretchField:true
         },
         {
-            type:&#x27;form.Password&#x27;, name:&#x27;repeatpassword&#x27;, minLength:5, md5:true, label:chess.language.repeatPassword, required:true, stretchField:true
+            type:&#x27;form.Password&#x27;, name:&#x27;repeat_password&#x27;, minLength:5, md5:true, label:chess.language.repeatPassword, required:true, stretchField:true
         },
         {
             type:&#x27;form.Checkbox&#x27;, name:&#x27;rememberMe&#x27;, label:chess.language.rememberMe, value:1

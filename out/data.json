@@ -58,6 +58,24 @@
         "..\\api\\src\\datasource\\game-list.js": {
             "name": "..\\api\\src\\datasource\\game-list.js",
             "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {
+                "chess.dataSource": 1
+            }
+        },
+        "..\\api\\src\\datasource\\pgn-games.js": {
+            "name": "..\\api\\src\\datasource\\pgn-games.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {
+                "chess.dataSource": 1
+            }
+        },
+        "..\\api\\src\\datasource\\pgn-list.js": {
+            "name": "..\\api\\src\\datasource\\pgn-list.js",
+            "modules": {},
             "classes": {
                 "chess.dataSource.GameList": 1
             },
@@ -147,22 +165,11 @@
                 "chess.remote": 1
             }
         },
-        "..\\api\\src\\view\\board\\chess-board-gui.js": {
-            "name": "..\\api\\src\\view\\board\\chess-board-gui.js",
+        "..\\api\\src\\view\\board\\board.js": {
+            "name": "..\\api\\src\\view\\board\\board.js",
             "modules": {
                 "Board": 1
             },
-            "classes": {
-                "chess.view.board.GUI": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "chess.view.board": 1
-            }
-        },
-        "..\\api\\src\\view\\board\\chess-board.js": {
-            "name": "..\\api\\src\\view\\board\\chess-board.js",
-            "modules": {},
             "classes": {
                 "chess.view.board.Board": 1
             },
@@ -171,8 +178,19 @@
                 "chess.view.board": 1
             }
         },
-        "..\\api\\src\\view\\board\\chess-piece.js": {
-            "name": "..\\api\\src\\view\\board\\chess-piece.js",
+        "..\\api\\src\\view\\board\\gui.js": {
+            "name": "..\\api\\src\\view\\board\\gui.js",
+            "modules": {},
+            "classes": {
+                "chess.view.board.GUI": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.board": 1
+            }
+        },
+        "..\\api\\src\\view\\board\\piece.js": {
+            "name": "..\\api\\src\\view\\board\\piece.js",
             "modules": {},
             "classes": {
                 "chess.view.board.Piece": 1
@@ -367,9 +385,7 @@
             "modules": {
                 "Grid": 1
             },
-            "classes": {
-                "chess.view.gamelist.Grid": 1
-            },
+            "classes": {},
             "fors": {},
             "namespaces": {
                 "chess.view.gamelist": 1
@@ -514,6 +530,17 @@
                 "chess.view.notation": 1
             }
         },
+        "..\\api\\src\\view\\pgn\\grid.js": {
+            "name": "..\\api\\src\\view\\pgn\\grid.js",
+            "modules": {},
+            "classes": {
+                "chess.view.gamelist.Grid": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "chess.view.gamelist": 1
+            }
+        },
         "..\\api\\src\\view\\position\\board.js": {
             "name": "..\\api\\src\\view\\position\\board.js",
             "modules": {},
@@ -567,6 +594,17 @@
             "fors": {},
             "namespaces": {
                 "chess.view.position": 1
+            }
+        },
+        "..\\api\\src\\view\\seek\\view.js": {
+            "name": "..\\api\\src\\view\\seek\\view.js",
+            "modules": {},
+            "classes": {
+                "seek.View": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "seek": 1
             }
         },
         "..\\api\\src\\view\\user\\controller.js": {
@@ -731,7 +769,7 @@
                 "chess.dataSource": 1
             },
             "tag": "module",
-            "file": "..\\api\\src\\datasource\\game-list.js",
+            "file": "..\\api\\src\\datasource\\pgn-list.js",
             "line": 1,
             "description": "Data source for list of folders and databases\nby chess.view.gamelist.Grid",
             "extends": "dataSource.JSON"
@@ -764,16 +802,18 @@
                 "chess.parser.Move0x88": 1,
                 "chess.parser.PositionValidator": 1,
                 "chess.pgn.Parser": 1,
-                "chess.remote.GameReader": 1
+                "chess.remote.GameReader": 1,
+                "chess.view.board.Board": 1
             },
             "fors": {},
             "namespaces": {
                 "chess.parser": 1,
                 "chess.pgn": 1,
-                "chess.remote": 1
+                "chess.remote": 1,
+                "chess.view.board": 1
             },
             "tag": "module",
-            "file": "..\\api\\src\\remote\\game-reader.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 1,
             "description": "Chess position parser",
             "is_constructor": 1,
@@ -788,6 +828,40 @@
                 "\n\tvar parser = new chess.parser.FenParser0x88('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1');\n\tconsole.log(parser.getValidMovesAndResult('white'));\n"
             ]
         },
+        "Board": {
+            "name": "Board",
+            "submodules": {},
+            "classes": {
+                "chess.view.board.Board": 1,
+                "chess.view.board.GUI": 1,
+                "chess.view.board.Piece": 1,
+                "chess.view.highlight.Arrow": 1,
+                "chess.view.highlight.Square": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {
+                "chess.view.board": 1,
+                "chess.view.highlight": 1
+            },
+            "module": "View",
+            "namespace": "chess.remote",
+            "file": "..\\api\\src\\view\\highlight\\square.js",
+            "line": 1,
+            "description": "Javascript Class for Chess Board and Pieces on the board\nJSON config type: chess.view.board.Board",
+            "extends": "chess.view.board.GUI",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "config",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "example": [
+                "\n\tchildren:[\n\t{\n\t\t type:'chess.view.board.Board',\n\t\t labels:true,\n\t\t weight:1,\n\t\t addons:[\n\t\t\t {\n\t\t\t\t type:'chess.view.highlight.Arrow',\n\t\t\t\t properties:{\n\t\t\t\t\t 'stroke-width' : 0\n\t\t\t\t }\n\t\t\t }\n\t\t ]\n\t }\n]\n"
+            ]
+        },
         "View": {
             "name": "View",
             "submodules": {
@@ -800,7 +874,6 @@
             },
             "classes": {
                 "chess.view.board.GUI": 1,
-                "chess.view.board.Board": 1,
                 "chess.view.board.Piece": 1,
                 "chess.view.button.NextGame": 1,
                 "chess.view.button.PreviousGame": 1,
@@ -834,6 +907,7 @@
                 "chess.view.position.Dialog": 1,
                 "chess.view.position.Pieces": 1,
                 "chess.view.position.SideToMove": 1,
+                "seek.View": 1,
                 "chess.view.user.Controller": 1,
                 "chess.view.user.Country": 1,
                 "chess.view.user.LoginButton": 1,
@@ -863,44 +937,11 @@
                 "chess.view.metadata": 1,
                 "chess.view.notation": 1,
                 "chess.view.position": 1,
+                "seek": 1,
                 "chess.view.user": 1
             },
             "file": "..\\api\\src\\view\\user\\user-model.js",
             "line": 1
-        },
-        "Board": {
-            "name": "Board",
-            "submodules": {},
-            "classes": {
-                "chess.view.board.GUI": 1,
-                "chess.view.board.Board": 1,
-                "chess.view.board.Piece": 1,
-                "chess.view.highlight.Arrow": 1,
-                "chess.view.highlight.Square": 1
-            },
-            "fors": {},
-            "is_submodule": 1,
-            "namespaces": {
-                "chess.view.board": 1,
-                "chess.view.highlight": 1
-            },
-            "module": "View",
-            "namespace": "",
-            "file": "..\\api\\src\\view\\highlight\\square.js",
-            "line": 1,
-            "description": "Javascript Class for Chess Board and Pieces on the board\nJSON config type: chess.view.board.Board",
-            "extends": "View",
-            "is_constructor": 1,
-            "params": [
-                {
-                    "name": "config",
-                    "description": "",
-                    "type": "Object"
-                }
-            ],
-            "example": [
-                "\n\tchildren:[\n\t{\n\t\t type:'chess.view.board.Board',\n\t\t labels:true,\n\t\t weight:1,\n\t\t addons:[\n\t\t\t {\n\t\t\t\t type:'chess.view.highlight.Arrow',\n\t\t\t\t properties:{\n\t\t\t\t\t 'stroke-width' : 0\n\t\t\t\t }\n\t\t\t }\n\t\t ]\n\t }\n]\n"
-            ]
         },
         "Dialog": {
             "name": "Dialog",
@@ -951,8 +992,8 @@
             "namespaces": {},
             "module": "View",
             "namespace": "",
-            "file": "..\\api\\src\\view\\gamelist\\grid.js",
-            "line": 1,
+            "file": "..\\api\\src\\view\\pgn\\grid.js",
+            "line": 2,
             "description": "List of games view. List of games is displayed in a grid.",
             "extends": "grid.Grid",
             "is_constructor": 1,
@@ -1023,7 +1064,7 @@
                 "chess.view.user": 1
             },
             "module": "View",
-            "namespace": "chess.view.position",
+            "namespace": "seek",
             "file": "..\\api\\src\\view\\user\\register-window.js",
             "line": 1,
             "description": "Controller for the user login/registration module",
@@ -1121,7 +1162,7 @@
             "extension_for": [],
             "module": "DataSource",
             "namespace": "chess.dataSource",
-            "file": "..\\api\\src\\datasource\\game-list.js",
+            "file": "..\\api\\src\\datasource\\pgn-list.js",
             "line": 1,
             "description": "Data source for list of games. An object of this class is automatically created\nby chess.view.gamelist.Grid"
         },
@@ -1217,8 +1258,15 @@
             "namespace": "chess.pgn",
             "file": "..\\api\\src\\pgn\\parser.js",
             "line": 1,
-            "description": "Model to PGN parser",
+            "description": "Model to PGN parser. Takes a\n{{#crossLink \"chess.model.Game\"}}{{/crossLink}} as only argument\nand returns a PGN string for the game.",
             "is_constructor": 1,
+            "params": [
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "chess.model.Game"
+                }
+            ],
             "example": [
                 "\n\t var game = new chess.model.Game();\n\t game.setMetadataValue('white','Magnus Carlsen');\n\t game.setMetadataValue('black','Levon Aronian');\n\t game.appendMove('e4');\n\t game.appendMove('e5');\n\n\t var parser = new chess.pgn.Parser(game);\n\t console.log(parser.getPgn());"
             ]
@@ -1238,6 +1286,21 @@
             "description": "Class used to load games from server. An object of this class is automatically created by\nchess.model:Game.",
             "extends": "remote.Reader"
         },
+        "chess.view.board.Board": {
+            "name": "chess.view.board.Board",
+            "shortname": "chess.view.board.Board",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Parser",
+            "submodule": "Board",
+            "namespace": "chess.view.board",
+            "file": "..\\api\\src\\view\\board\\board.js",
+            "line": 1,
+            "description": "Javascript Class for Chess Board and Pieces on the board\nJSON config type: chess.view.board.Board"
+        },
         "chess.view.board.GUI": {
             "name": "chess.view.board.GUI",
             "shortname": "chess.view.board.GUI",
@@ -1249,22 +1312,7 @@
             "module": "View",
             "submodule": "Board",
             "namespace": "chess.view.board",
-            "file": "..\\api\\src\\view\\board\\chess-board-gui.js",
-            "line": 1,
-            "description": "Javascript Class for Chess Board and Pieces on the board\nJSON config type: chess.view.board.Board"
-        },
-        "chess.view.board.Board": {
-            "name": "chess.view.board.Board",
-            "shortname": "chess.view.board.Board",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "View",
-            "submodule": "Board",
-            "namespace": "chess.view.board",
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\gui.js",
             "line": 1,
             "description": "Javascript Class for Chess Board and Pieces on the board\nJSON config type: chess.view.board.Board"
         },
@@ -1279,7 +1327,7 @@
             "module": "View",
             "submodule": "Board",
             "namespace": "chess.view.board",
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 1,
             "description": "Class representing the view of chess pieces in DHTML Chess.\nInstances of this class are created dynamically by chess.view.Board"
         },
@@ -1537,8 +1585,8 @@
             "module": "View",
             "submodule": "Grid",
             "namespace": "chess.view.gamelist",
-            "file": "..\\api\\src\\view\\gamelist\\grid.js",
-            "line": 1,
+            "file": "..\\api\\src\\view\\pgn\\grid.js",
+            "line": 2,
             "description": "List of games view. List of games is displayed in a grid."
         },
         "chess.view.highlight.Arrow": {
@@ -1791,6 +1839,20 @@
             "description": "Side to move panel for the position setup dialog",
             "extends": "Panel"
         },
+        "seek.View": {
+            "name": "seek.View",
+            "shortname": "seek.View",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "View",
+            "namespace": "seek",
+            "file": "..\\api\\src\\view\\seek\\view.js",
+            "line": 1,
+            "description": "Displays seek form."
+        },
         "chess.view.user.Controller": {
             "name": "chess.view.user.Controller",
             "shortname": "chess.view.user.Controller",
@@ -1960,7 +2022,7 @@
     "classitems": [
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 81,
+            "line": 84,
             "description": "New game dialog event",
             "itemtype": "event",
             "name": "newGameDialog",
@@ -1970,7 +2032,7 @@
         },
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 142,
+            "line": 145,
             "description": "Select a database",
             "itemtype": "method",
             "name": "selectDatabase",
@@ -1987,7 +2049,7 @@
         },
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 149,
+            "line": 152,
             "description": "Select database event",
             "itemtype": "event",
             "name": "selectDatabase",
@@ -2004,7 +2066,7 @@
         },
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 156,
+            "line": 159,
             "description": "Load next game in selected database. This method will only work if you have\na grid with list of games. The only thing this method does is to fire the \"nextGame\"\nevent which the list of games grid listens to. The grid will go to next game and fire it's\nselectGame event",
             "itemtype": "method",
             "name": "loadNextGame",
@@ -2017,7 +2079,7 @@
         },
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 165,
+            "line": 168,
             "description": "next game event",
             "itemtype": "event",
             "name": "nextGame",
@@ -2027,7 +2089,7 @@
         },
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 172,
+            "line": 175,
             "description": "Load previous game from selected database. For info, see loadNextGame",
             "itemtype": "method",
             "name": "loadPreviousGame",
@@ -2040,7 +2102,7 @@
         },
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 215,
+            "line": 218,
             "description": "Flip board. The only thing this method does is to fire the flipBoard event.",
             "itemtype": "method",
             "name": "flipBoard",
@@ -2053,7 +2115,7 @@
         },
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 221,
+            "line": 224,
             "description": "flip event. A board is example of a view listening to this event. When it's fired, the board\nwill be flipped",
             "itemtype": "event",
             "name": "flip",
@@ -2063,7 +2125,7 @@
         },
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 229,
+            "line": 232,
             "description": "Add a move to current model",
             "itemtype": "method",
             "name": "addMove",
@@ -2083,7 +2145,7 @@
         },
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 250,
+            "line": 253,
             "description": "Event fired when the Comment before a move dialog should be shown.",
             "itemtype": "event",
             "name": "commentBefore",
@@ -2105,7 +2167,7 @@
         },
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 260,
+            "line": 263,
             "description": "Event fired when the Comment after a move dialog should be shown.",
             "itemtype": "event",
             "name": "commentAfter",
@@ -2127,7 +2189,7 @@
         },
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 274,
+            "line": 277,
             "description": "Go to start of current game",
             "itemtype": "method",
             "name": "toStart",
@@ -2140,7 +2202,7 @@
         },
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 282,
+            "line": 285,
             "description": "Go to end of current game",
             "itemtype": "method",
             "name": "toEnd",
@@ -2153,7 +2215,7 @@
         },
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 290,
+            "line": 293,
             "description": "Go to previous move",
             "itemtype": "method",
             "name": "previousMove",
@@ -2166,7 +2228,7 @@
         },
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 298,
+            "line": 301,
             "description": "Go to next move",
             "itemtype": "method",
             "name": "nextMove",
@@ -2179,7 +2241,7 @@
         },
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 306,
+            "line": 309,
             "description": "Start auto play of moves in current game from current position",
             "itemtype": "method",
             "name": "playMoves",
@@ -2192,7 +2254,7 @@
         },
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 314,
+            "line": 317,
             "description": "Pause auto play of moves",
             "itemtype": "method",
             "name": "pauseGame",
@@ -2205,7 +2267,7 @@
         },
         {
             "file": "..\\api\\src\\controller\\controller.js",
-            "line": 387,
+            "line": 396,
             "description": "Return active game",
             "itemtype": "method",
             "name": "getCurrentModel",
@@ -2266,7 +2328,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 63,
+            "line": 68,
             "description": "Returns game id",
             "itemtype": "method",
             "name": "getId",
@@ -2280,7 +2342,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 71,
+            "line": 77,
             "description": "Load a game from server",
             "itemtype": "method",
             "name": "loadGame",
@@ -2297,7 +2359,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 79,
+            "line": 89,
             "description": "Load a random game from selected database",
             "itemtype": "method",
             "name": "loadRandomGame",
@@ -2314,7 +2376,24 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 98,
+            "line": 108,
+            "description": "Returns true if this model is model for given game object",
+            "itemtype": "method",
+            "name": "isModelFor",
+            "params": [
+                {
+                    "name": "game",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 119,
             "description": "Empty model and reset to standard position",
             "itemtype": "method",
             "name": "newGame",
@@ -2324,7 +2403,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 105,
+            "line": 126,
             "description": "Activate model. This will fire newGame and setPosition events",
             "itemtype": "method",
             "name": "activate",
@@ -2334,7 +2413,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 110,
+            "line": 131,
             "description": "new game event. Fired when a new model is created or an old model is activated",
             "itemtype": "event",
             "name": "newGame",
@@ -2356,7 +2435,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 117,
+            "line": 138,
             "description": "Fired when current chess position is changed, example by moving to a different move",
             "itemtype": "event",
             "name": "setPosition",
@@ -2378,7 +2457,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 126,
+            "line": 147,
             "description": "Create new game from given fen position",
             "itemtype": "method",
             "name": "setPosition",
@@ -2395,7 +2474,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 134,
+            "line": 155,
             "description": "Fired when there are no moves in the game",
             "itemtype": "event",
             "name": "noMoves",
@@ -2417,7 +2496,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 145,
+            "line": 166,
             "description": "Populate game model by JSON game object. This method will create a new game.",
             "itemtype": "method",
             "name": "populate",
@@ -2436,7 +2515,17 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 166,
+            "line": 192,
+            "description": "Move metadata into metadata object",
+            "itemtype": "method",
+            "name": "getValidMetadata",
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 210,
             "description": "Return game data",
             "itemtype": "method",
             "name": "getModel",
@@ -2452,7 +2541,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 176,
+            "line": 220,
             "description": "Parse and index moves received from the server, i.e. the populate method",
             "itemtype": "method",
             "name": "registerMoves",
@@ -2482,7 +2571,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 213,
+            "line": 257,
             "description": "Store internal reference to previous move",
             "itemtype": "method",
             "name": "registerPreviousMap",
@@ -2506,7 +2595,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 223,
+            "line": 267,
             "description": "Store internal reference to parent move",
             "itemtype": "method",
             "name": "registerParentMap",
@@ -2530,7 +2619,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 234,
+            "line": 278,
             "description": "Store internal link between move and a branch of moves(Main line or variation)",
             "itemtype": "method",
             "name": "registerBranchMap",
@@ -2554,7 +2643,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 245,
+            "line": 289,
             "description": "Return branch/line of current move, i.e. main line or variation",
             "itemtype": "method",
             "name": "getBranch",
@@ -2577,7 +2666,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 256,
+            "line": 300,
             "description": "Reset model data to default, blank game",
             "itemtype": "method",
             "name": "setDefaultModel",
@@ -2587,7 +2676,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 274,
+            "line": 318,
             "description": "Update game information",
             "itemtype": "method",
             "name": "setMetadata",
@@ -2607,7 +2696,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 288,
+            "line": 332,
             "description": "Update particular info about the game",
             "itemtype": "method",
             "name": "setMetadataValue",
@@ -2632,7 +2721,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 298,
+            "line": 342,
             "description": "Fired when metadata is updated",
             "itemtype": "event",
             "name": "updateMetadata",
@@ -2659,7 +2748,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 309,
+            "line": 353,
             "description": "Return all game metadata info",
             "itemtype": "method",
             "name": "getMetadata",
@@ -2677,7 +2766,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 322,
+            "line": 366,
             "description": "Return a specific metadata key",
             "itemtype": "method",
             "name": "getMetadataValue",
@@ -2701,7 +2790,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 334,
+            "line": 378,
             "description": "Return array of moves in game",
             "itemtype": "method",
             "name": "getMoves",
@@ -2715,7 +2804,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 343,
+            "line": 387,
             "description": "Return start position of game",
             "itemtype": "method",
             "name": "getStartPosition",
@@ -2729,7 +2818,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 352,
+            "line": 396,
             "description": "Try to guess next move in a game",
             "itemtype": "method",
             "name": "tryNextMove",
@@ -2753,7 +2842,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 389,
+            "line": 433,
             "description": "Returns true if passed guess matches next move",
             "itemtype": "method",
             "name": "isCorrectGuess",
@@ -2781,7 +2870,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 413,
+            "line": 457,
             "description": "Return result of game, either from metadata(\"result\") or by trying to calculate final\nposition. Return value will be 1 for white win, -1 for black win. 0.5 for draw and 0 for\nundecided.",
             "itemtype": "method",
             "name": "getResult",
@@ -2795,7 +2884,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 444,
+            "line": 488,
             "description": "Returns true if user can claim draw in current position",
             "itemtype": "method",
             "name": "canClaimDraw",
@@ -2809,7 +2898,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 453,
+            "line": 497,
             "description": "Returns array of all FEN's in main line(Not variations)",
             "itemtype": "method",
             "name": "getAllFens",
@@ -2823,7 +2912,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 467,
+            "line": 511,
             "description": "Return last move in game",
             "itemtype": "method",
             "name": "getLastMoveInGame",
@@ -2837,7 +2926,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 479,
+            "line": 523,
             "description": "Return last position in game",
             "itemtype": "method",
             "name": "getLastPositionInGame",
@@ -2851,7 +2940,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 492,
+            "line": 536,
             "description": "Returns array of remaining moves",
             "itemtype": "method",
             "name": "getAllNextMoves",
@@ -2872,7 +2961,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 518,
+            "line": 562,
             "description": "Append move to the model",
             "itemtype": "method",
             "name": "appendMove",
@@ -2896,7 +2985,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 535,
+            "line": 579,
             "description": "verify promotion event. This event is fired when you try to append a promotion move\nwhere the promoteTo info is missing",
             "itemtype": "event",
             "name": "verifyPromotion",
@@ -2923,7 +3012,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 556,
+            "line": 600,
             "description": "Fired when appending a move in the middle of a game. This method sends a message to the controller\nsaying that it needs to know if appended move should be added as variation or if it should overwrite\ncurrent next move",
             "itemtype": "event",
             "name": "overwriteOrVariation",
@@ -2950,7 +3039,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 576,
+            "line": 620,
             "description": "Fired when a new move is appended to the game.",
             "itemtype": "event",
             "name": "newMove",
@@ -2977,7 +3066,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 584,
+            "line": 628,
             "description": "Fired when current move is last move in branch, either last move in game or last move inside a variation.",
             "itemtype": "event",
             "name": "endOfBranch",
@@ -2999,7 +3088,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 592,
+            "line": 636,
             "description": "Fired when current move is last move in game.",
             "itemtype": "event",
             "name": "endOfBranch",
@@ -3021,7 +3110,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 602,
+            "line": 646,
             "description": "Fired when you try to append an invalid move to the game",
             "itemtype": "event",
             "name": "endOfBranch",
@@ -3048,7 +3137,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 615,
+            "line": 659,
             "description": "Overwrite a move with a different move. oldMove has to be a\nmove in the game. When found, this move and all following move will be deleted\nand the new move will be appended.",
             "itemtype": "method",
             "name": "overwriteMove",
@@ -3070,7 +3159,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 631,
+            "line": 675,
             "description": "Returns valid chess.model.Move object for a move",
             "itemtype": "method",
             "name": "getValidMove",
@@ -3098,7 +3187,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 646,
+            "line": 690,
             "description": "Add a new move as a variation. If current move is already first move in variation it will go to this move\nand not create a new variation. This method will\nfire the events \"newVariation\", \"newMove\" and \"endOfBranch\" on success.\n\"invalidMove\" will be fired on invalid move.",
             "itemtype": "method",
             "name": "newVariation",
@@ -3118,7 +3207,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 671,
+            "line": 715,
             "description": "Fired after creating a new variation",
             "itemtype": "event",
             "name": "newVariation",
@@ -3145,7 +3234,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 688,
+            "line": 732,
             "description": "Returns true when trying to create variation and passed move is next move in line",
             "itemtype": "method",
             "name": "isDuplicateVariationMove",
@@ -3166,7 +3255,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 698,
+            "line": 742,
             "description": "Returns true if current move already has a variation starting with given move",
             "itemtype": "method",
             "name": "getDuplicateVariationMove",
@@ -3187,7 +3276,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 718,
+            "line": 762,
             "description": "Create new variation branch",
             "itemtype": "method",
             "name": "newVariationBranch",
@@ -3199,7 +3288,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 730,
+            "line": 774,
             "description": "Returns fen of current move or start of game fen",
             "itemtype": "method",
             "name": "getCurrentPosition",
@@ -3213,7 +3302,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 742,
+            "line": 786,
             "description": "Returns fen of previous move or start of game fen",
             "itemtype": "method",
             "name": "getPreviousPosition",
@@ -3227,7 +3316,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 759,
+            "line": 803,
             "description": "Delete a move. This method will fire the deleteMove and endOfBranch events. If deleted move is in\nmain line, the endOfGame event will also be fired. The event \"noMoves\" will be fired if the deleted move\nis the first move in the game. \"deleteVariation\" will be fired if the deleted move is the first move\nin a variation.",
             "itemtype": "method",
             "name": "deleteMove",
@@ -3244,7 +3333,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 774,
+            "line": 818,
             "description": "Special event not yet implemented. Supporting for adding info to games such as video links, automatic start and stop\nof auto play for lecture purpose will be added as actions later.",
             "itemtype": "event",
             "name": "deleteAction",
@@ -3271,7 +3360,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 784,
+            "line": 828,
             "description": "Fired when a move is deleted. It will only be fired for one move and not the following moves which of course\nalso will be deleted.",
             "itemtype": "event",
             "name": "deleteMove",
@@ -3298,7 +3387,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 797,
+            "line": 841,
             "description": "Fired when going to a move which is not last move in game",
             "itemtype": "event",
             "name": "notEndOfGame",
@@ -3320,7 +3409,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 820,
+            "line": 864,
             "description": "true if given move is last move in current variation, i.e. the variation active on the board",
             "itemtype": "method",
             "name": "isLastMoveInVariation",
@@ -3341,7 +3430,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 836,
+            "line": 880,
             "description": "true if move displayed on board, i.e. current model move is last move in game.",
             "itemtype": "method",
             "name": "isAtEndOfGame",
@@ -3355,7 +3444,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 848,
+            "line": 892,
             "description": "Returns true if there are moves left in branch",
             "itemtype": "method",
             "name": "hasMovesInBranch",
@@ -3378,7 +3467,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 867,
+            "line": 911,
             "description": "Delete moves from branch, i.e. main line or variation",
             "itemtype": "method",
             "name": "clearMovesInBranch",
@@ -3402,7 +3491,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 881,
+            "line": 925,
             "itemtype": "method",
             "name": "findMove",
             "params": [
@@ -3422,7 +3511,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 890,
+            "line": 934,
             "description": "Delete current move reference. This method is called when creating a new game and when first\nmove in the game is deleted",
             "itemtype": "method",
             "name": "clearCurrentMove",
@@ -3434,7 +3523,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 902,
+            "line": 946,
             "description": "Go to a specific move.",
             "itemtype": "method",
             "name": "goToMove",
@@ -3451,7 +3540,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 913,
+            "line": 957,
             "description": "Back up x number of moves",
             "itemtype": "method",
             "name": "back",
@@ -3472,7 +3561,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 957,
+            "line": 1001,
             "description": "Call goToMove for current move and trigger the events. This method is called when\noverwrite of move is cancelled from game editor and when you're guessing the wrong move\nin a tactic puzzle",
             "itemtype": "method",
             "name": "resetPosition",
@@ -3482,7 +3571,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 970,
+            "line": 1014,
             "itemtype": "method",
             "name": "setCurrentMove",
             "params": [
@@ -3504,7 +3593,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 997,
+            "line": 1041,
             "description": "Return color to move, \"white\" or \"black\"",
             "itemtype": "method",
             "name": "getColorToMove",
@@ -3518,7 +3607,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1008,
+            "line": 1052,
             "description": "Returns current move, i.e. last played move",
             "itemtype": "method",
             "name": "getCurrentMove",
@@ -3532,7 +3621,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1017,
+            "line": 1061,
             "description": "Return branch, i.e. main line or variation of current move",
             "itemtype": "method",
             "name": "getCurrentBranch",
@@ -3546,7 +3635,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1026,
+            "line": 1070,
             "description": "Go to previous move",
             "itemtype": "method",
             "name": "previousMove",
@@ -3556,7 +3645,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1040,
+            "line": 1084,
             "description": "Go to next move",
             "itemtype": "method",
             "name": "nextMove",
@@ -3566,7 +3655,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1057,
+            "line": 1101,
             "description": "Go to start of game",
             "itemtype": "method",
             "name": "toStart",
@@ -3576,7 +3665,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1074,
+            "line": 1118,
             "description": "Go to last move in game",
             "itemtype": "method",
             "name": "toEnd",
@@ -3586,7 +3675,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1087,
+            "line": 1131,
             "description": "Go to last move in current branch, i.e. main line or variation",
             "itemtype": "method",
             "name": "toEndOfCurrentBranch",
@@ -3596,7 +3685,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1103,
+            "line": 1147,
             "description": "Returns rue if current move is set",
             "itemtype": "method",
             "name": "hasCurrentMove",
@@ -3610,7 +3699,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1112,
+            "line": 1156,
             "description": "Return first move in game",
             "itemtype": "method",
             "name": "getFirstMoveInGame",
@@ -3624,7 +3713,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1127,
+            "line": 1171,
             "description": "Return parent move of given move, i.e. parent move of a move in a variation.",
             "itemtype": "method",
             "name": "getParentMove",
@@ -3645,7 +3734,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1141,
+            "line": 1185,
             "description": "Returns previous move in same branch/line or undefined",
             "itemtype": "method",
             "name": "getPreviousMoveInBranch",
@@ -3668,7 +3757,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1166,
+            "line": 1210,
             "description": "Returns previous move in same branch or parent branch",
             "itemtype": "method",
             "name": "getPreviousMove",
@@ -3695,7 +3784,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1208,
+            "line": 1252,
             "description": "Get next move of",
             "itemtype": "method",
             "name": "getNextMove",
@@ -3716,7 +3805,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1238,
+            "line": 1282,
             "description": "Add action as a move. Actions are not fully implemented. When implemented, it will add supports for\ninteractive chess games, example: start and stop autoplay. Display comments, videos or audio etc.",
             "itemtype": "method",
             "name": "addAction",
@@ -3733,7 +3822,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1256,
+            "line": 1300,
             "description": "Grade a move",
             "itemtype": "method",
             "name": "gradeMove",
@@ -3756,7 +3845,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1281,
+            "line": 1325,
             "description": "Internally index a move",
             "itemtype": "method",
             "name": "registerMove",
@@ -3781,7 +3870,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1309,
+            "line": 1353,
             "description": "Insert space for new move in a branch at index",
             "itemtype": "method",
             "name": "insertSpacerInBranch",
@@ -3803,7 +3892,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1326,
+            "line": 1370,
             "description": "Return comment before move, i.e. get comment of previous move",
             "itemtype": "method",
             "name": "getCommentBefore",
@@ -3824,7 +3913,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1342,
+            "line": 1386,
             "description": "Get comment of current move",
             "itemtype": "method",
             "name": "getCommentAfter",
@@ -3845,7 +3934,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1356,
+            "line": 1400,
             "description": "Set comment before a move, i.e. set comment of previous move, or in case of first move in game, set \"commment\" attribute of\ngame metadata.",
             "itemtype": "method",
             "name": "setCommentBefore",
@@ -3867,7 +3956,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1384,
+            "line": 1428,
             "description": "Set comment after a move",
             "itemtype": "method",
             "name": "setCommentAfter",
@@ -3889,7 +3978,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1397,
+            "line": 1441,
             "description": "Set comment property of a move",
             "itemtype": "method",
             "name": "setComment",
@@ -3911,7 +4000,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1408,
+            "line": 1452,
             "description": "Returns true if passed move is a valid chess move",
             "itemtype": "method",
             "name": "isChessMove",
@@ -3934,7 +4023,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1419,
+            "line": 1463,
             "itemtype": "method",
             "name": "fire",
             "params": [
@@ -3958,7 +4047,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1434,
+            "line": 1478,
             "description": "Start auto play of moves",
             "itemtype": "method",
             "name": "startAutoPlay",
@@ -3968,7 +4057,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1443,
+            "line": 1487,
             "description": "Stop auto play of moves",
             "itemtype": "method",
             "name": "startAutoPlay",
@@ -3978,7 +4067,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1452,
+            "line": 1496,
             "description": "Auto play next move",
             "itemtype": "method",
             "name": "nextAutoPlayMove",
@@ -3990,7 +4079,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1468,
+            "line": 1512,
             "description": "Returns true if in auto play mode",
             "itemtype": "method",
             "name": "isInAutoPlayMode",
@@ -4004,7 +4093,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1477,
+            "line": 1521,
             "description": "Return database id of game",
             "itemtype": "method",
             "name": "getDatabaseId",
@@ -4018,7 +4107,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1486,
+            "line": 1530,
             "description": "Set dirty flag to true, i.e. game has been changed but not saved.",
             "itemtype": "method",
             "name": "setDirty",
@@ -4030,7 +4119,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1493,
+            "line": 1537,
             "description": "Event fired when model is changed but not saved",
             "itemtype": "event",
             "name": "dirty",
@@ -4047,7 +4136,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1500,
+            "line": 1544,
             "description": "Set dirty flag to false, i.e. game has been changed and saved",
             "itemtype": "method",
             "name": "setClean",
@@ -4059,7 +4148,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1507,
+            "line": 1551,
             "description": "Event fired when model is clean, i.e. right after being saved to the server.",
             "itemtype": "event",
             "name": "dirty",
@@ -4076,7 +4165,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1515,
+            "line": 1559,
             "description": "Return dirty flag. dirty flag is set to true when game has been changed, but not saved.",
             "itemtype": "method",
             "name": "isDirty",
@@ -4090,7 +4179,7 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1524,
+            "line": 1568,
             "description": "Save model to server",
             "itemtype": "method",
             "name": "save",
@@ -4100,7 +4189,30 @@
         },
         {
             "file": "..\\api\\src\\model\\game.js",
-            "line": 1533,
+            "line": 1576,
+            "description": "Convert to valid server model, i.e. reserved metadata moved from metadata object",
+            "itemtype": "method",
+            "name": "toValidServerModel",
+            "params": [
+                {
+                    "name": "gameData",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "chess.model.Game",
+            "module": "Model",
+            "namespace": "chess.model"
+        },
+        {
+            "file": "..\\api\\src\\model\\game.js",
+            "line": 1596,
             "description": "Receive game update from server",
             "itemtype": "method",
             "name": "updateGameFromServer",
@@ -5001,23 +5113,25 @@
         },
         {
             "file": "..\\api\\src\\pgn\\parser.js",
-            "line": 17,
+            "line": 20,
             "itemtype": "property",
             "name": "model",
             "type": "chess.model.Game",
+            "access": "private",
+            "tagname": "",
             "class": "chess.pgn.Parser",
             "module": "Parser",
             "namespace": "chess.pgn"
         },
         {
             "file": "..\\api\\src\\pgn\\parser.js",
-            "line": 26,
+            "line": 31,
             "description": "Return pgn in string format",
             "itemtype": "method",
             "name": "getPgn",
             "return": {
                 "description": "",
-                "type": "*"
+                "type": "String"
             },
             "class": "chess.pgn.Parser",
             "module": "Parser",
@@ -5025,7 +5139,7 @@
         },
         {
             "file": "..\\api\\src\\pgn\\parser.js",
-            "line": 36,
+            "line": 40,
             "itemtype": "method",
             "name": "getMetadata",
             "return": {
@@ -5040,7 +5154,7 @@
         },
         {
             "file": "..\\api\\src\\pgn\\parser.js",
-            "line": 51,
+            "line": 55,
             "itemtype": "method",
             "name": "getMoves",
             "return": {
@@ -5054,43 +5168,87 @@
             "namespace": "chess.pgn"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\pgn\\parser.js",
+            "line": 64,
+            "description": "Return comment before first move",
+            "itemtype": "method",
+            "name": "getFirstComment",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "chess.pgn.Parser",
+            "module": "Parser",
+            "namespace": "chess.pgn"
+        },
+        {
+            "file": "..\\api\\src\\pgn\\parser.js",
+            "line": 78,
+            "description": "Return main line of moves or a variation",
+            "itemtype": "method",
+            "name": "getMovesInBranch",
+            "params": [
+                {
+                    "name": "moves",
+                    "description": "",
+                    "type": "Array"
+                },
+                {
+                    "name": "moveIndex",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "chess.pgn.Parser",
+            "module": "Parser",
+            "namespace": "chess.pgn"
+        },
+        {
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 16,
             "description": "Duration of piece animations in seconds.",
             "itemtype": "config",
             "name": "float animationDuration",
             "default": "0.35",
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 22,
             "description": "Layout of pieces, examples: \"alphapale\", \"alpha\", \"merida\", \"kingdom\"",
             "itemtype": "config",
             "name": "string pieceLayout",
             "default": "alphapale",
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 28,
             "description": "Layout of board. The name correspondes to the suffix of the CSS class\nludo-chess-board-container-wood. (In this example wood). If you want to create your own\nboard layout. You can specify a custom value for boardLayout, create your own graphic and\nimplement your own CSS rules. Take a look at css/board/board.css for more info",
             "itemtype": "config",
             "name": "string boardLayout",
             "default": "wood",
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 90,
             "description": "All DHTML Chess 3 views are using the setController method. It is used to\ncontrol behaviour of the view. So if you want to create your own Chess View component, you\nshould take a look at setController. Example method:<br><br>\n    setController : function(controller){<br>\n        this.parent(controller); // always call supperclass\n        controller.addEvent('newGame', this.doSomethingOnNewGame.bind(this));\n    }\nHere, the method doSomethingOnNewGame will be executed every time the controller loads a new game",
             "itemtype": "method",
@@ -5103,12 +5261,12 @@
                 }
             ],
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 116,
             "description": "Enable drag and drop feature of the board. It expects a game model as first argument.\nWhen connected to a controller event, the controller always sends current game model as\nfirst argument when it fire events.",
             "itemtype": "method",
@@ -5123,12 +5281,12 @@
                 "description": "void"
             },
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 142,
             "description": "Disable drag and drop feature of the board",
             "itemtype": "method",
@@ -5137,12 +5295,12 @@
                 "description": "void"
             },
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 156,
             "description": "Animate/Play the \"movements\" involved in a move, example: O-O involves two moves,\nmoving the king and moving the rook. By default, this method will be executed when the\ncontroller fires newMove or nextmove event.",
             "itemtype": "method",
@@ -5163,12 +5321,12 @@
                 "\n   { m: 'O-O', moves : [{ from: 'e1', to: 'g1' },{ from:'h1', to: 'f1'}] }"
             ],
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 248,
             "description": "Show start position of game",
             "itemtype": "method",
@@ -5184,12 +5342,12 @@
                 "description": "void"
             },
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 257,
             "description": "Show a specific FEN position on the board",
             "itemtype": "method",
@@ -5205,12 +5363,12 @@
                 "description": "undefined"
             },
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 286,
             "description": "Return number of visible pieces on the board",
             "itemtype": "method",
@@ -5219,12 +5377,12 @@
                 "description": "int"
             },
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 308,
             "description": "This method resets the board to the standard position at start of games",
             "itemtype": "method",
@@ -5233,12 +5391,12 @@
                 "description": "void"
             },
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 315,
             "description": "Event fired when board is reset to standard start position,\ni.e. fen: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
             "itemtype": "event",
@@ -5250,12 +5408,12 @@
                 }
             ],
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 323,
             "description": "Remove all pieces from the board",
             "itemtype": "method",
@@ -5264,12 +5422,12 @@
                 "description": "void"
             },
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 333,
             "description": "Event fired when all pieces are being removed from the board via the clearBoard() method",
             "itemtype": "event",
@@ -5281,12 +5439,12 @@
                 }
             ],
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 342,
             "description": "Event fired when a piece is moved from one square to another",
             "itemtype": "event",
@@ -5299,12 +5457,12 @@
                 }
             ],
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 353,
             "description": "Returns JSON object for a piece on a specific square or null if no piece is on the square",
             "itemtype": "method",
@@ -5320,12 +5478,12 @@
                 "\n   alert(board.getPieceOnSquare('e4');"
             ],
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 372,
             "description": "Flip board",
             "itemtype": "method",
@@ -5334,34 +5492,34 @@
                 "description": "void"
             },
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 383,
             "description": "Show whites pieces at the bottom. If white is allready on the bottom, this method will do nothing.",
             "itemtype": "method",
             "name": "flipToWhite",
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-board.js",
+            "file": "..\\api\\src\\view\\board\\board.js",
             "line": 392,
             "description": "Show blacks pieces at the bottom. If black is allready on the bottom, this method will do nothing.",
             "itemtype": "method",
             "name": "flipToBlack",
             "class": "chess.view.board.Board",
-            "module": "View",
+            "module": "Parser",
             "submodule": "Board",
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 14,
             "description": "Color of piece, \"white\" or \"black\"",
             "itemtype": "config",
@@ -5374,7 +5532,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 24,
             "description": "0x88 board position of piece",
             "itemtype": "config",
@@ -5386,7 +5544,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 36,
             "description": "Type of piece",
             "itemtype": "config",
@@ -5401,7 +5559,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 78,
             "description": "Create DOM elements for the chess piece",
             "itemtype": "method",
@@ -5414,7 +5572,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 119,
             "description": "Method executed when mouse enters a chess piece",
             "itemtype": "method",
@@ -5427,7 +5585,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 127,
             "description": "Method executed when mouse leaves a chess piece",
             "itemtype": "method",
@@ -5440,7 +5598,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 136,
             "description": "Disable drag and drop for the chess piece. This will set the internal ddEnabled property to\nfalse and reset cursor to arrow.",
             "itemtype": "method",
@@ -5451,7 +5609,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 145,
             "description": "Enable drag and drop for the chess piece. This will set the internal ddEnabled property to true\nand update the cursor to a pointer/hand.",
             "itemtype": "method",
@@ -5462,7 +5620,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 154,
             "description": "Returns true if chess piece is currently on board.",
             "itemtype": "method",
@@ -5477,7 +5635,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 162,
             "description": "Hide the chess piece",
             "itemtype": "method",
@@ -5488,7 +5646,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 169,
             "description": "Show the chess piece",
             "itemtype": "method",
@@ -5499,7 +5657,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 176,
             "description": "Start dragging a chess piece",
             "itemtype": "method",
@@ -5523,7 +5681,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 199,
             "description": "Method executed when dragging has started and mouse moves",
             "itemtype": "method",
@@ -5547,7 +5705,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 214,
             "description": "Stop dragging the chess piece.",
             "itemtype": "method",
@@ -5567,7 +5725,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 253,
             "description": "Return 0x88 square by screen coordinates",
             "itemtype": "method",
@@ -5596,7 +5754,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 279,
             "description": "Return square of piece",
             "itemtype": "method",
@@ -5611,7 +5769,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 288,
             "description": "Promote piece to this type",
             "itemtype": "method",
@@ -5632,7 +5790,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 299,
             "description": "Update background image of piece when piece type is set or changed and when size of square is changed.",
             "itemtype": "method",
@@ -5645,7 +5803,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 308,
             "description": "Resize piece",
             "itemtype": "method",
@@ -5663,7 +5821,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 331,
             "description": "Position piece on board by 0x88 board square coordinate",
             "itemtype": "method",
@@ -5682,7 +5840,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 343,
             "description": "Move piece on board to square",
             "itemtype": "method",
@@ -5700,7 +5858,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 369,
             "description": "Returns true if piece is already on a given 0x88 square number",
             "itemtype": "method",
@@ -5724,7 +5882,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 380,
             "description": "Move piece to front",
             "itemtype": "method",
@@ -5737,7 +5895,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 389,
             "description": "Method executed when move animation is complete",
             "itemtype": "method",
@@ -5750,7 +5908,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 401,
             "description": "Return x and y coordinate by 0x88 square number",
             "itemtype": "method",
@@ -5767,7 +5925,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n   var pos = piece.getPos();\n   // may return\n   {\n       \"x\":\"12.5%\",\n       \"y\":\"25%\"\n   }"
+                "\n\t\tvar pos = piece.getPos();\n\t\t// may return\n\t\t{\n\t\t\t\"x\":\"12.5%\",\n\t\t\t\"y\":\"25%\"\n\t\t}"
             ],
             "class": "chess.view.board.Piece",
             "module": "View",
@@ -5775,7 +5933,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 421,
             "description": "Return x and y position of square by 0x88 coordinate(without the % suffix)",
             "itemtype": "method",
@@ -5797,7 +5955,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 440,
             "description": "Return HTML element of piece",
             "itemtype": "method",
@@ -5812,7 +5970,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 448,
             "description": "Return color code of piece, \"w\" or \"b\"",
             "itemtype": "method",
@@ -5829,7 +5987,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 457,
             "description": "Return lowercase piece type, i.e. \"k\",\"q\",\"r\",\"b\",\"n\" or \"p\"",
             "itemtype": "method",
@@ -5846,7 +6004,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 477,
             "description": "Executed when board is flipped. It will call the position method.",
             "itemtype": "method",
@@ -5857,7 +6015,7 @@
             "namespace": "chess.view.board"
         },
         {
-            "file": "..\\api\\src\\view\\board\\chess-piece.js",
+            "file": "..\\api\\src\\view\\board\\piece.js",
             "line": 485,
             "description": "Returns true if piece is already flipped",
             "itemtype": "method",
@@ -6549,7 +6707,7 @@
         },
         {
             "file": "..\\api\\src\\view\\gamelist\\grid.js",
-            "line": 102,
+            "line": 103,
             "description": "Select a new database",
             "itemtype": "method",
             "name": "selectDatabase",
@@ -6567,7 +6725,7 @@
         },
         {
             "file": "..\\api\\src\\view\\gamelist\\grid.js",
-            "line": 139,
+            "line": 143,
             "description": "Event fired on click on game in grid.",
             "itemtype": "event",
             "name": "selectGame",
@@ -6632,7 +6790,7 @@
         },
         {
             "file": "..\\api\\src\\view\\metadata\\game.js",
-            "line": 12,
+            "line": 13,
             "description": "How metadata are displayed is configured using \"tpl\".",
             "itemtype": "config",
             "name": "tpl",
@@ -6681,6 +6839,37 @@
             "class": "chess.view.notation.Panel",
             "module": "View",
             "namespace": "chess.view.notation"
+        },
+        {
+            "file": "..\\api\\src\\view\\pgn\\grid.js",
+            "line": 49,
+            "description": "initial database id. Show the games from this database when the grid is first displayed.",
+            "itemtype": "config",
+            "name": "databaseId",
+            "type": "{Number}",
+            "default": "undefined",
+            "class": "chess.view.gamelist.Grid",
+            "module": "View",
+            "submodule": "Grid",
+            "namespace": "chess.view.gamelist"
+        },
+        {
+            "file": "..\\api\\src\\view\\pgn\\grid.js",
+            "line": 82,
+            "description": "Event fired on click on game in grid.",
+            "itemtype": "event",
+            "name": "selectPgn",
+            "params": [
+                {
+                    "name": "game",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "chess.view.gamelist.Grid",
+            "module": "View",
+            "submodule": "Grid",
+            "namespace": "chess.view.gamelist"
         },
         {
             "file": "..\\api\\src\\view\\position\\castling.js",
@@ -6744,7 +6933,7 @@
         },
         {
             "file": "..\\api\\src\\view\\user\\register-window.js",
-            "line": 67,
+            "line": 71,
             "description": "Event fired when user registration was successful.",
             "itemtype": "event",
             "name": "registerSuccess",
